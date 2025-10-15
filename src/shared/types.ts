@@ -1,0 +1,1 @@
+export type ButtonAction = 'hidden' | 'highlight' | string;

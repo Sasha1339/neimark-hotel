@@ -1,0 +1,10 @@
+:root {
+    --text-color-default: #FFFFFF;
+    --text-color-active: #E68F61;
+    --background-main: #161A1F;
+    --background-black-opacity-25: rgba(0, 0, 0, 0.25);
+    --main-gray-dark: #233346;
+    --main-black: #161A1F;
+
+    --gradient-gray-black: linear-gradient(var(--main-gray-dark), var(--main-black));
+}

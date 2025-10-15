@@ -1,0 +1,63 @@
+.header {
+    box-sizing: border-box;
+    padding: 20px;
+    position: absolute;
+    background-color: var(--background-black-opacity-25);
+    backdrop-filter: blur(20px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.navigation {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button_ref {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.button_element__hidden {
+    transition: 0s;
+    transform: translateX(200%);
+}
+
+.button_element__highlight {
+    box-shadow: 0 0 20px var(--text-color-active);
+}
+
+@keyframes animated_text {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes button_highlight {
+    0% {
+        transform: rotate(1deg);
+    }
+    25% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    75% {
+        transform: rotate(-1deg);
+    }
+    100% {
+        transform: rotate(1deg);
+    }
+}

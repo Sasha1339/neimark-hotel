@@ -1,0 +1,60 @@
+.main_section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+}
+
+.image_container {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: image_animation 1s;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+    scrollbar-width: none;
+}
+
+.frame_blur {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    animation: frame_animation 5s;
+    backdrop-filter: blur(4px);
+    background-color: var(--background-black-opacity-25);
+}
+
+
+@keyframes frame_animation {
+    from {
+        backdrop-filter: blur(0);
+        background-color: transparent;
+    }
+    to {
+        backdrop-filter: blur(4px);
+        background-color: var(--background-black-opacity-25);
+    }
+}
+
+@keyframes image_animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
