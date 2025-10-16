@@ -7,4 +7,6 @@
     --main-black: #161A1F;
 
     --gradient-gray-black: linear-gradient(var(--main-gray-dark), var(--main-black));
+    --gradient-black-gray-black: linear-gradient(var(--main-black), var(--main-gray-dark), var(--main-black));
+    --gradient-opacity-gray: linear-gradient(#00000000, var(--main-gray-dark));
 }

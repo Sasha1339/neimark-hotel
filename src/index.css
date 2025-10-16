@@ -4,3 +4,11 @@
   font-family: 'Biform';
   src: local('Biform'), url('./fonts/Paratype - Biform Regular.otf') format('opentype');
 }
+
+.room_alpha:hover ~ .window_alpha {
+  fill: #FFEF4A;
+}
+
+.window_alpha:hover ~ .window_alpha {
+  fill: #FFEF4A;
+}

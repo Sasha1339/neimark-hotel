@@ -4,7 +4,6 @@ import {ButtonContext} from "../../providers/ButtonContext";
 import {gsap} from "gsap";
 
 type Props = {
-
   scrollerRef: RefObject<HTMLElement>;
 }
 

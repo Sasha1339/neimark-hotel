@@ -2,6 +2,9 @@ import React, {FC, RefObject, useRef} from "react";
 import styles from "./BuilderSections.module.css";
 import {HomeComponent} from "../HomeComponent/HomeComponent";
 import {AboutComponent} from "../AboutComponent/AboutComponent";
+import {PriceComponents} from "@components/PriceComponent/PriceComponents";
+import {ReservedPriceComponent} from "@components/PriceComponent/ReservedPriceComponent";
+import {AboutHotelComponent} from "@components/AboutHotelComponent/AboutHotelComponent";
 
 type Props = {}
 
@@ -23,7 +26,8 @@ export const BuilderSections: FC<Props> = ({...props}) => {
                        scrollerRef={scrollRef as RefObject<HTMLElement>}
         />
         <AboutComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <AboutComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <AboutHotelComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <ReservedPriceComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />
       </div>
     </main>
   )

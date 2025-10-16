@@ -1,0 +1,14 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="lampShadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="0" dy="0" stdDeviation="0" flood-color="#000" />
+        </filter>
+    </defs>
+
+    <path class="lamp" d="M87.509 30C94.478 64.192 124.78 90 161 90C197.22 90 227.522 64.192 234.491 30L161 15L87.509 30Z" fill="#555900" filter="url(#lampShadow)"/>
+    <path d="M251 0H86V15C86 20.136 86.521 25.151 87.509 30H251C292.355 30 326 63.645 326 105V377H356V105C356 47.103 308.897 0 251 0Z" fill="#555970"/>
+    <path d="M384.802 362H341L321 495.754H395.948L384.802 362Z" fill="#5475AC"/>
+    <path d="M297.198 362L286.052 495.754H341V362H297.198Z" fill="#4482D9"/>
+    <path d="M426 482H341L321 497L341 512H426V482Z" fill="#555970"/>
+    <path d="M341 482H256V512H341V482Z" fill="#5475AC"/>
+</svg>
