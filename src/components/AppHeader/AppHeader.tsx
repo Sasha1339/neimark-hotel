@@ -1,13 +1,17 @@
-import {FC, useContext} from "react";
+import {FC, useContext, useEffect} from "react";
 import styles from "./AppHeader.module.css"
 import {Tab} from "../Tab/Tab";
 import {Button} from "../Button/Button";
 import {ButtonContext} from "../../providers/ButtonContext";
 import {ButtonAction} from "../../shared/types";
+import {NavigationContext} from "@/providers/NavigationContext";
+import {TabContext} from "@/providers/TabContext";
 
 export const AppHeader: FC = () => {
 
   const buttonContext = useContext(ButtonContext);
+  const navigationContext = useContext(NavigationContext);
+  const tabContext = useContext(TabContext);
 
   const buttonActionSelect = (action: ButtonAction) => {
     switch (action) {
@@ -20,14 +24,18 @@ export const AppHeader: FC = () => {
     }
   }
 
+  useEffect(() => {
+    tabContext[1]('');
+  }, [tabContext[0]]);
+
   return (
     <header className={styles.header}>
       <div></div>
       <nav className={styles.navigation}>
-        <Tab active={false} title={'Главная'} onClick={() => {}} />
-        <Tab active={false} title={'О нас'} onClick={() => {}} />
+        <Tab active={navigationContext[0] === 'home'} title={'Главная'} onClick={() => tabContext[1]('home')} />
+        <Tab active={navigationContext[0] === 'about'} title={'О нас'} onClick={() => tabContext[1]('about')} />
         <Tab active={false} title={'Услуги'} onClick={() => {}} />
-        <Tab active={false} title={'Цены'} onClick={() => {}} />
+        <Tab active={navigationContext[0] === 'price'} title={'Цены'} onClick={() => tabContext[1]('price')} />
         <Tab active={false} title={'Новости'} onClick={() => {}} />
       </nav>
       <div className={`${styles.button_ref}`}>

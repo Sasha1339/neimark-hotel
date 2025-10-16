@@ -38,6 +38,12 @@
     background-color: var(--background-black-opacity-25);
 }
 
+.ref_navigation {
+    width: 100vw;
+    height: 0;
+    opacity: 0;
+}
+
 
 @keyframes frame_animation {
     from {

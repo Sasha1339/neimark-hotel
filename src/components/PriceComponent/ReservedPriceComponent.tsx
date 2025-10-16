@@ -23,7 +23,7 @@ export const ReservedPriceComponent: FC<Props> = ({scrollerRef, ...props}) => {
       scrollTrigger: {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
-        start: "top 20%",
+        start: "top 100%",
         end: "bottom bottom",
         scrub: true,                // плавное связывание со скроллом
       },
@@ -35,7 +35,7 @@ export const ReservedPriceComponent: FC<Props> = ({scrollerRef, ...props}) => {
       scrollTrigger: {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
-        start: "top top",
+        start: "top 100%",
         end: "bottom bottom",
         scrub: true,                // плавное связывание со скроллом
       },
@@ -47,7 +47,7 @@ export const ReservedPriceComponent: FC<Props> = ({scrollerRef, ...props}) => {
       scrollTrigger: {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
-        start: "top top",
+        start: "top 100%",
         end: "bottom bottom",
         scrub: true,                // плавное связывание со скроллом
       },

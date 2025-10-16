@@ -24,7 +24,7 @@ export const AboutHotelComponent: FC<Props> = ({scrollerRef}) => {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
         start: "top 50%",
-        end: "30% top",
+        end: "40% top",
         scrub: true,
         // markers: true
       },
@@ -39,8 +39,8 @@ export const AboutHotelComponent: FC<Props> = ({scrollerRef}) => {
       scrollTrigger: {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
-        start: "20% top",
-        end: "50% top",
+        start: "30% top",
+        end: "60% top",
         scrub: true,
         // markers: true
       },
@@ -55,15 +55,14 @@ export const AboutHotelComponent: FC<Props> = ({scrollerRef}) => {
       scrollTrigger: {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
-        start: "40% top",
-        end: "70% top",
+        start: "50% top",
+        end: "90% top",
         scrub: true,
         // markers: true
       },
       keyframes: [
-        { x: 0, duration: 0.3 },    // вход (30% пути)
-        { x: 0, duration: 0.4 },    // пауза (40% пути)
-        { x: "-100vw", duration: 0.3 } // выход (последние 30%)
+        { x: 0, duration: 0.6 },
+        { x: 0, duration: 0.4 }
       ]
     });
 
