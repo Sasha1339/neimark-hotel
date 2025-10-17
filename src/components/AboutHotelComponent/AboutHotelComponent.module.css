@@ -18,6 +18,73 @@
     box-sizing: border-box;
 }
 
+.hotel_preview {
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    width: 15vw;
+}
+
+.pointer {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    width: 10vw;
+}
+
+.rules {
+    position: absolute;
+}
+
+.rule_one {
+    position: absolute;
+    top: 15vh;
+    right: 5vw;
+    width: 7vw;
+    height: 15vh;
+    transform: translateX(100vw);
+}
+
+.rule_two {
+    position: absolute;
+    top: 40vh;
+    left: 10vw;
+    width: 7vw;
+    height: 15vh;
+    transform: translateX(-100vw);
+}
+
+.rule_three {
+    position: absolute;
+    bottom: 10vh;
+    left: 40vw;
+    width: 7vw;
+    height: 15vh;
+    transform: translateX(100vw);
+}
+
+.rule_four {
+    position: absolute;
+    top: 20px;
+    left: 60vw;
+    width: 7vw;
+    height: 15vh;
+    transform: translateX(-100vw);
+}
+
+.documentsBack {
+    position: absolute;
+    top: -82px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-100vh);
+    background-image: url("assets/png/pasport.png");
+    opacity: 0.5;
+    background-size: 10%;
+    visibility: hidden;
+}
+
 .description_row {
     display: grid;
     height: 60%;

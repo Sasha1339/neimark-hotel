@@ -34,7 +34,7 @@ export const AppHeader: FC = () => {
       <nav className={styles.navigation}>
         <Tab active={navigationContext[0] === 'home'} title={'Главная'} onClick={() => tabContext[1]('home')} />
         <Tab active={navigationContext[0] === 'about'} title={'О нас'} onClick={() => tabContext[1]('about')} />
-        <Tab active={false} title={'Услуги'} onClick={() => {}} />
+        <Tab active={navigationContext[0] === 'service'} title={'Услуги'} onClick={() => tabContext[1]('service')} />
         <Tab active={navigationContext[0] === 'price'} title={'Цены'} onClick={() => tabContext[1]('price')} />
         <Tab active={false} title={'Новости'} onClick={() => {}} />
       </nav>

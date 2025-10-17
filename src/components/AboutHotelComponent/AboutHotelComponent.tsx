@@ -1,12 +1,20 @@
 import {FC, RefObject, useEffect, useRef} from "react";
 import styles from "./AboutHotelComponent.module.css";
 import {gsap} from "gsap";
+import {ReactComponent as HotelPreview} from "@/assets/svg/hotel-preview.svg";
+import {ReactComponent as Pointer} from "@/assets/svg/pointer.svg";
+import {ReactComponent as RuleOne} from "@/assets/svg/sticker_one.svg";
+import {ReactComponent as RuleTwo} from "@/assets/svg/sticker_two.svg";
+import {ReactComponent as RuleThree} from "@/assets/svg/sticker_three.svg";
+import {ReactComponent as RuleFour} from "@/assets/svg/sticker_four.svg";
 
 type Props = {
   scrollerRef: RefObject<HTMLElement>;
 }
 
 export const AboutHotelComponent: FC<Props> = ({scrollerRef}) => {
+
+
 
   const triggerRef = useRef<HTMLElement>(null);
 
@@ -15,6 +23,17 @@ export const AboutHotelComponent: FC<Props> = ({scrollerRef}) => {
   const conditionRef = useRef<HTMLDivElement>(null);
   const ruleRef = useRef<HTMLDivElement>(null);
   const documentsRef = useRef<HTMLDivElement>(null);
+
+  const hotelPreviewRef = useRef<SVGSVGElement>(null);
+  const pointerRef = useRef<SVGSVGElement>(null);
+
+  const ruleOneRef = useRef<SVGSVGElement>(null);
+  const ruleTwoRef = useRef<SVGSVGElement>(null);
+  const ruleThreeRef = useRef<SVGSVGElement>(null);
+  const ruleFourRef = useRef<SVGSVGElement>(null);
+
+  const documentsBackRef = useRef<HTMLDivElement>(null);
+
 
   useEffect(() => {
     if (!scrollerRef.current) return;
@@ -26,12 +45,56 @@ export const AboutHotelComponent: FC<Props> = ({scrollerRef}) => {
         start: "top 50%",
         end: "40% top",
         scrub: true,
-        // markers: true
       },
       keyframes: [
-        { x: 0, duration: 0.3 },    // вход (30% пути)
-        { x: 0, duration: 0.4 },    // пауза (40% пути)
-        { x: "100vw", duration: 0.3 } // выход (последние 30%)
+        { x: 0, duration: 0.3 },
+        { x: 0, duration: 0.4 },
+        { x: "100vw", duration: 0.3 }
+      ]
+    });
+
+    gsap.to(hotelPreviewRef.current, {
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "top 50%",
+        end: "40% top",
+        scrub: true
+      },
+      keyframes: [
+        { x: "25%", duration: 0.3 },
+        { x: "25%", duration: 0.4 },
+        { x: "300%", duration: 0.3 }
+      ]
+    });
+
+    gsap.to(pointerRef.current, {
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "top 50%",
+        end: "40% top",
+        scrub: true
+      },
+      keyframes: [
+        { x: "10%", duration: 0.3 },
+        { x: "10%", duration: 0.4 },
+        { x: "-300%", duration: 0.3 }
+      ]
+    });
+
+    gsap.to('.window', {
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "top 50%",
+        end: "40% top",
+        scrub: true
+      },
+      keyframes: [
+        { x: 0, duration: 0.3 },
+        { fill: "#FFEF4A", duration: 0.4 },
+        { fill: "#FFEF4A", duration: 0.3 },
       ]
     });
 
@@ -51,17 +114,95 @@ export const AboutHotelComponent: FC<Props> = ({scrollerRef}) => {
       ]
     });
 
+    gsap.to(ruleOneRef.current, {
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "30% top",
+        end: "60% top",
+        scrub: true
+      },
+      keyframes: [
+        { x: 0, duration: 0.4 },
+        { x: 0, duration: 0.2 },
+        { x: '100vw', duration: 0.4 }
+      ]
+    });
+
+    gsap.to(ruleTwoRef.current, {
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "30% top",
+        end: "60% top",
+        scrub: true
+      },
+      keyframes: [
+        { x: 0, duration: 0.4 },
+        { x: 0, duration: 0.2 },
+        { x: '-100vw', duration: 0.4 }
+      ]
+    });
+
+
+    gsap.to(ruleThreeRef.current, {
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "30% top",
+        end: "60% top",
+        scrub: true
+      },
+      keyframes: [
+        { x: 0, duration: 0.4 },
+        { x: 0, duration: 0.2 },
+        { y: '200%', duration: 0.39 },
+        { autoAlpha: 0, duration: 0.01 },
+      ]
+    });
+
+    gsap.to(ruleFourRef.current, {
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "30% top",
+        end: "60% top",
+        scrub: true
+      },
+      keyframes: [
+        { x: 0, duration: 0.4 },
+        { x: 0, duration: 0.2 },
+        { y: '-100vh', duration: 0.4 }
+      ]
+    });
+
+
+
     gsap.to(documentsRef.current, {
       scrollTrigger: {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
         start: "50% top",
         end: "90% top",
-        scrub: true,
-        // markers: true
+        scrub: true
       },
       keyframes: [
         { x: 0, duration: 0.6 },
+        { x: 0, duration: 0.4 }
+      ]
+    });
+
+    gsap.to(documentsBackRef.current, {
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "50% top",
+        end: "90% top",
+        scrub: true
+      },
+      keyframes: [
+        {visibility: 'inherit', duration: 0.01},
+        { y: 0, duration: 0.49 },
         { x: 0, duration: 0.4 }
       ]
     });
@@ -72,6 +213,16 @@ export const AboutHotelComponent: FC<Props> = ({scrollerRef}) => {
   return (
     <section ref={triggerRef} className={styles.main}>
       <div ref={contentRef} className={styles.description_section}>
+        <HotelPreview ref={hotelPreviewRef} className={styles.hotel_preview} />
+        <Pointer ref={pointerRef} className={styles.pointer} />
+
+          <RuleOne ref={ruleOneRef} className={styles.rule_one} />
+          <RuleTwo ref={ruleTwoRef} className={styles.rule_two} />
+          <RuleThree ref={ruleThreeRef} className={styles.rule_three} />
+          <RuleFour ref={ruleFourRef} className={styles.rule_four} />
+
+        <div ref={documentsBackRef} className={styles.documentsBack}></div>
+
         <div ref={conditionRef} className={`${styles.description_row} ${styles.condition}`}>
           <h1 className={styles.title_row}>Условия проживания</h1>
           <img className={styles.image_row}

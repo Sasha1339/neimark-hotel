@@ -8,6 +8,7 @@ import {AboutHotelComponent} from "@components/AboutHotelComponent/AboutHotelCom
 import {NavigationContext} from "@/providers/NavigationContext";
 import {TabContext} from "@/providers/TabContext";
 import {gsap} from "gsap";
+import {ServiceComponent} from "@components/ServiceComponent/ServiceComponent";
 
 type Props = {}
 
@@ -23,6 +24,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const priceRef = useRef<HTMLDivElement>(null);
+  const serviceRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
       switch (tabContext[0]) {
@@ -53,17 +55,29 @@ export const BuilderSections: FC<Props> = ({...props}) => {
           });
         }
           break;
+        case 'service': {
+          const mainTopParent = serviceRef.current!.getBoundingClientRect().top - serviceRef.current!.parentElement!.getBoundingClientRect().top;
+          gsap.to(serviceRef.current!.parentElement!, {
+            scrollTop: serviceRef.current!.parentElement!.scrollTop + mainTopParent,
+            duration: 0.4,
+            ease: 'power2.inOut'
+          });
+        }
+          break;
       }
   }, [tabContext[0]]);
 
   const onScrollIngredients = (event: SyntheticEvent) => {
     const homeTopParent = homeRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
     const aboutTopParent = aboutRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
+    const serviceTopParent = serviceRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
     const priceTopParent = priceRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
 
 
     if (priceTopParent < 400) {
       navigationContext[1]('price');
+    } else if (serviceTopParent < 400) {
+      navigationContext[1]('service');
     } else if (aboutTopParent < 400) {
       navigationContext[1]('about');
     } else {
@@ -77,7 +91,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
            src={'https://cdn.b12.io/client_media/VhBHooYp/a92276b6-84a5-11f0-aec8-0242ac110002-46-hero_image.jpeg'}
            alt={'Здесь фото гостиницы'}/>
       <div ref={blurRef} className={styles.frame_blur}></div>
-      <div ref={scrollRef} className={styles.container}  onScroll={onScrollIngredients}>
+      <div ref={scrollRef} className={styles.container} onScroll={onScrollIngredients}>
         <div ref={homeRef} className={styles.ref_navigation}></div>
         <HomeComponent imageRef={imageRef as RefObject<HTMLElement>}
                        blurRef={blurRef as RefObject<HTMLElement>}
@@ -86,6 +100,8 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <div ref={aboutRef} className={styles.ref_navigation}></div>
         <AboutComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <AboutHotelComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <div ref={serviceRef} className={styles.ref_navigation}></div>
+        <ServiceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={priceRef} className={styles.ref_navigation}></div>
         <ReservedPriceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
       </div>

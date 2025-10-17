@@ -19,11 +19,58 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
   const articleRef = useRef<HTMLElement>(null);
   const imageTwoRef = useRef<HTMLImageElement>(null);
   const imageOneRef = useRef<HTMLImageElement>(null);
+  const blurRef = useRef<HTMLImageElement>(null);
+  const backgroundOneRef = useRef<HTMLImageElement>(null);
+  const backgroundTwoRef = useRef<HTMLImageElement>(null);
 
   const buttonContext = useContext(ButtonContext);
 
   useEffect(() => {
     if (!scrollerRef.current) return;
+
+    gsap.to(backgroundOneRef.current, {
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true
+      },
+      keyframes: [
+        { opacity: 1, duration: 0.35 },
+        { x: '100%', duration: 0.35 },
+        { x: '100%', duration: 0.3 },
+      ]
+    });
+
+    gsap.to(backgroundTwoRef.current, {
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true
+      },
+      keyframes: [
+        { x: '-100%', duration: 0.35 },
+        { x: '0', duration: 0.35 },
+        { x: '0', duration: 0.3 },
+      ]
+    });
+
+    gsap.to(blurRef.current, {
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true
+      },
+      keyframes: [
+        { x: '0', duration: 0.7 },
+        { backgroundImage: 'var(--gradient-opacity-gray-black-75-main-black)', duration: 0.3 },
+      ]
+    });
 
     gsap.to(articleRef.current, {
       scrollTrigger: {
@@ -101,7 +148,11 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
 
   return (
     <section ref={triggerRef} className={styles.main}>
+
       <div ref={contentRef} className={styles.description_section}>
+        <div ref={blurRef} className={styles.blur_effect}></div>
+        <div ref={backgroundOneRef} className={styles.background_image_one} style={{backgroundImage: 'url("https://cdn.b12.io/client_media/VhBHooYp/468ba60c-8442-11f0-b86e-0242ac110002-IMG_9217.WEBP")'}}></div>
+        <div ref={backgroundTwoRef} className={styles.background_image_two} style={{backgroundImage: 'url("https://cdn.b12.io/client_media/VhBHooYp/1a8d17fa-8446-11f0-9fa8-0242ac110002-IMG_9225.WEBP")'}}></div>
         <article className={styles.article_element}>
           <div ref={nameRef} className={styles.text_title_active}>
             Гостиница Неймарк

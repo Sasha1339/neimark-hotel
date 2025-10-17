@@ -10,11 +10,20 @@
     background-position: center center;
     transition: 1s;
     animation: content_animation 1s;
+    user-select: none;
+    cursor: pointer;
 }
 
 .content:hover > .gradient_element {
     border-bottom: 20px solid var(--text-color-active);
     border-left: 4px solid var(--text-color-active);
+    background-color: var(--main-gray-dark-opacity-50);
+    transform: rotateX(2deg) translateY(-30px) translateX(-10px);
+}
+
+.content:hover {
+    transform: rotateX(-2deg) translateX(10px);
+    filter: brightness(1.1);
 }
 
 .title {

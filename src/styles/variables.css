@@ -1,12 +1,23 @@
 :root {
     --text-color-default: #FFFFFF;
+    --text-color-default-opacity-50: rgba(255, 255, 255, 0.5);
     --text-color-active: #E68F61;
     --background-main: #161A1F;
     --background-black-opacity-25: rgba(0, 0, 0, 0.25);
+    --background-gray-black-opacity-75: rgba(35, 51, 70, 0.75);
+    --background-gray-black-opacity-10: rgba(35, 51, 70, 0.1);
+    --background-gray-black-opacity-25: rgba(35, 51, 70, 0.25);
+    --background-gray-orange-opacity-25: rgba(230, 143, 97, 0.25);
     --main-gray-dark: #233346;
+    --main-gray-dark-opacity-50: rgba(35, 51, 70, 0.50);
     --main-black: #161A1F;
+    --main-purple: #8E92FB;
 
     --gradient-gray-black: linear-gradient(var(--main-gray-dark), var(--main-black));
+    --gradient-black-gray: linear-gradient(var(--main-black), var(--main-gray-dark));
+    --gradient-opacity-gray-black-75-main-black: linear-gradient(var(--background-gray-black-opacity-75), var(--main-black));
     --gradient-black-gray-black: linear-gradient(var(--main-black), var(--main-gray-dark), var(--main-black));
+    --gradient-black-purple-black: linear-gradient(var(--main-black), var(--main-purple), var(--main-black));
     --gradient-opacity-gray: linear-gradient(#00000000, var(--main-gray-dark));
+    --gradient-opacity-gray-50: linear-gradient(var(--main-gray-dark-opacity-50), var(--main-gray-dark));
 }
