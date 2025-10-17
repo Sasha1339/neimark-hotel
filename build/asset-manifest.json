@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.053dd6c3.css",
+    "main.js": "/static/js/main.2d041f40.js",
+    "static/js/453.c9fd5b68.chunk.js": "/static/js/453.c9fd5b68.chunk.js",
+    "static/media/Paratype - Biform Regular.otf": "/static/media/Paratype - Biform Regular.30ea029c0d3f548d92ff.otf",
+    "static/media/sticker_two.svg": "/static/media/sticker_two.22f060892e55d11acc520b91c9caebd4.svg",
+    "static/media/sticker_three.svg": "/static/media/sticker_three.24862986839414a7dbe9bf928ec61555.svg",
+    "static/media/sticker_four.svg": "/static/media/sticker_four.70cde4b9a6f901834c0e4e582738e970.svg",
+    "static/media/sticker_one.svg": "/static/media/sticker_one.121bdeb7ed97f580273b39bf44a9a41f.svg",
+    "static/media/pointer.svg": "/static/media/pointer.7944f40c7c444f436b86c01161fce095.svg",
+    "static/media/hotel-preview.svg": "/static/media/hotel-preview.bff2a732d08c1df71f7068b38dd8abe0.svg",
+    "static/media/logo.svg": "/static/media/logo.fc1da68839b9149958e1c074c6fe382f.svg",
+    "index.html": "/index.html",
+    "main.053dd6c3.css.map": "/static/css/main.053dd6c3.css.map",
+    "main.2d041f40.js.map": "/static/js/main.2d041f40.js.map",
+    "453.c9fd5b68.chunk.js.map": "/static/js/453.c9fd5b68.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.053dd6c3.css",
+    "static/js/main.2d041f40.js"
+  ]
+}
