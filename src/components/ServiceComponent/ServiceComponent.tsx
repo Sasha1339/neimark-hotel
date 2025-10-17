@@ -38,7 +38,7 @@ export const ServiceComponent: FC<Props> = ({scrollerRef, ...props}) => {
       scrollTrigger: {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
-        start: "top 90%",
+        start: "top 30%",
         once: true
       },
       onStart: () => {
@@ -64,7 +64,6 @@ export const ServiceComponent: FC<Props> = ({scrollerRef, ...props}) => {
       <div className={styles.background_services}></div>
       <div className={styles.logo_wrapper}>
         <Neimark className={styles.logo}/>
-        печатает...
       </div>
       <div className={styles.button_wrapper}>
         <Button active={true} className={styles.button_effect} title={'Забронируй номер уже сейчас!'} onClick={() => {}} />

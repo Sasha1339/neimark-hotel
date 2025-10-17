@@ -7,7 +7,7 @@ export const animationMes1 = (ref: RefObject<HTMLDivElement | null>) => {
   tl.to(ref.current, {
       scale: 1,
       opacity: 1,
-      duration: 0.5,
+      duration: 0.2,
       ease: "power2.inOut",
     })
 
@@ -18,11 +18,11 @@ export const animationMes1 = (ref: RefObject<HTMLDivElement | null>) => {
 export const animationMes2 = (ref: RefObject<HTMLDivElement | null>) => {
   const tl = gsap.timeline({ paused: true });
 
-  tl.to({}, { duration: 1 })
+  tl.to({}, { duration: 0.1 })
     .to(ref.current, {
       scale: 1,
       opacity: 1,
-    duration: 0.5,
+    duration: 0.2,
     ease: "power2.inOut",
   })
 
@@ -33,10 +33,10 @@ export const animationMes2 = (ref: RefObject<HTMLDivElement | null>) => {
 export const animationMes3 = (ref: RefObject<HTMLDivElement | null>) => {
   const tl = gsap.timeline({ paused: true });
 
-  tl.to({}, { duration: 2 }).to(ref.current, {
+  tl.to({}, { duration: 0.2 }).to(ref.current, {
     scale: 1,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.2,
     ease: "power2.inOut",
     })
 
@@ -48,12 +48,12 @@ export const animationMes3 = (ref: RefObject<HTMLDivElement | null>) => {
 export const animationMes4 = (ref: RefObject<HTMLDivElement | null>) => {
   const tl = gsap.timeline({ paused: true });
 
-  tl.to({}, { duration: 3 }).to(ref.current, {
+  tl.to({}, { duration: 0.3 }).to(ref.current, {
     scale: 1,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.2,
     ease: "power2.inOut",
-  }).to({}, { duration: 0.5 })
+  })
 
 
   return tl;
@@ -62,12 +62,12 @@ export const animationMes4 = (ref: RefObject<HTMLDivElement | null>) => {
 export const animationMes5 = (ref: RefObject<HTMLDivElement | null>) => {
   const tl = gsap.timeline({ paused: true });
 
-  tl.to({}, { duration: 4 }).to(ref.current, {
+  tl.to({}, { duration: 0.4 }).to(ref.current, {
     scale: 1,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.2,
     ease: "power2.inOut",
-  }).to({}, { duration: 0.5 })
+  })
 
   return tl;
 }
@@ -75,12 +75,12 @@ export const animationMes5 = (ref: RefObject<HTMLDivElement | null>) => {
 export const animationMes6 = (ref: RefObject<HTMLDivElement | null>) => {
   const tl = gsap.timeline({ paused: true });
 
-  tl.to({}, { duration: 5 }).to(ref.current, {
+  tl.to({}, { duration: 0.5 }).to(ref.current, {
     scale: 1,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.2,
     ease: "power2.inOut",
-  }).to({}, { duration: 0.5 })
+  })
 
   return tl;
 }
@@ -89,12 +89,12 @@ export const animationMes6 = (ref: RefObject<HTMLDivElement | null>) => {
 export const animationMes7 = (ref: RefObject<HTMLDivElement | null>) => {
   const tl = gsap.timeline({ paused: true });
 
-  tl.to({}, { duration: 6 }).to(ref.current, {
+  tl.to({}, { duration: 0.6 }).to(ref.current, {
     scale: 1,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.2,
     ease: "power2.inOut",
-  }).to({}, { duration: 0.5 })
+  })
 
   return tl;
 }
@@ -102,12 +102,12 @@ export const animationMes7 = (ref: RefObject<HTMLDivElement | null>) => {
 export const animationMes8 = (ref: RefObject<HTMLDivElement | null>) => {
   const tl = gsap.timeline({ paused: true });
 
-  tl.to({}, { duration: 7 }).to(ref.current, {
+  tl.to({}, { duration: 0.7 }).to(ref.current, {
     scale: 1,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.2,
     ease: "power2.inOut",
-  }).to({}, { duration: 0.5 })
+  })
 
   return tl;
 }
@@ -115,12 +115,12 @@ export const animationMes8 = (ref: RefObject<HTMLDivElement | null>) => {
 export const animationMes9 = (ref: RefObject<HTMLDivElement | null>) => {
   const tl = gsap.timeline({ paused: true });
 
-  tl.to({}, { duration: 8 }).to(ref.current, {
+  tl.to({}, { duration: 0.8 }).to(ref.current, {
     scale: 1,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.2,
     ease: "power2.inOut",
-  }).to({}, { duration: 0.5 })
+  })
 
   return tl;
 }
@@ -128,12 +128,12 @@ export const animationMes9 = (ref: RefObject<HTMLDivElement | null>) => {
 export const animationMes10 = (ref: RefObject<HTMLDivElement | null>) => {
   const tl = gsap.timeline({ paused: true });
 
-  tl.to({}, { duration: 9 }).to(ref.current, {
+  tl.to({}, { duration: 0.9 }).to(ref.current, {
     scale: 1,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.2,
     ease: "power2.inOut",
-  }).to({}, { duration: 0.5 })
+  })
 
 
   return tl;
@@ -142,12 +142,12 @@ export const animationMes10 = (ref: RefObject<HTMLDivElement | null>) => {
 export const animationMes11 = (ref: RefObject<HTMLDivElement | null>) => {
   const tl = gsap.timeline({ paused: true });
 
-  tl.to({}, { duration: 10 }).to(ref.current, {
+  tl.to({}, { duration: 1.0 }).to(ref.current, {
     scale: 1,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.2,
     ease: "power2.inOut",
-  }).to({}, { duration: 0.5 })
+  })
 
 
   return tl;
@@ -156,12 +156,12 @@ export const animationMes11 = (ref: RefObject<HTMLDivElement | null>) => {
 export const animationMes12 = (ref: RefObject<HTMLDivElement | null>) => {
   const tl = gsap.timeline({ paused: true });
 
-  tl.to({}, { duration: 11 }).to(ref.current, {
+  tl.to({}, { duration: 1.1 }).to(ref.current, {
     scale: 1,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.2,
     ease: "power2.inOut",
-  }).to({}, { duration: 0.5 })
+  })
 
 
   return tl;

@@ -36,7 +36,7 @@ export const AppHeader: FC = () => {
         <Tab active={navigationContext[0] === 'about'} title={'О нас'} onClick={() => tabContext[1]('about')} />
         <Tab active={navigationContext[0] === 'service'} title={'Услуги'} onClick={() => tabContext[1]('service')} />
         <Tab active={navigationContext[0] === 'price'} title={'Цены'} onClick={() => tabContext[1]('price')} />
-        <Tab active={false} title={'Новости'} onClick={() => {}} />
+        <Tab active={navigationContext[0] === 'news'} title={'Новости'} onClick={() => tabContext[1]('news')} />
       </nav>
       <div className={`${styles.button_ref}`}>
         <Button active={buttonContext[0] === 'highlight'} className={`${buttonContext[0] !== '' && buttonActionSelect(buttonContext[0])}`} title={'Заявка на проживание'} onClick={() => {}} />

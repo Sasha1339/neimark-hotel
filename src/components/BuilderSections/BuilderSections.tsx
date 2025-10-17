@@ -9,6 +9,7 @@ import {NavigationContext} from "@/providers/NavigationContext";
 import {TabContext} from "@/providers/TabContext";
 import {gsap} from "gsap";
 import {ServiceComponent} from "@components/ServiceComponent/ServiceComponent";
+import {NewsComponent} from "@components/NewsComponent/NewsComponent";
 
 type Props = {}
 
@@ -25,6 +26,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
   const aboutRef = useRef<HTMLDivElement>(null);
   const priceRef = useRef<HTMLDivElement>(null);
   const serviceRef = useRef<HTMLDivElement>(null);
+  const newsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
       switch (tabContext[0]) {
@@ -64,6 +66,15 @@ export const BuilderSections: FC<Props> = ({...props}) => {
           });
         }
           break;
+        case 'news': {
+          const mainTopParent = newsRef.current!.getBoundingClientRect().top - newsRef.current!.parentElement!.getBoundingClientRect().top;
+          gsap.to(newsRef.current!.parentElement!, {
+            scrollTop: newsRef.current!.parentElement!.scrollTop + mainTopParent,
+            duration: 0.4,
+            ease: 'power2.inOut'
+          });
+        }
+          break;
       }
   }, [tabContext[0]]);
 
@@ -72,9 +83,12 @@ export const BuilderSections: FC<Props> = ({...props}) => {
     const aboutTopParent = aboutRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
     const serviceTopParent = serviceRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
     const priceTopParent = priceRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
+    const newsTopParent = newsRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
 
 
-    if (priceTopParent < 400) {
+    if (newsTopParent < 400) {
+      navigationContext[1]('news');
+    }else if (priceTopParent < 400) {
       navigationContext[1]('price');
     } else if (serviceTopParent < 400) {
       navigationContext[1]('service');
@@ -104,6 +118,8 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <ServiceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={priceRef} className={styles.ref_navigation}></div>
         <ReservedPriceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <div ref={newsRef} className={styles.ref_navigation}></div>
+        <NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
       </div>
     </main>
   )

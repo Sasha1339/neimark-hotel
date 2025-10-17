@@ -2,6 +2,7 @@
     width: 100%;
     height: 150vh;
     background-color: var(--main-black);
+    border-top: 1px solid var(--text-color-default);
 }
 
 .content {
