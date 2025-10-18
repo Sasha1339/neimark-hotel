@@ -9,7 +9,8 @@
     position: sticky;
     top: 82px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
     width: 100%;
     height: calc(100vh - 82px);
     padding-bottom: 82px;
