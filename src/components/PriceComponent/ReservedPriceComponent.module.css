@@ -5,6 +5,10 @@
     border-top: 1px solid var(--text-color-default);
 }
 
+.main_mobile {
+    height: 100vh;
+}
+
 .content {
     position: sticky;
     top: 82px;
@@ -17,11 +21,20 @@
     box-sizing: border-box;
 }
 
+.content_mobile {
+    display: flex;
+    overflow-x: scroll;
+    flex-direction: row;
+    height: calc(80vh);
+    scrollbar-color: var(--text-color-active) var(--main-black);
+}
+
 .room {
     box-sizing: border-box;
     padding: 50px;
     opacity: 0;
 }
+
 
 .alpha {
     transform: translateX(-200%);
@@ -33,4 +46,9 @@
 
 .omega {
     transform: translateX(200%);
+}
+
+
+.room_mobile {
+    transform: none;
 }

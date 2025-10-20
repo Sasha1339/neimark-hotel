@@ -48,22 +48,23 @@ export const GammaRoomComponent: FC<Props> = ({ onBack, ...props}) => {
   }
 
   return (
-    <div ref={contentRef} className={styles.content} style={{backgroundImage: 'url(' + getImageUrl(index) + ')'}}>
-      <div className={styles.gradient_element}>
-        <div className={styles.title}>Номер Гамма</div>
+    <div ref={contentRef} className={`${styles.content} ${window.innerWidth < 700 && styles.content_mobile}`}
+         style={{backgroundImage: 'url(' + getImageUrl(index) + ')'}}>
+      <div className={`${styles.gradient_element} ${window.innerWidth < 700 && styles.gradient_element_mobile}`}>
+        <div className={`${styles.title} ${window.innerWidth < 700 && styles.title_mobile}`}>Номер Гамма</div>
 
-        <div className={styles.title}>От 16 тыс. руб.</div>
+        <div className={`${styles.title} ${window.innerWidth < 700 && styles.title_mobile}`}>От 16 тыс. руб.</div>
 
-        <ul className={styles.paragraph}>
+        <ul className={`${styles.paragraph} ${window.innerWidth < 700 && styles.paragraph_mobile}`}>
           <li>Трехместный номер</li>
           <li>Общая площадь 33,3 м</li>
           <li>Две одинаковые спальни</li>
           <li>Два санузла</li>
         </ul>
-        <Button title={'Забронировать сейчас'} onClick={() => {
+        <Button className={`${window.innerWidth < 700 && styles.button_mobile}`} title={'Забронировать сейчас'} onClick={() => {
         }}/>
       </div>
-      {onBack && <Button className={styles.button_back} title={'<'} onClick={onClick} />}
+      {onBack && <Button className={styles.button_back} title={'<'} onClick={onClick}/>}
 
     </div>
   )

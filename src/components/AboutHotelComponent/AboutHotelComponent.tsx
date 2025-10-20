@@ -213,22 +213,22 @@ export const AboutHotelComponent: FC<Props> = ({scrollerRef}) => {
   return (
     <section ref={triggerRef} className={styles.main}>
       <div ref={contentRef} className={styles.description_section}>
-        <HotelPreview ref={hotelPreviewRef} className={styles.hotel_preview} />
+        {window.innerWidth > 700 &&  <><HotelPreview ref={hotelPreviewRef} className={styles.hotel_preview} />
         <Pointer ref={pointerRef} className={styles.pointer} />
 
           <RuleOne ref={ruleOneRef} className={styles.rule_one} />
           <RuleTwo ref={ruleTwoRef} className={styles.rule_two} />
           <RuleThree ref={ruleThreeRef} className={styles.rule_three} />
-          <RuleFour ref={ruleFourRef} className={styles.rule_four} />
+          <RuleFour ref={ruleFourRef} className={styles.rule_four} /> </>}
 
         <div ref={documentsBackRef} className={styles.documentsBack}></div>
 
-        <div ref={conditionRef} className={`${styles.description_row} ${styles.condition}`}>
+        <div ref={conditionRef} className={`${styles.description_row} ${styles.condition} ${window.innerWidth < 700 && styles.description_row_mobile}`}>
           <h1 className={styles.title_row}>Условия проживания</h1>
-          <img className={styles.image_row}
+          <img className={`${styles.image_row} ${window.innerWidth < 700 && styles.image_row_mobile}`}
                src={'https://cdn.b12.io/client_media/VhBHooYp/f96472b8-8445-11f0-9509-0242ac110002-IMG_9216.WEBP'}
                alt={''}/>
-          <div className={styles.text_row}>Гостиницы Неймарк предлагают различные типы комнат, чтобы удовлетворить
+          <div className={`${styles.text_row} ${window.innerWidth < 700 && styles.text_row_mobile}`}>Гостиницы Неймарк предлагают различные типы комнат, чтобы удовлетворить
             потребности студентов и их родителей. Вы можете выбрать между одноместными, двухместными и многоместными
             номерами. Каждый номер оснащён всем необходимым для комфортного проживания: мебель, интернет и уборка. Это
             идеальный выбор для студентов, которые ищут доступное и удобное место для жизни во время учёбы. Мы заботимся
@@ -237,12 +237,12 @@ export const AboutHotelComponent: FC<Props> = ({scrollerRef}) => {
           </div>
         </div>
 
-        <div ref={ruleRef} className={`${styles.description_row} ${styles.rule}`}>
+        <div ref={ruleRef} className={`${styles.description_row} ${styles.rule} ${window.innerWidth < 700 && styles.description_row_mobile}`}>
           <h1 className={styles.title_row}>Правила проживания</h1>
-          <img className={styles.image_row}
+          <img className={`${styles.image_row} ${window.innerWidth < 700 && styles.image_row_mobile}`}
                src={'https://cdn.b12.io/client_media/VhBHooYp/83e592b2-84b2-11f0-ad8d-0242ac110002-IMG_9221.WEBP'}
                alt={''}/>
-          <div className={styles.text_row}>В гостиницах Неймарк установлены правила проживания, которые помогут создать
+          <div className={`${styles.text_row} ${window.innerWidth < 700 && styles.text_row_mobile}`}>В гостиницах Неймарк установлены правила проживания, которые помогут создать
             комфортную и безопасную атмосферу для всех гостей. Мы стремимся к тому, чтобы каждый постоялец чувствовал
             себя уютно и мог сосредоточиться на учёбе. В правилах описаны основные моменты, такие как время тишины,
             использование общих пространств и порядок выхода из номеров. Ознакомление с правилами обязательно для всех
@@ -250,12 +250,12 @@ export const AboutHotelComponent: FC<Props> = ({scrollerRef}) => {
           </div>
         </div>
 
-        <div ref={documentsRef} className={`${styles.description_row} ${styles.documents}`}>
+        <div ref={documentsRef} className={`${styles.description_row} ${styles.documents} ${window.innerWidth < 700 && styles.description_row_mobile}`}>
           <h1 className={styles.title_row}>Документы при заселении</h1>
-          <img className={styles.image_row}
+          <img className={`${styles.image_row} ${window.innerWidth < 700 && styles.image_row_mobile}`}
                src={'https://cdn.b12.io/client_media/VhBHooYp/f96472b8-8445-11f0-9509-0242ac110002-IMG_9216.WEBP'}
                alt={''}/>
-          <div className={styles.text_row}>При заселении в гостиницы Неймарк необходимо предоставить определённые
+          <div className={`${styles.text_row} ${window.innerWidth < 700 && styles.text_row_mobile}`}>При заселении в гостиницы Неймарк необходимо предоставить определённые
             документы. Это может включать паспорт, студенческий билет и другие удостоверяющие документы. Мы понимаем,
             что процесс может быть сложным, поэтому наши сотрудники готовы помочь вам на каждом этапе. Правильная
             подготовка документов ускорит процесс заселения и позволит вам быстрее начать наслаждаться комфортом нашего

@@ -57,11 +57,11 @@ export const ReservedPriceComponent: FC<Props> = ({scrollerRef, ...props}) => {
   }, []);
 
   return (
-    <section ref={triggerRef} className={styles.main}>
-      <div className={styles.content}>
-        <div ref={alphaRef} className={`${styles.room} ${styles.alpha}`}><AlphaRoomComponent /></div>
-        <div ref={gammaRef} className={`${styles.room} ${styles.gamma}`}><GammaRoomComponent /></div>
-        <div ref={omegaRef} className={`${styles.room} ${styles.omega}`}><OmegaRoomComponent /></div>
+    <section ref={triggerRef} className={`${styles.main} ${window.innerWidth < 700 && styles.main_mobile}`}>
+      <div className={`${styles.content} ${window.innerWidth < 700 && styles.content_mobile}`}>
+        <div ref={alphaRef} className={`${styles.room} ${styles.alpha} ${window.innerWidth < 700 && styles.room_mobile}`}><AlphaRoomComponent /></div>
+        <div ref={gammaRef} className={`${styles.room} ${styles.gamma} ${window.innerWidth < 700 && styles.room_mobile}`}><GammaRoomComponent /></div>
+        <div ref={omegaRef} className={`${styles.room} ${styles.omega} ${window.innerWidth < 700 && styles.room_mobile}`}><OmegaRoomComponent /></div>
       </div>
     </section>
   )

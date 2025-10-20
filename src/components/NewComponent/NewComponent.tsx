@@ -13,9 +13,9 @@ export const NewComponent: FC<Props> = ({src,title, description, ...props}) => {
   return (
 
     <div className={styles.main}>
-      <img className={styles.image} src={src} />
+      <img className={`${styles.image} ${window.innerWidth < 700 && styles.image_mobile}`} src={src} />
       <div className={styles.title}>{title}</div>
-      <div className={styles.description}>{description}</div>
+      <div className={`${styles.description} ${window.innerWidth < 700 && styles.description_mobile}`}>{description}</div>
     </div>
 
   )

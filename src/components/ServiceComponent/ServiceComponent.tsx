@@ -62,42 +62,42 @@ export const ServiceComponent: FC<Props> = ({scrollerRef, ...props}) => {
   return (
     <section ref={triggerRef} className={styles.main}>
       <div className={styles.background_services}></div>
-      <div className={styles.logo_wrapper}>
+      <div className={`${styles.logo_wrapper} ${window.innerWidth < 700 && styles.logo_wrapper_mobile}`}>
         <Neimark className={styles.logo}/>
       </div>
-      <div className={styles.button_wrapper}>
+      <div className={`${styles.button_wrapper} ${window.innerWidth < 700 && styles.button_wrapper_mobile}`}>
         <Button active={true} className={styles.button_effect} title={'Забронируй номер уже сейчас!'} onClick={() => {}} />
       </div>
-      <div className={styles.content}>
-        <div ref={mesBot1Ref} className={styles.chat_block_left}>Регулярный клининг номеров
+      <div className={`${styles.content} ${window.innerWidth < 700 && styles.content_mobile}`}>
+        <div ref={mesBot1Ref} className={`${styles.chat_block_left} ${window.innerWidth < 700 && styles.chat_block_left_mobile}`}>Регулярный клининг номеров
         </div>
-        <div ref={mesBot2Ref} className={styles.chat_block_left}>Консьерж сервис
+        <div ref={mesBot2Ref} className={`${styles.chat_block_left} ${window.innerWidth < 700 && styles.chat_block_left_mobile}`}>Консьерж сервис
         </div>
-        <div ref={mesBot3Ref} className={styles.chat_block_left}>Аренда оборудования
+        <div ref={mesBot3Ref} className={`${styles.chat_block_left} ${window.innerWidth < 700 && styles.chat_block_left_mobile}`}>Аренда оборудования
         </div>
-        <div ref={mesBot4Ref} className={styles.chat_block_left}>Онлайн регистрация гостевого пропуска
+        <div ref={mesBot4Ref} className={`${styles.chat_block_left} ${window.innerWidth < 700 && styles.chat_block_left_mobile}`}>Онлайн регистрация гостевого пропуска
         </div>
-        <div ref={mesBot5Ref} className={styles.chat_block_left}>Аренда помещений
+        <div ref={mesBot5Ref} className={`${styles.chat_block_left} ${window.innerWidth < 700 && styles.chat_block_left_mobile}`}>Аренда помещений
         </div>
-        <div ref={mesBot6Ref} className={styles.chat_block_left}>
+        <div ref={mesBot6Ref} className={`${styles.chat_block_left} ${window.innerWidth < 700 && styles.chat_block_left_mobile}`}>
           Система мобильного доступа
         </div>
-        <div ref={mesBot7Ref} className={styles.chat_block_left}>
+        <div ref={mesBot7Ref} className={`${styles.chat_block_left} ${window.innerWidth < 700 && styles.chat_block_left_mobile}`}>
           Онлайн оплата услуг
         </div>
-        <div ref={mesBot8Ref} className={styles.chat_block_left}>
+        <div ref={mesBot8Ref} className={`${styles.chat_block_left} ${window.innerWidth < 700 && styles.chat_block_left_mobile}`}>
           Свободное пользование гостинной
         </div>
-        <div ref={mesBot9Ref} className={styles.chat_block_left}>
+        <div ref={mesBot9Ref} className={`${styles.chat_block_left} ${window.innerWidth < 700 && styles.chat_block_left_mobile}`}>
           Комфортные бытовые условия
         </div>
-        <div ref={mesBot10Ref} className={styles.chat_block_left}>
+        <div ref={mesBot10Ref} className={`${styles.chat_block_left} ${window.innerWidth < 700 && styles.chat_block_left_mobile}`}>
           Шаговая доступность маркетплейсов
         </div>
-        <div ref={mesBot11Ref} className={styles.chat_block_left}>
+        <div ref={mesBot11Ref} className={`${styles.chat_block_left} ${window.innerWidth < 700 && styles.chat_block_left_mobile}`}>
           Кофейни на территории гостиницы
         </div>
-        <div ref={mesBot12Ref} className={styles.chat_block_left}>
+        <div ref={mesBot12Ref} className={`${styles.chat_block_left} ${window.innerWidth < 700 && styles.chat_block_left_mobile}`}>
           И не только...
         </div>
       </div>

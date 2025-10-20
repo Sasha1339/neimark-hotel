@@ -48,18 +48,18 @@ export const AlphaRoomComponent: FC<Props> = ({ onBack, ...props}) => {
   }
 
   return (
-    <div ref={contentRef} className={styles.content} style={{backgroundImage: 'url(' + getImageUrl(index) + ')'}}>
-      <div className={styles.gradient_element}>
-        <div className={styles.title}>Номер Альфа</div>
-        <div className={styles.title}>от 12,5 тыс. руб.</div>
-        <ul className={styles.paragraph}>
+    <div ref={contentRef} className={`${styles.content} ${window.innerWidth < 700 && styles.content_mobile}`} style={{backgroundImage: 'url(' + getImageUrl(index) + ')'}}>
+      <div className={`${styles.gradient_element} ${window.innerWidth < 700 && styles.gradient_element_mobile}`}>
+        <div className={`${styles.title} ${window.innerWidth < 700 && styles.title_mobile}`}>Номер Альфа</div>
+        <div className={`${styles.title} ${window.innerWidth < 700 && styles.title_mobile}`}>от 12,5 тыс. руб.</div>
+        <ul className={`${styles.paragraph} ${window.innerWidth < 700 && styles.paragraph_mobile}`}>
           <li>Четырехместный номер</li>
           <li>Общая площадь 35,5 м</li>
           <li>Две одинаковые спальни</li>
           <li>Два санузла</li>
           <li>Общая прихожая</li>
         </ul>
-        <Button title={'Забронировать сейчас'} onClick={() => {}} />
+        <Button className={`${window.innerWidth < 700 && styles.button_mobile}`} title={'Забронировать сейчас'} onClick={() => {}} />
       </div>
       {onBack && <Button className={styles.button_back} title={'<'} onClick={onClick} />}
 

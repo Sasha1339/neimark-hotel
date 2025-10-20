@@ -27,6 +27,13 @@
     color: var(--text-color-default-opacity-50);
 }
 
+.logo_wrapper_mobile {
+    bottom: auto;
+    top: 82px;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
 .logo {
     height: 36px;
 }
@@ -42,6 +49,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.button_wrapper_mobile {
+    bottom: 10px;
 }
 
 .button_effect {
@@ -85,11 +96,8 @@
 }
 
 .chat_block_left {
-    width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 10px 10px 10px 0;
-    box-sizing: border-box;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -99,11 +107,16 @@
     color: var(--text-color-default);
 }
 
+.chat_block_left_mobile {
+    font-size: 12px;
+    padding: 10px;
+}
+
 .content {
     position: absolute;
     top: 82px;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(6, 1fr);
     width: 100%;
     padding: 82px 20% 20% 20%;
@@ -111,6 +124,12 @@
     box-sizing: border-box;
     column-gap: 40px;
     row-gap: 20px;
+}
+
+.content_mobile {
+    top: 162px;
+    padding: 0 5% 25% 5%;
+    height: calc(70vh - 82px);
 }
 
 .right_block {

@@ -95,6 +95,18 @@
     position: absolute;
 }
 
+.description_row_mobile {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .condition {
     transform: translateX(-100vw);
 }
@@ -117,7 +129,16 @@
     height: 30vh;
 }
 
+.image_row_mobile {
+    width: 100%;
+    height: 20vh;
+}
+
 .text_row {
     font-size: 18px;
     text-align: justify;
+}
+
+.text_row_mobile {
+    font-size: 14px;
 }
