@@ -80,7 +80,7 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
         end: "20% top",
         scrub: true,                // плавное связывание со скроллом
       },
-      height: '600px'
+      height: window.innerWidth < 700 ? '350px' : '600px'
     });
 
     gsap.to(nameRef.current, {
@@ -117,12 +117,12 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
 
     tl.fromTo(
       imageTwoRef.current,
-      { xPercent: 100, opacity: 0 },
+      { xPercent: 110, opacity: 0 },
       { xPercent: 0, opacity: 1, ease: "power2.out", duration: 1 },
       0
     ).to(
       imageOneRef.current,
-      { xPercent: -100, opacity: 0.6, ease: "power2.inOut", duration: 1 },
+      { xPercent: -110, opacity: 0.6, ease: "power2.inOut", duration: 1 },
       0
     );
 
@@ -154,18 +154,18 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
         <div ref={backgroundOneRef} className={styles.background_image_one} style={{backgroundImage: 'url("https://cdn.b12.io/client_media/VhBHooYp/468ba60c-8442-11f0-b86e-0242ac110002-IMG_9217.WEBP")'}}></div>
         <div ref={backgroundTwoRef} className={styles.background_image_two} style={{backgroundImage: 'url("https://cdn.b12.io/client_media/VhBHooYp/1a8d17fa-8446-11f0-9fa8-0242ac110002-IMG_9225.WEBP")'}}></div>
         <article className={styles.article_element}>
-          <div ref={nameRef} className={styles.text_title_active}>
+          <div ref={nameRef} className={`${styles.text_title_active} ${window.innerWidth < 700 && styles.text_title_mobile}`}>
             Гостиница Неймарк
           </div>
-          <div className={styles.text_title}>
+          <div className={`${styles.text_title} ${window.innerWidth < 700 && styles.text_title_mobile}`}>
             Современное проживание для студентов ИТ-направлений
           </div>
           <article ref={articleRef} className={styles.article_element_horizontal}>
-            <div className={styles.image_block}>
-              <img ref={imageOneRef} className={styles.image_element}
+            <div className={`${styles.image_block} ${window.innerWidth < 700 && styles.image_block_mobile}`}>
+              <img ref={imageOneRef} className={`${styles.image_element} ${window.innerWidth < 700 && styles.image_element_mobile}`}
                    src='https://cdn.b12.io/client_media/VhBHooYp/468ba60c-8442-11f0-b86e-0242ac110002-IMG_9217.WEBP'
                    alt={'Здесь изображение номера'}/>
-              <div className={styles.text_block}>
+              <div className={`${styles.text_block} ${window.innerWidth < 700 && styles.text_block_mobile}`}>
                 <ul>
                   <li>Центр города и университеты рядом</li>
                   <br/>
@@ -176,11 +176,11 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
               </div>
             </div>
 
-            <div className={styles.image_block}>
-              <img ref={imageTwoRef} className={styles.image_element}
+            <div className={`${styles.image_block} ${window.innerWidth < 700 && styles.image_block_mobile}`}>
+              <img ref={imageTwoRef} className={`${styles.image_element} ${window.innerWidth < 700 && styles.image_element_mobile}`}
                    src='https://cdn.b12.io/client_media/VhBHooYp/1a8d17fa-8446-11f0-9fa8-0242ac110002-IMG_9225.WEBP'
                    alt={'Здесь изображение номера'}/>
-              <div className={styles.text_block}>
+              <div className={`${styles.text_block} ${window.innerWidth < 700 && styles.text_block_mobile}`}>
                 <ul>
                   <li>Регулярная уборка и смена белья</li>
                   <br/>

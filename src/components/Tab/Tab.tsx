@@ -1,5 +1,6 @@
 import {FC, SyntheticEvent} from "react";
 import styles from './Tab.module.css';
+import {isMobile} from 'react-device-detect';
 
 type Props = {
   active: boolean;

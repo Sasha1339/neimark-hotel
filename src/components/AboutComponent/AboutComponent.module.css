@@ -65,6 +65,10 @@
     height: 100%;
 }
 
+.image_block_mobile {
+    width: 40vw;
+}
+
 .text_block {
     position: absolute;
     top: 0;
@@ -79,6 +83,10 @@
     text-align: start;
 }
 
+.text_block_mobile {
+    font-size: 14px;
+}
+
 .image_element {
     width: 400px;
     height: 100%;
@@ -87,6 +95,10 @@
     transition: 0.5s;
     /*transition: transform 0.3s ease-out;*/
     /*will-change: transform, opacity;*/
+}
+
+.image_element_mobile {
+    width: 40vw;
 }
 
 .image_element:hover {
@@ -114,6 +126,7 @@
     text-align: center;
 }
 
+
 .text_title_active {
     font-size: 24px;
     width: 25vw;
@@ -121,6 +134,14 @@
     color: var(--text-color-active);
     opacity: 0;
 }
+
+
+.text_title_mobile {
+    font-size: 16px;
+    width: 80vw;
+}
+
+
 
 
 .image_element_hidden {

@@ -13,6 +13,12 @@
     justify-content: center;
 }
 
+@media (max-width: 768px) {
+    .tab {
+        font-size: 10px;
+    }
+}
+
 .tab_active {
     color: var(--text-color-active);
     border-bottom: 1px solid var(--text-color-active);

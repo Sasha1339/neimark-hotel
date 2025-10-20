@@ -44,7 +44,7 @@ export const HomeComponent: FC<Props> = ({imageRef, blurRef, scrollerRef}) => {
       scale: 4
     });
 
-    gsap.to(buttonRef.current, {
+    window.innerWidth >= 700 && gsap.to(buttonRef.current, {
       scrollTrigger: {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
@@ -84,7 +84,7 @@ export const HomeComponent: FC<Props> = ({imageRef, blurRef, scrollerRef}) => {
 
   return (
     <section ref={triggerRef} className={styles.main}>
-        <div className={styles.description_section}>
+        <div className={`${styles.description_section} ${window.innerWidth < 700 && styles.description_section_mobile}`}>
           <p className={styles.main_title}>Гостиница Неймарк</p>
           <p className={styles.title}>Живи там, где строится будущее</p>
           <Button ref={buttonRef} title={'Заявка на проживание'} onClick={() => {}} />

@@ -29,8 +29,8 @@ export const AppHeader: FC = () => {
   }, [tabContext[0]]);
 
   return (
-    <header className={styles.header}>
-      <div></div>
+    <header className={`${styles.header} ${window.innerWidth <= 700 && styles.header_mobile}`}>
+      {window.innerWidth > 700 && <div></div>}
       <nav className={styles.navigation}>
         <Tab active={navigationContext[0] === 'home'} title={'Главная'} onClick={() => tabContext[1]('home')} />
         <Tab active={navigationContext[0] === 'about'} title={'О нас'} onClick={() => tabContext[1]('about')} />
@@ -38,9 +38,9 @@ export const AppHeader: FC = () => {
         <Tab active={navigationContext[0] === 'price'} title={'Цены'} onClick={() => tabContext[1]('price')} />
         <Tab active={navigationContext[0] === 'news'} title={'Новости'} onClick={() => tabContext[1]('news')} />
       </nav>
-      <div className={`${styles.button_ref}`}>
+      {window.innerWidth > 700 && <div className={`${styles.button_ref}`}>
         <Button active={buttonContext[0] === 'highlight'} className={`${buttonContext[0] !== '' && buttonActionSelect(buttonContext[0])}`} title={'Заявка на проживание'} onClick={() => {}} />
-      </div>
+      </div>}
     </header>
   )
 }

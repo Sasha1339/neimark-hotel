@@ -12,6 +12,13 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.header_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .navigation {
     height: 40px;
     display: flex;
