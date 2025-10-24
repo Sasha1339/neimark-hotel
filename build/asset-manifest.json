@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.93f1449c.css",
-    "main.js": "/static/js/main.2b0612d4.js",
+    "main.js": "/static/js/main.d1c97da8.js",
     "static/js/453.c9fd5b68.chunk.js": "/static/js/453.c9fd5b68.chunk.js",
     "static/media/Paratype - Biform Regular.otf": "/static/media/Paratype - Biform Regular.30ea029c0d3f548d92ff.otf",
     "static/media/sticker_two.svg": "/static/media/sticker_two.26f9b5c64a82851d8ddbd13fbe36d481.svg",
@@ -13,11 +13,11 @@
     "static/media/logo.svg": "/static/media/logo.c63ab7e1fd289ea2b3c2fa2ff5c03d25.svg",
     "index.html": "/index.html",
     "main.93f1449c.css.map": "/static/css/main.93f1449c.css.map",
-    "main.2b0612d4.js.map": "/static/js/main.2b0612d4.js.map",
+    "main.d1c97da8.js.map": "/static/js/main.d1c97da8.js.map",
     "453.c9fd5b68.chunk.js.map": "/static/js/453.c9fd5b68.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93f1449c.css",
-    "static/js/main.2b0612d4.js"
+    "static/js/main.d1c97da8.js"
   ]
 }
