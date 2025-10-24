@@ -87,7 +87,7 @@
 
 .description_row {
     display: grid;
-    height: 60%;
+    height: 80%;
     width: 60%;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 5fr;
@@ -135,7 +135,7 @@
 }
 
 .text_row {
-    font-size: 18px;
+    font-size: 2vh;
     text-align: justify;
 }
 

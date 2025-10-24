@@ -80,7 +80,7 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
         end: "20% top",
         scrub: true,                // плавное связывание со скроллом
       },
-      height: window.innerWidth < 700 ? '350px' : '600px'
+      height: window.innerWidth < 700 ? '350px' : '100%'
     });
 
     gsap.to(nameRef.current, {
