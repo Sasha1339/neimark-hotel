@@ -1,15 +1,11 @@
 import React, {FC, RefObject, SyntheticEvent, useContext, useEffect, useRef} from "react";
 import styles from "./BuilderSections.module.css";
 import {HomeComponent} from "../HomeComponent/HomeComponent";
-import {AboutComponent} from "../AboutComponent/AboutComponent";
-import {PriceComponents} from "@components/PriceComponent/PriceComponents";
-import {ReservedPriceComponent} from "@components/PriceComponent/ReservedPriceComponent";
-import {AboutHotelComponent} from "@components/AboutHotelComponent/AboutHotelComponent";
 import {NavigationContext} from "@/providers/NavigationContext";
 import {TabContext} from "@/providers/TabContext";
 import {gsap} from "gsap";
-import {ServiceComponent} from "@components/ServiceComponent/ServiceComponent";
-import {NewsComponent} from "@components/NewsComponent/NewsComponent";
+import {AboutComponent} from "@components/AboutComponent/AboutComponent";
+import {AccommodationComponent} from "@components/AccommodationComponent/AccommodationComponent";
 
 type Props = {}
 
@@ -18,8 +14,6 @@ export const BuilderSections: FC<Props> = ({...props}) => {
   const navigationContext = useContext(NavigationContext);
   const tabContext = useContext(TabContext);
 
-  const imageRef = useRef<HTMLImageElement>(null);
-  const blurRef = useRef<HTMLImageElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const homeRef = useRef<HTMLDivElement>(null);
@@ -78,48 +72,35 @@ export const BuilderSections: FC<Props> = ({...props}) => {
       }
   }, [tabContext[0]]);
 
-  const onScrollIngredients = (event: SyntheticEvent) => {
-    const homeTopParent = homeRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
-    const aboutTopParent = aboutRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
-    const serviceTopParent = serviceRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
-    const priceTopParent = priceRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
-    const newsTopParent = newsRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
-
-
-    if (newsTopParent < 400) {
-      navigationContext[1]('news');
-    }else if (priceTopParent < 400) {
-      navigationContext[1]('price');
-    } else if (serviceTopParent < 400) {
-      navigationContext[1]('service');
-    } else if (aboutTopParent < 400) {
-      navigationContext[1]('about');
-    } else {
-      navigationContext[1]('home');
-    }
-  }
+  // const onScrollIngredients = (event: SyntheticEvent) => {
+  //   const homeTopParent = homeRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
+  //   const aboutTopParent = aboutRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
+  //   const serviceTopParent = serviceRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
+  //   const priceTopParent = priceRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
+  //   const newsTopParent = newsRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
+  //
+  //
+  //   if (newsTopParent < 400) {
+  //     navigationContext[1]('news');
+  //   }else if (priceTopParent < 400) {
+  //     navigationContext[1]('price');
+  //   } else if (serviceTopParent < 400) {
+  //     navigationContext[1]('service');
+  //   } else if (aboutTopParent < 400) {
+  //     navigationContext[1]('about');
+  //   } else {
+  //     navigationContext[1]('home');
+  //   }
+  // }
 
   return (
     <main className={styles.main_section}>
-      <img ref={imageRef} className={styles.image_container}
-           src={'https://cdn.b12.io/client_media/VhBHooYp/a92276b6-84a5-11f0-aec8-0242ac110002-46-hero_image.jpeg'}
-           alt={'Здесь фото гостиницы'}/>
-      <div ref={blurRef} className={styles.frame_blur}></div>
-      <div ref={scrollRef} className={styles.container} onScroll={onScrollIngredients}>
+      <div ref={scrollRef} className={styles.container}>
         <div ref={homeRef} className={styles.ref_navigation}></div>
-        <HomeComponent imageRef={imageRef as RefObject<HTMLElement>}
-                       blurRef={blurRef as RefObject<HTMLElement>}
-                       scrollerRef={scrollRef as RefObject<HTMLElement>}
-        />
-        <div ref={aboutRef} className={styles.ref_navigation}></div>
+        <HomeComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <AboutComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <AboutHotelComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <div ref={serviceRef} className={styles.ref_navigation}></div>
-        <ServiceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <div ref={priceRef} className={styles.ref_navigation}></div>
-        <ReservedPriceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <div ref={newsRef} className={styles.ref_navigation}></div>
-        <NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <div style={{width: '100vw', height: '400vh'}}></div>
       </div>
     </main>
   )

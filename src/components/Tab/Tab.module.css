@@ -3,7 +3,7 @@
     font-size: 16px;
     transition: 0.5s;
     color: var(--text-color-default);
-    border-bottom: 1px solid var(--text-color-default);
+    border-bottom: 1px solid transparent;
     padding: 10px;
     box-sizing: border-box;
     user-select: none;

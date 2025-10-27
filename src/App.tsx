@@ -13,7 +13,7 @@ function App() {
       <NavigationProvider>
         <TabProvider>
           <ButtonProvider>
-            <AppHeader/>
+            {/*<AppHeader/>*/}
             <BuilderSections />
           </ButtonProvider>
         </TabProvider>

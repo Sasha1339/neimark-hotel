@@ -10,15 +10,29 @@
     background-color: var(--text-color-active);
     outline: none;
     border: none;
+    position: relative;
+}
+
+.button:hover::after {
+    top: -10px;
+    left: -10px;
 }
 
 .button:hover {
-    box-shadow: 0 0 30px var(--text-color-default);
-    transform: scale(1.03);
+    color: var(--text-color-active);
+    background-color: var(--text-color-default);
 }
 
-.button:active {
-    transform: scale(0.98);
+.button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 10px;
+    transition: 0.3s;
+    border: 1px solid var(--text-color-active);
+    z-index: -1;
 }
 
 .button_element__highlight {

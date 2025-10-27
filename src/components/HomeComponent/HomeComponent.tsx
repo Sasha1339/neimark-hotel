@@ -2,27 +2,24 @@ import {FC, RefObject, useContext, useEffect, useRef} from "react";
 import styles from "./HomeComponent.module.css";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {Button} from "../Button/Button";
-import {ButtonContext} from "../../providers/ButtonContext";
+import {Tab} from "@components/Tab/Tab";
+import {ReactComponent as Logo} from "@/assets/svg/logo.svg";
+import {Button} from "@components/Button/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
 type Props = {
-  imageRef: RefObject<HTMLElement>;
-  blurRef: RefObject<HTMLElement>;
   scrollerRef: RefObject<HTMLElement>;
 }
 
-export const HomeComponent: FC<Props> = ({imageRef, blurRef, scrollerRef}) => {
+export const HomeComponent: FC<Props> = ({scrollerRef}) => {
 
   const triggerRef = useRef<HTMLElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  const buttonContext = useContext(ButtonContext);
+  const imageBG = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!imageRef.current || !scrollerRef.current || !blurRef.current) return;
 
-    gsap.to(imageRef.current, {
+    gsap.to(imageBG.current, {
       scrollTrigger: {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
@@ -30,65 +27,43 @@ export const HomeComponent: FC<Props> = ({imageRef, blurRef, scrollerRef}) => {
         end: "bottom top",
         scrub: true
       },
-      scale: 4
+      backgroundPosition: "center 100%"
     });
 
-    gsap.to(imageRef.current, {
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        scroller: scrollerRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-      },
-      scale: 4
-    });
-
-    window.innerWidth >= 700 && gsap.to(buttonRef.current, {
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        scroller: scrollerRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-      },
-      x: '-200%'
-    });
-
-    gsap.to(blurRef.current, {
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        scroller: scrollerRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-      },
-      onUpdate: function() {
-        const progress = this.progress(); // 0 → 1
-        const blurValue = 4 * (1 - progress); // 4 → 0
-        if (progress === 1) {
-          buttonContext[1]('')
-        } else {
-          buttonContext[1]('hidden')
-        }
-
-        if (blurRef.current) {
-          blurRef.current.style.backdropFilter = `blur(${blurValue}px)`;
-        }
-      }
-    })
-
-
-
-  }, [imageRef, scrollerRef, blurRef]);
+  }, [scrollerRef]);
 
   return (
     <section ref={triggerRef} className={styles.main}>
-        <div className={`${styles.description_section} ${window.innerWidth < 700 && styles.description_section_mobile}`}>
-          <p className={styles.main_title}>Гостиница Неймарк</p>
-          <p className={styles.title}>Живи там, где строится будущее</p>
-          <Button ref={buttonRef} title={'Заявка на проживание'} onClick={() => {}} />
+      <div ref={imageBG} className={`${styles.description_section}`}>
+        <div className={`${styles.gradient_overlay}`}></div>
+        <header className={`${styles.header}`}>
+          <div className={styles.header_left}>
+            <Logo className={styles.logo}/>
+            <nav className={styles.navigation}>
+              <Tab active={false} title={'О нас'} onClick={() => {
+              }}/>
+              <Tab active={false} title={'Проживание'} onClick={() => {
+              }}/>
+              <Tab active={false} title={'Цены'} onClick={() => {
+              }}/>
+              <Tab active={false} title={'Новости'} onClick={() => {
+              }}/>
+            </nav>
+          </div>
+          <div className={styles.header_right}>
+            <Button title={'Забронировать сейчас'} onClick={() => {}} />
+          </div>
+        </header>
+        <div className={styles.content}>
+          <div className={styles.description_container}>
+            <div className={styles.paragraph_text}>ГОСТИНИЦА НЕЙМАРК</div>
+            <div className={styles.description_text}>
+              ЖИВИ ТАМ, ГДЕ РАСТЕТ БУДУЩЕЕ
+            </div>
+            <Button title={'О гостинице'} onClick={() => {}} />
+          </div>
         </div>
+      </div>
     </section>
   )
 
