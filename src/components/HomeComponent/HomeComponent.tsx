@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {Tab} from "@components/Tab/Tab";
 import {ReactComponent as Logo} from "@/assets/svg/logo.svg";
 import {Button} from "@components/Button/Button";
+import {HeaderContext} from "@/providers/HeaderContext";
+import {TabContext} from "@/providers/TabContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +18,9 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
 
   const triggerRef = useRef<HTMLElement>(null);
   const imageBG = useRef<HTMLDivElement>(null);
+  const tabContext = useContext(TabContext);
+
+  const headerContext = useContext(HeaderContext);
 
   useEffect(() => {
 
@@ -30,6 +35,21 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
       backgroundPosition: "center 100%"
     });
 
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "top -10%",
+        scrub: false,
+        onEnter: () => {
+          headerContext[1]('visible')
+        },
+        onLeaveBack: () => {
+          headerContext[1]('hidden')
+        },
+      }
+    })
+
   }, [scrollerRef]);
 
   return (
@@ -40,14 +60,10 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
           <div className={styles.header_left}>
             <Logo className={styles.logo}/>
             <nav className={styles.navigation}>
-              <Tab active={false} title={'О нас'} onClick={() => {
-              }}/>
-              <Tab active={false} title={'Проживание'} onClick={() => {
-              }}/>
-              <Tab active={false} title={'Цены'} onClick={() => {
-              }}/>
-              <Tab active={false} title={'Новости'} onClick={() => {
-              }}/>
+              <Tab active={false} title={'О нас'} onClick={() => tabContext[1]('about')}/>
+              <Tab active={false} title={'Проживание'} onClick={() => tabContext[1]('acco')}/>
+              <Tab active={false} title={'Цены'} onClick={() => tabContext[1]('price')}/>
+              <Tab active={false} title={'Новости'} onClick={() => tabContext[1]('news')}/>
             </nav>
           </div>
           <div className={styles.header_right}>

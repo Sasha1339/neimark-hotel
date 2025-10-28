@@ -1,18 +1,23 @@
 import {FC, RefObject, useContext, useEffect, useRef} from "react";
-import styles from "./PriceComponent.module.css";
-import alpha from '@/assets/images/alpha.webp';
-import gamma from '@/assets/images/gamma.webp';
-import omega from '@/assets/images/omega.webp';
+import styles from "./EnvironmentsComponent.module.css";
+import barber from '@/assets/images/barber.png';
+import mola from '@/assets/images/mola.webp';
+import ozon from '@/assets/images/ozon.webp';
+import cofe from '@/assets/images/cofe-like.jpeg';
+import sber from '@/assets/images/sber.webp';
+import wild from '@/assets/images/wild.webp';
+import ya from '@/assets/images/ya2.jpg';
 import {Button} from "@components/Button/Button";
 import {gsap} from "gsap";
 import useEmblaCarousel from "embla-carousel-react";
 import {RoomComponent} from "@components/RoomComponent/RoomComponent";
+import {EnvironmentComponent} from "@components/EnvironmentComponent/EnvironmentComponent";
 
 type Props = {
   scrollerRef: RefObject<HTMLElement>;
 }
 
-export const PriceComponent: FC<Props> = ({scrollerRef}) => {
+export const EnvironmentsComponent: FC<Props> = ({scrollerRef}) => {
 
   const triggerRef = useRef<HTMLElement>(null);
 
@@ -61,13 +66,13 @@ export const PriceComponent: FC<Props> = ({scrollerRef}) => {
 
   }, [scrollerRef]);
 
-  const textHeader = 'ДОСТУПНЫЕ КАТЕГОРИИ НОМЕРОВ';
+  const textHeader = 'ВСЕ УДОБСТВА ПОБЛИЗОСТИ';
 
   return (
     <section ref={triggerRef} className={styles.main}>
 
       <div ref={contentRef} className={styles.description_section}>
-        <span className={styles.hint_span}>ЦЕНЫ</span>
+        <span className={styles.hint_span}>ОКРУЖЕНИЕ</span>
         <h1 className={styles.header_about}>{textHeader.split(" ").map((word, wi) => (
           <span key={wi} className={styles.word}>
           {word.split("").map((letter, li) => (
@@ -84,17 +89,14 @@ export const PriceComponent: FC<Props> = ({scrollerRef}) => {
         <div className={styles.embla} ref={emblaRef}>
           <div className={styles.embla__container}>
 
-            <div className={styles.embla__slide}><RoomComponent title={'Номер Альфа'} image={alpha} price={12.5}
-                                                                description={'Стандартное размещение в двухместном номере'} about={'Площадь 35.5 м | 2 С/У | 4 персоны'}></RoomComponent></div>
-            <div className={styles.embla__slide}><RoomComponent title={'Номер Гамма'} image={gamma} price={16}
-                                                                description={'Номера повышенной комфортности'} about={'Площадь 33.3 м | 2 С/У | 3 персоны'}></RoomComponent></div>
-            <div className={styles.embla__slide}><RoomComponent title={'Номер Омега'} image={omega} price={25}
-                                                                description={'Одноместное размещение'} about={'Площадь 16.7 м | 1 С/У | 2 персоны'}></RoomComponent></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={barber} title={'Барбер шоп'} address={'Б. овраги 12к1'} /></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={mola} title={'MOLA MOLA'} address={'Б. овраги 12к2'} /></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={ozon} title={'OZON'} address={'Б. овраги 12к3'} /></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={wild} title={'WILDBERRIES'} address={'Б. овраги 12к4'} /></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={cofe} title={'COFFEE LIKE'} address={'Б. овраги 12к5'} /></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={sber} title={'SBER'} address={'Б. овраги 12к6'} /></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={ya} title={'Я.Маркет'} address={'Б. овраги 12к7'} /></div>
           </div>
-        </div>
-        <div className={styles.buttons}>
-          <div className={styles.button} onClick={() => emblaApi && emblaApi.scrollPrev()}>{'<'}</div>
-          <div className={styles.button} onClick={() => emblaApi && emblaApi.scrollNext()}>{'>'}</div>
         </div>
 
       </div>

@@ -25,7 +25,19 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
       scrollTrigger: {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
-        start: "top 10%",
+        start: "top 30%",
+        scrub: false, // scrub = false, чтобы анимация не зависела от скролла
+        once: true,   // анимация срабатывает только один раз
+      },
+    })
+      .from(`.${styles.text_header_animated}`, { x: '100vw', opacity: 0, stagger: 0.01, duration: 0.01 })
+      .to(`.${styles.text_header_animated}`, { x: 0, opacity: 1, stagger: 0.01, duration: 0.7 })
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "top 30%",
         scrub: false, // scrub = false, чтобы анимация не зависела от скролла
         once: true,   // анимация срабатывает только один раз
       },
@@ -52,7 +64,6 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
             <span
               key={li}
               className={styles.text_header_animated}
-              style={{ animationDelay: `${li * 0.02 + wi * 0.1}s` }}
             >
               {letter}
             </span>

@@ -1,5 +1,5 @@
 import {FC, PropsWithChildren, useState} from "react";
-import {ButtonAction, NavigationTab} from "@/shared/types";
+import {HeaderAction, NavigationTab} from "@/shared/types";
 import {NavigationContext} from "@/providers/NavigationContext";
 
 export const NavigationProvider: FC<PropsWithChildren> = ({children}) => {

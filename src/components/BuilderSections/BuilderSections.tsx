@@ -7,6 +7,9 @@ import {gsap} from "gsap";
 import {AboutComponent} from "@components/AboutComponent/AboutComponent";
 import {AccommodationComponent} from "@components/AccommodationComponent/AccommodationComponent";
 import {PriceComponent} from "@components/PriceComponent/PriceComponent";
+import {EnvironmentsComponent} from "@components/EnvironmentsComponent/EnvironmentsComponent";
+import {NewsComponent} from "@components/NewsComponent/NewsComponent";
+import {ContactComponent} from "@components/ContactComponent/ConcactComponent";
 
 type Props = {}
 
@@ -19,8 +22,8 @@ export const BuilderSections: FC<Props> = ({...props}) => {
 
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const accoRef = useRef<HTMLDivElement>(null);
   const priceRef = useRef<HTMLDivElement>(null);
-  const serviceRef = useRef<HTMLDivElement>(null);
   const newsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -52,10 +55,10 @@ export const BuilderSections: FC<Props> = ({...props}) => {
           });
         }
           break;
-        case 'service': {
-          const mainTopParent = serviceRef.current!.getBoundingClientRect().top - serviceRef.current!.parentElement!.getBoundingClientRect().top;
-          gsap.to(serviceRef.current!.parentElement!, {
-            scrollTop: serviceRef.current!.parentElement!.scrollTop + mainTopParent,
+        case 'acco': {
+          const mainTopParent = accoRef.current!.getBoundingClientRect().top - accoRef.current!.parentElement!.getBoundingClientRect().top;
+          gsap.to(accoRef.current!.parentElement!, {
+            scrollTop: accoRef.current!.parentElement!.scrollTop + mainTopParent,
             duration: 0.4,
             ease: 'power2.inOut'
           });
@@ -73,36 +76,42 @@ export const BuilderSections: FC<Props> = ({...props}) => {
       }
   }, [tabContext[0]]);
 
-  // const onScrollIngredients = (event: SyntheticEvent) => {
-  //   const homeTopParent = homeRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
-  //   const aboutTopParent = aboutRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
-  //   const serviceTopParent = serviceRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
-  //   const priceTopParent = priceRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
-  //   const newsTopParent = newsRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
-  //
-  //
-  //   if (newsTopParent < 400) {
-  //     navigationContext[1]('news');
-  //   }else if (priceTopParent < 400) {
-  //     navigationContext[1]('price');
-  //   } else if (serviceTopParent < 400) {
-  //     navigationContext[1]('service');
-  //   } else if (aboutTopParent < 400) {
-  //     navigationContext[1]('about');
-  //   } else {
-  //     navigationContext[1]('home');
-  //   }
-  // }
+  const onScrollIngredients = (event: SyntheticEvent) => {
+    const homeTopParent = homeRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
+    const aboutTopParent = aboutRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
+    const accoTopParent = accoRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
+    const priceTopParent = priceRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
+    const newsTopParent = newsRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
+
+
+    if (newsTopParent < 400) {
+      navigationContext[1]('news');
+    }else if (priceTopParent < 400) {
+      navigationContext[1]('price');
+    } else if (accoTopParent < 400) {
+      navigationContext[1]('acco');
+    } else if (aboutTopParent < 400) {
+      navigationContext[1]('about');
+    } else {
+      navigationContext[1]('home');
+    }
+  }
 
   return (
     <main className={styles.main_section}>
-      <div ref={scrollRef} className={styles.container}>
+      <div ref={scrollRef} className={styles.container} onScroll={onScrollIngredients}>
         <div ref={homeRef} className={styles.ref_navigation}></div>
         <HomeComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <div ref={aboutRef} className={styles.ref_navigation}></div>
         <AboutComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <div ref={accoRef} className={styles.ref_navigation}></div>
         <AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <div ref={priceRef} className={styles.ref_navigation}></div>
         <PriceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <div style={{width: '100vw', height: '400vh'}}></div>
+        <EnvironmentsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <div ref={newsRef} className={styles.ref_navigation}></div>
+        <NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <ContactComponent/>
       </div>
     </main>
   )

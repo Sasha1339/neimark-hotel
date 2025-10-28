@@ -1,3 +1,3 @@
-export type ButtonAction = 'hidden' | 'highlight' | string;
+export type HeaderAction = 'hidden' | 'visible';
 
-export type NavigationTab = 'home' | 'about' | 'price' | 'service' | 'news' | string;
+export type NavigationTab = 'home' | 'about' | 'price' | 'acco' | 'news' | string;

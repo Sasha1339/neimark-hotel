@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {AppHeader} from "./components/AppHeader/AppHeader";
 import {BuilderSections} from "./components/BuilderSections/BuilderSections";
-import {ButtonProvider} from "./providers/ButtonProvider";
+import {HeaderProvider} from "./providers/HeaderProvider";
 import {NavigationProvider} from "@/providers/NavigationProvider";
 import {TabProvider} from "@/providers/TabProvider";
 
@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <NavigationProvider>
         <TabProvider>
-          <ButtonProvider>
-            {/*<AppHeader/>*/}
+          <HeaderProvider>
+            <AppHeader/>
             <BuilderSections />
-          </ButtonProvider>
+          </HeaderProvider>
         </TabProvider>
       </NavigationProvider>
     </div>
