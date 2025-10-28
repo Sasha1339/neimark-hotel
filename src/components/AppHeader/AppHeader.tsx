@@ -3,7 +3,6 @@ import styles from "./AppHeader.module.css"
 import {Tab} from "../Tab/Tab";
 import {Button} from "../Button/Button";
 import {HeaderContext} from "../../providers/HeaderContext";
-import {HeaderAction} from "../../shared/types";
 import {NavigationContext} from "@/providers/NavigationContext";
 import {TabContext} from "@/providers/TabContext";
 import {ReactComponent as Logo} from "@/assets/svg/logo.svg";
@@ -44,7 +43,7 @@ export const AppHeader: FC = () => {
         </nav>
       </div>
       <div className={styles.header_right}>
-        <Button className={styles.header_button} title={'Подать заявку'} onClick={() => {}}/>
+        <Button className={styles.header_button} defaultClassName={false} title={'Подать заявку'} onClick={() => {}}/>
       </div>
     </header>
   )

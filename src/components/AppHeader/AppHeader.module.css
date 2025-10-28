@@ -37,18 +37,28 @@
     justify-content: end;
 }
 
+.header_button {
+    font-family: 'Biform', sans-serif;
+    font-size: 16px;
+    transition: 0.5s;
+    color: var(--text-color-default);
+    padding: 10px;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+    background-color: var(--text-color-active);
+    outline: none;
+    position: relative;
+    border: 1px solid transparent;
+}
 
 .header_button:hover {
     border: 1px solid var(--text-color-default);
     background-color: transparent;
     color: var(--text-color-default);
-    box-sizing: border-box;
+
 }
 
-
-.header_button::after {
-    border: none;
-}
 
 .header_mobile {
     display: flex;
