@@ -6,13 +6,14 @@ type Props = {
   title: string;
   active?: boolean;
   type?: 'button' | 'submit';
+  defaultClassName?: boolean;
   onClick: (event: SyntheticEvent) => void;
 }
 
-export const Button = forwardRef<HTMLButtonElement, Props>(({active, className, type, title, onClick, ...props}, ref) => {
+export const Button = forwardRef<HTMLButtonElement, Props>(({active, className, type, title, onClick, defaultClassName = true, ...props}, ref) => {
 
   return (
-    <button ref={ref} className={`${styles.button} ${className}`} type={type ?? 'button'} onClick={(e) => onClick(e)}>
+    <button ref={ref} className={`${defaultClassName && styles.button} ${className}`} type={type ?? 'button'} onClick={(e) => onClick(e)}>
       <span className={`${active && styles.button_element__highlight}`}>{ title }</span>
     </button>
   )
