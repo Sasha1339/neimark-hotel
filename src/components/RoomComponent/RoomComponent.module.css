@@ -44,14 +44,16 @@
     font-size: 40px;
     padding: 0 3%;
     box-sizing: border-box;
+    z-index: 0;
 }
 
-.button {
-    z-index: 5;
+.button:hover {
+    background-color: var(--main-purple);
+    color: var(--text-color-default);
 }
 
-.button::after {
-    z-index: 3;
+.button:hover::after {
+    border-color: var(--main-purple);
 }
 
 .description_block {

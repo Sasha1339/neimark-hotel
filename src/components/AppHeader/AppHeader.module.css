@@ -37,6 +37,19 @@
     justify-content: end;
 }
 
+
+.header_button:hover {
+    border: 1px solid var(--text-color-default);
+    background-color: transparent;
+    color: var(--text-color-default);
+    box-sizing: border-box;
+}
+
+
+.header_button::after {
+    border: none;
+}
+
 .header_mobile {
     display: flex;
     align-items: center;

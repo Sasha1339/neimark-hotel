@@ -12,7 +12,7 @@ type Props = {
 export const Button = forwardRef<HTMLButtonElement, Props>(({active, className, type, title, onClick, ...props}, ref) => {
 
   return (
-    <button ref={ref} className={`${styles.button} ${className} `} type={type ?? 'button'} onClick={(e) => onClick(e)}>
+    <button ref={ref} className={`${styles.button} ${className}`} type={type ?? 'button'} onClick={(e) => onClick(e)}>
       <span className={`${active && styles.button_element__highlight}`}>{ title }</span>
     </button>
   )

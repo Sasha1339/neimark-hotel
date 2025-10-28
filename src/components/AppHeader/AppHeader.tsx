@@ -44,8 +44,7 @@ export const AppHeader: FC = () => {
         </nav>
       </div>
       <div className={styles.header_right}>
-        <Button title={'Подать заявку'} onClick={() => {
-        }}/>
+        <Button className={styles.header_button} title={'Подать заявку'} onClick={() => {}}/>
       </div>
     </header>
   )
