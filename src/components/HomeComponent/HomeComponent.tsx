@@ -54,10 +54,19 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
   return (
     <section ref={triggerRef} className={styles.main}>
       <div ref={imageBG} className={`${styles.description_section}`}>
+        <video
+          className={styles.video_background}
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/video/neimark_video.mp4" type="video/mp4"/>
+        </video>
         <div className={`${styles.gradient_overlay}`}></div>
         <header className={`${styles.header}`}>
           <div className={styles.header_left}>
-            <Logo className={styles.logo}/>
+          <Logo className={styles.logo}/>
             <nav className={styles.navigation}>
               <Tab active={false} title={'О нас'} onClick={() => tabContext[1]('about')}/>
               <Tab active={false} title={'Проживание'} onClick={() => tabContext[1]('acco')}/>
@@ -66,7 +75,7 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
             </nav>
           </div>
           <div className={styles.header_right}>
-            <Button title={'Забронировать сейчас'} onClick={() => {}} />
+            <Button title={'Подать заявку'} onClick={() => {}} />
           </div>
         </header>
         <div className={styles.content}>

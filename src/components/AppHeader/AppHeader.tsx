@@ -29,16 +29,24 @@ export const AppHeader: FC = () => {
     tabContext[1]('');
   }, [tabContext[0]]);
 
+
+
   return (
     <header ref={header} className={`${styles.header}`}>
-      <Logo className={styles.logo}/>
-      <nav className={styles.navigation}>
-        <Tab active={navigationContext[0] === 'home'} title={'Главная'} onClick={() => tabContext[1]('home')} />
-        <Tab active={navigationContext[0] === 'about'} title={'О нас'} onClick={() => tabContext[1]('about')} />
-        <Tab active={navigationContext[0] === 'acco'} title={'Проживание'} onClick={() => tabContext[1]('acco')} />
-        <Tab active={navigationContext[0] === 'price'} title={'Цены'} onClick={() => tabContext[1]('price')} />
-        <Tab active={navigationContext[0] === 'news'} title={'Новости'} onClick={() => tabContext[1]('news')} />
-      </nav>
+      <div className={styles.header_left}>
+        <Logo className={styles.logo}/>
+        <nav className={styles.navigation}>
+          <Tab active={navigationContext[0] === 'home'} title={'Главная'} onClick={() => tabContext[1]('home')} />
+          <Tab active={navigationContext[0] === 'about'} title={'О нас'} onClick={() => tabContext[1]('about')} />
+          <Tab active={navigationContext[0] === 'acco'} title={'Проживание'} onClick={() => tabContext[1]('acco')} />
+          <Tab active={navigationContext[0] === 'price'} title={'Цены'} onClick={() => tabContext[1]('price')} />
+          <Tab active={navigationContext[0] === 'news'} title={'Новости'} onClick={() => tabContext[1]('news')} />
+        </nav>
+      </div>
+      <div className={styles.header_right}>
+        <Button title={'Подать заявку'} onClick={() => {
+        }}/>
+      </div>
     </header>
   )
 }
