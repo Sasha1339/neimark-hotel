@@ -49,7 +49,6 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
         },
       }
     })
-
   }, [scrollerRef]);
 
   return (
