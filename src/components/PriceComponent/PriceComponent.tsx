@@ -37,6 +37,7 @@ export const PriceComponent: FC<Props> = ({scrollerRef}) => {
 
   }, [scrollerRef]);
 
+
   return (
     <section ref={triggerRef} className={styles.main}>
 
