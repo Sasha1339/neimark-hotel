@@ -47,6 +47,8 @@
     grid-template-columns: repeat(3, 1fr);
     background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
+    transform: translateY(100vw);
 }
 
 .gradient_overlay {
@@ -55,7 +57,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: var(--gradient-gray-100-opacity-90);
+    opacity: 1;
+    background-image: var(--main-gray-dark);
 }
 
 .title_text {
@@ -72,12 +75,22 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     box-sizing: border-box;
     padding: 50px 0;
     z-index: 1;
+}
+
+.items_button {
+    background: var(--main-gray-dark);
+    font-size: 30px;
+    opacity: 0;
+}
+
+.items_button::after {
+    border: 1px solid var(--main-gray-dark);
 }
 
 
@@ -98,6 +111,10 @@
 
 .items_content:hover > .title_text {
     color: var(--text-color-active);
+}
+
+.items_content:hover > .items_button {
+    opacity: 1;
 }
 
 

@@ -1,72 +1,182 @@
 .main {
     width: 100%;
-    height: 400vh;
-    background-color: var(--main-black);
+    height: 120vh;
+    background: var(--gradient-gray-black);
+    border-top: 1px solid var(--text-color-active);
+}
+
+.animate_before_first {
+    transform: translateY(100vw);
+}
+
+.animate_before_second{
+    transform: translateY(100vw);
+}
+
+.animate {
+    animation: animated_block 1s forwards;
+}
+
+@keyframes animated_block {
+    from {
+        opacity: 0;
+        transform: translateY(100vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.embla {
+    overflow: hidden;
+    width: 100%;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    flex: 0 0 100%; /* ширина слайда */
+    user-select: none;
+}
+
+.hint_span {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Biform, 'sans-serif';
+    color: transparent;
+    font-size: 300px;
+    -webkit-text-stroke: 1px var(--text-color-default-opacity-25);
+}
+
+.description_section {
+    position: sticky;
+    top: 0;/* прилипание */
+    padding: 82px 20px 20px 20px;
+    height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Biform', sans-serif;
+    color: var(--text-color-default);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.word {
+    display: inline-block;
+    white-space: nowrap; /* чтобы буквы не переносились */
 }
 
 .content {
-    position: sticky;
-    top: 82px;
-    display: grid;
-    grid-template-columns: auto auto auto;
     width: 100%;
-    height: calc(100vh - 82px);
-    padding-bottom: 82px;
-    box-sizing: border-box;
+    height: 70%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
 
-.hotel_content_right {
+.image_small {
+    width: 100%;
+    height: 50%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.image_medium {
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.content_text {
+    height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+.content_image_left {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: start;
+}
+
+.content_image_right {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
     align-items: end;
-    position: relative;
 }
 
-.lamp_content_right {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: end;
-    position: relative;
+.text_title {
+    font-family: Biform, 'sans-serif';
+    color: var(--text-color-default);
+    font-size: 30px;
 }
 
-.lamp_content_left {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: end;
-    position: relative;
+.text_paragraph {
+    font-family: Biform, 'sans-serif';
+    color: var(--text-color-default);
+    font-size: 20px;
+    text-align: start;
 }
 
-.hotel_element {
-    transform: scale(2.3);
-    opacity: 0;
-    z-index: 1;
-    width: 30%;
-    height: calc(100% - 82px);
+.header_about {
+    margin: 0;
+    width: 55%;
+    height: 30%;
+    font-family: Biform, 'sans-serif';
+    color: var(--text-color-default);
+    font-size: 50px;
 }
 
-.lamp_left {
-    transform: scale(-0.5, 0.5) translateY(50%);
-    position: absolute;
-    z-index: 2;
-    bottom: 0;
-    right: 100%;
+.text_header_animated {
+    display: inline-block;
+    transform: translateX(100vw);
+    animation: animated_text_words 0.1s forwards;
 }
 
-.lamp_right {
-    transform: scale(0.5) translateY(50%);
-    position: absolute;
-    z-index: 2;
-    bottom: 0;
-    left: 100%;
+@keyframes animated_text_words {
+
+    from {
+        transform: translateX(100vw) scale(2);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+
 }
 
-.rooms {
-    position: absolute;
-    top: 82px;
-    height: calc(100vh - 246px);
-    width: 30%;
+@keyframes animated_text_words {
+
+    from {
+        transform: translateY(100vh) scale(2);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
 }
 

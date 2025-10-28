@@ -5,6 +5,7 @@ import img1_2 from '@/assets/images/about_im_1_2.jpeg';
 import img2_1 from '@/assets/images/about_im_2_1.jpg';
 import img2_2 from '@/assets/images/about_im_2_2.jpg';
 import {Button} from "@components/Button/Button";
+import {gsap} from "gsap";
 
 type Props = {
   scrollerRef: RefObject<HTMLElement>;
@@ -19,6 +20,22 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
 
   useEffect(() => {
     if (!scrollerRef.current) return;
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: scrollerRef.current,
+        start: "top 10%",
+        scrub: false, // scrub = false, чтобы анимация не зависела от скролла
+        once: true,   // анимация срабатывает только один раз
+      },
+    })
+      .from(`.${styles.animate_before_first}`, { y: '100vw', opacity: 0, duration: 0.1 })
+      .to(`.${styles.animate_before_first}`, { y: 0, opacity: 1, duration: 0.3 })
+      .to(`.${styles.animate_before_first}`, { duration: 0.05 })
+      .from(`.${styles.animate_before_second}`, { y: '100vw', opacity: 0, duration: 0.1 })
+      .to(`.${styles.animate_before_second}`, { y: 0, opacity: 1, duration: 0.3 })
+
 
   }, [scrollerRef]);
 
@@ -45,12 +62,12 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
         ))}</h1>
         <div className={styles.content}>
           <div className={styles.content_image_left}>
-            <div className={styles.image_medium} style={{backgroundImage: `url(${img1_1})`}}></div>
-            <div className={styles.image_small} style={{backgroundImage: `url(${img1_2})`}}></div>
+            <div className={`${styles.image_medium} ${styles.animate_before_first}`} style={{backgroundImage: `url(${img1_1})`}}></div>
+            <div className={`${styles.image_small} ${styles.animate_before_second}`} style={{backgroundImage: `url(${img1_2})`}}></div>
           </div>
           <div className={styles.content_text}>
-            <div className={styles.text_title}>Современное проживание для студентов ИТ-направлений</div>
-            <div className={styles.text_paragraph}>
+            <div className={`${styles.text_title} ${styles.animate_before_second}`}>Современное проживание для студентов ИТ-направлений</div>
+            <div className={`${styles.text_paragraph} ${styles.animate_before_first}`}>
               <ul>
                 <li>Центр города и университеты рядом</li>
                 <li>Круглосуточная безопасность и пропускной режим</li>
@@ -64,8 +81,8 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
             <Button title={'Хочу взглянуть на номера'} onClick={() => {}} />
           </div>
           <div className={styles.content_image_right}>
-            <div className={styles.image_small} style={{backgroundImage: `url(${img2_1})`}}></div>
-            <div className={styles.image_medium} style={{backgroundImage: `url(${img2_2})`}}></div>
+            <div className={`${styles.image_small} ${styles.animate_before_first}`} style={{backgroundImage: `url(${img2_1})`}}></div>
+            <div className={`${styles.image_medium} ${styles.animate_before_second}`} style={{backgroundImage: `url(${img2_2})`}}></div>
           </div>
         </div>
       </div>

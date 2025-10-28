@@ -6,6 +6,7 @@ import {TabContext} from "@/providers/TabContext";
 import {gsap} from "gsap";
 import {AboutComponent} from "@components/AboutComponent/AboutComponent";
 import {AccommodationComponent} from "@components/AccommodationComponent/AccommodationComponent";
+import {PriceComponent} from "@components/PriceComponent/PriceComponent";
 
 type Props = {}
 
@@ -100,6 +101,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <HomeComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <AboutComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <PriceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div style={{width: '100vw', height: '400vh'}}></div>
       </div>
     </main>
