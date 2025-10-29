@@ -28,10 +28,10 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
   useEffect(() => {
     if (Hls.isSupported() && videoRef.current) {
       const hls = new Hls();
-      hls.loadSource("/video/index.m3u8");
+      hls.loadSource("/hls/index.m3u8");
       hls.attachMedia(videoRef.current);
     } else if (videoRef.current && videoRef.current.canPlayType("application/vnd.apple.mpegurl")) {
-      videoRef.current.src = "/video/index.m3u8";
+      videoRef.current.src = "/hls/index.m3u8";
     }
   }, [videoRef.current]);
 
