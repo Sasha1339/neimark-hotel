@@ -167,6 +167,50 @@
 
 }
 
+@media (max-height: 900px) {
+    .header_about {
+        margin: 0;
+        width: 70%;
+        height: 15%;
+        font-family: Biform, 'sans-serif';
+        color: var(--text-color-default);
+        font-size: 40px;
+    }
+
+    .text_title {
+        font-family: Biform, 'sans-serif';
+        color: var(--text-color-default);
+        font-size: 20px;
+    }
+
+    .text_paragraph {
+        font-family: Biform, 'sans-serif';
+        color: var(--text-color-default);
+        font-size: 15px;
+        text-align: start;
+    }
+
+    .content {
+        width: 100%;
+        height: 75%;
+    }
+
+    .description_section {
+        position: sticky;
+        top: 0;/* прилипание */
+        padding: 82px 20px 20px 20px;
+        height: calc(100vh);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Biform', sans-serif;
+        color: var(--text-color-default);
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+}
+
 @media (max-width: 700px) {
     .hint_span {
         font-size: 100px;

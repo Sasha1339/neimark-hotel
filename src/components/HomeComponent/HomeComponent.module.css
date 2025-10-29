@@ -153,6 +153,19 @@
     }
 }
 
+@media (max-height: 900px) {
+    .description_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 250%;
+        transform: translate(-50%, -50%);
+        font-family: Biform, 'sans-serif';
+        color: var(--text-color-default);
+        font-size: 70px;
+    }
+}
+
 @media (max-width: 700px) {
     .header {
         width: 100%;

@@ -158,6 +158,27 @@
     background-repeat: no-repeat;
 }
 
+@media (max-height: 900px) {
+    .content_right {
+        width: 50%;
+        height: 100%;
+        background-color: var(--main-gray-dark);
+        font-family: Biform, 'sans-serif';
+        color: var(--text-color-default);
+        font-size: 25px;
+        padding: 10%;
+        box-sizing: border-box;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 30px
+    }
+
+    .embla__slide {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 700px) {
     .hint_span {
         font-size: 100px;

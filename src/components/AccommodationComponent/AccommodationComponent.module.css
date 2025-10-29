@@ -127,6 +127,21 @@
     border-left: 1px solid var(--main-gray-dark);
 }
 
+@media (max-height: 900px) {
+    .title_text {
+        position: relative;
+        z-index: 1;
+        transition: 0.5s;
+        font-size: 30px;
+    }
+
+    .items_button {
+        background: var(--main-gray-dark);
+        font-size: 20px;
+        opacity: 0;
+    }
+}
+
 @media (max-width: 700px) {
     .hint_span {
         font-size: 100px;
