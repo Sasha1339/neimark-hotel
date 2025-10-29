@@ -7,6 +7,7 @@ import {ReactComponent as Logo} from "@/assets/svg/logo.svg";
 import {Button} from "@components/Button/Button";
 import {HeaderContext} from "@/providers/HeaderContext";
 import {TabContext} from "@/providers/TabContext";
+import Hls from "hls.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,6 +22,18 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
   const tabContext = useContext(TabContext);
 
   const headerContext = useContext(HeaderContext);
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (Hls.isSupported() && videoRef.current) {
+      const hls = new Hls();
+      hls.loadSource("/video/index.m3u8");
+      hls.attachMedia(videoRef.current);
+    } else if (videoRef.current && videoRef.current.canPlayType("application/vnd.apple.mpegurl")) {
+      videoRef.current.src = "/video/index.m3u8";
+    }
+  }, [videoRef.current]);
 
   useEffect(() => {
 
@@ -55,18 +68,17 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
     <section ref={triggerRef} className={styles.main}>
       <div ref={imageBG} className={`${styles.description_section}`}>
         <video
-          className={styles.video_background}
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-        >
-          <source src="/video/neimark_video.mp4" type="video/mp4"/>
-        </video>
+          className={styles.video_background}
+        />
         <div className={`${styles.gradient_overlay}`}></div>
         <header className={`${styles.header}`}>
           <div className={styles.header_left}>
-          <Logo className={styles.logo}/>
+            <Logo className={styles.logo}/>
             <nav className={styles.navigation}>
               <Tab active={false} title={'О нас'} onClick={() => tabContext[1]('about')}/>
               <Tab active={false} title={'Проживание'} onClick={() => tabContext[1]('acco')}/>
@@ -75,7 +87,8 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
             </nav>
           </div>
           <div className={styles.header_right}>
-            <Button title={'Подать заявку'} onClick={() => {}} />
+            <Button title={'Подать заявку'} onClick={() => {
+            }}/>
           </div>
         </header>
         <div className={styles.content}>
@@ -84,7 +97,8 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
             <div className={styles.description_text}>
               ЖИВИ ТАМ, ГДЕ РАСТЕТ БУДУЩЕЕ
             </div>
-            <Button title={'О гостинице'} onClick={() => {}} />
+            <Button title={'О гостинице'} onClick={() => {
+            }}/>
           </div>
         </div>
       </div>

@@ -16,6 +16,7 @@
     "embla-carousel": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "gsap": "^3.13.0",
+    "hls.js": "^1.6.13",
     "react": "^19.2.0",
     "react-alice-carousel": "^2.9.1",
     "react-device-detect": "^2.2.3",
