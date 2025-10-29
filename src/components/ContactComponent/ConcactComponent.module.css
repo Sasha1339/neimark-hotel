@@ -56,6 +56,13 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
+@media (max-height: 900px) {
+    .info_column {
+        font-size: 18px;
+
+    }
+}
+
 @media (max-width: 700px) {
 
     .main {
