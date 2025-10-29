@@ -89,3 +89,44 @@
     width: 100%;
     text-align: start;
 }
+
+@media (max-width: 700px) {
+
+    .main {
+        justify-content: center;
+        align-items: end;
+    }
+
+    .description {
+        border-left: 3px solid var(--text-color-active);
+        position: relative;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+        background-color: var(--text-color-default);
+        font-family: 'Biform', sans-serif;
+        color: var(--main-black);
+        font-size: 20px;
+        padding: 0 3%;
+        box-sizing: border-box;
+        z-index: 0;
+    }
+
+    .about {
+        font-size: 10px;
+    }
+
+    .hint {
+        font-size: 10px;
+    }
+
+    .text_description {
+        font-size: 12px;
+        margin: 0;
+        text-align: start;
+    }
+
+}

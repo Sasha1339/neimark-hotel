@@ -116,3 +116,50 @@
         transform: rotate(1deg);
     }
 }
+
+@media (max-width: 700px) {
+    .header {
+        width: 100%;
+        height: 7vh;
+        gap: 1%;
+        justify-content: space-between;
+    }
+
+    .header_button {
+        font-family: 'Biform', sans-serif;
+        font-size: 10px;
+        transition: 0.5s;
+        color: var(--text-color-default);
+        padding: 2px;
+        box-sizing: border-box;
+        user-select: none;
+        cursor: pointer;
+        background-color: var(--text-color-active);
+        outline: none;
+        position: relative;
+        white-space: nowrap;
+        border: 1px solid transparent;
+    }
+
+    .navigation {
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 1px;
+    }
+
+    .logo {
+        height: 0;
+
+    }
+
+    .header_left {
+        display: flex;
+        flex-direction: column;
+        gap: 1%;
+        height: 10vh;
+        align-items: start;
+        justify-content: center;
+    }
+}

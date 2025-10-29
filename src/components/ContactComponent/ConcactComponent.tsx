@@ -25,6 +25,7 @@ export const ContactComponent = () => {
             <div>Сотрудничесвто с Неймарк</div>
           </div>
           <iframe
+            className={styles.map_column}
             src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=43.981812%2C56.314407&mode=whatshere&whatshere%5Bpoint%5D=43.981813%2C56.314407&whatshere%5Bzoom%5D=17&z=17"
             width="100%"
             height="100%"

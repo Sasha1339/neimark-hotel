@@ -158,3 +158,80 @@
     background-repeat: no-repeat;
 }
 
+@media (max-width: 700px) {
+    .hint_span {
+        font-size: 100px;
+
+    }
+
+    .content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .content_right {
+        width: 100%;
+        height: 30%;
+        background-color: var(--main-gray-dark);
+        font-family: Biform, 'sans-serif';
+        color: var(--text-color-default);
+        font-size: 20px;
+        padding: 10%;
+        box-sizing: border-box;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 30px
+    }
+
+    .content_left {
+        width: 100%;
+        height: 70%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .embla {
+        position: absolute;
+        overflow: hidden;
+        width: 100vw;
+        height: 20vh;
+        left: 0;
+        bottom: 40%;
+        background: var(--text-color-default-opacity-50);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--text-color-default-opacity-25);
+        box-sizing: border-box;
+    }
+
+    .embla__slide {
+        flex: 0 0 100%; /* ширина слайда */
+        user-select: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding: 2%;
+        box-sizing: border-box;
+        flex-direction: column;
+        color: var(--main-black);
+        font-family: 'Biform', sans-serif;
+        font-size: 12px;
+        text-align: start;
+    }
+
+    .date {
+        font-size: 9px;
+    }
+
+    .description_section {
+        padding: 100px 0 0 0;
+    }
+
+}
+

@@ -23,7 +23,7 @@ export const EnvironmentsComponent: FC<Props> = ({scrollerRef}) => {
 
   const contentRef = useRef<HTMLDivElement>(null);
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({loop: true});
 
 
   useEffect(() => {
@@ -48,8 +48,8 @@ export const EnvironmentsComponent: FC<Props> = ({scrollerRef}) => {
         once: true,   // анимация срабатывает только один раз
       },
     })
-      .from(`.${styles.text_header_animated}`, { x: '100vw', opacity: 0, stagger: 0.01, duration: 0.01 })
-      .to(`.${styles.text_header_animated}`, { x: 0, opacity: 1, stagger: 0.01, duration: 0.7 })
+      .from(`.${styles.text_header_animated}`, {x: '100vw', opacity: 0, stagger: 0.01, duration: 0.01})
+      .to(`.${styles.text_header_animated}`, {x: 0, opacity: 1, stagger: 0.01, duration: 0.7})
 
     gsap.timeline({
       scrollTrigger: {
@@ -60,8 +60,8 @@ export const EnvironmentsComponent: FC<Props> = ({scrollerRef}) => {
         once: true,   // анимация срабатывает только один раз
       },
     })
-      .from(`.${styles.embla}`, { y: '100vw', opacity: 0, duration: 0.1 })
-      .to(`.${styles.embla}`, { y: 0, opacity: 1, duration: 0.5, ease: "sine.out" })
+      .from(`.${styles.embla}`, {y: '100vw', opacity: 0, duration: 0.1})
+      .to(`.${styles.embla}`, {y: 0, opacity: 1, duration: 0.5, ease: "sine.out"})
 
 
   }, [scrollerRef]);
@@ -87,16 +87,39 @@ export const EnvironmentsComponent: FC<Props> = ({scrollerRef}) => {
         </span>
         ))}</h1>
         <div className={styles.embla} ref={emblaRef}>
-          <div className={styles.embla__container}>
+          {window.innerWidth > 700 ? (<div className={styles.embla__container}>
 
-            <div className={styles.embla__slide}><EnvironmentComponent image={barber} title={'Барбер шоп'} address={'Б. овраги 12к1'} /></div>
-            <div className={styles.embla__slide}><EnvironmentComponent image={mola} title={'MOLA MOLA'} address={'Б. овраги 12к2'} /></div>
-            <div className={styles.embla__slide}><EnvironmentComponent image={ozon} title={'OZON'} address={'Б. овраги 12к3'} /></div>
-            <div className={styles.embla__slide}><EnvironmentComponent image={wild} title={'WILDBERRIES'} address={'Б. овраги 12к4'} /></div>
-            <div className={styles.embla__slide}><EnvironmentComponent image={cofe} title={'COFFEE LIKE'} address={'Б. овраги 12к5'} /></div>
-            <div className={styles.embla__slide}><EnvironmentComponent image={sber} title={'SBER'} address={'Б. овраги 12к6'} /></div>
-            <div className={styles.embla__slide}><EnvironmentComponent image={ya} title={'Я.Маркет'} address={'Б. овраги 12к7'} /></div>
-          </div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={barber} title={'Барбер шоп'}
+                                                                       address={'Б. овраги 12к1'}/></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={mola} title={'MOLA MOLA'}
+                                                                       address={'Б. овраги 12к2'}/></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={ozon} title={'OZON'}
+                                                                       address={'Б. овраги 12к3'}/></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={wild} title={'WILDBERRIES'}
+                                                                       address={'Б. овраги 12к4'}/></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={cofe} title={'COFFEE LIKE'}
+                                                                       address={'Б. овраги 12к5'}/></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={sber} title={'SBER'}
+                                                                       address={'Б. овраги 12к6'}/></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={ya} title={'Я.Маркет'}
+                                                                       address={'Б. овраги 12к7'}/></div>
+          </div>) : (<div className={styles.embla__container}>
+
+            <div className={styles.embla__slide}><EnvironmentComponent image={barber} title={'Барбер шоп'}
+                                                                       address={'Б. овраги 12к1'}/>
+              <EnvironmentComponent image={mola} title={'MOLA MOLA'}
+                                    address={'Б. овраги 12к2'}/></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={ozon} title={'OZON'}
+                                                                       address={'Б. овраги 12к3'}/><EnvironmentComponent
+              image={wild} title={'WILDBERRIES'}
+              address={'Б. овраги 12к4'}/></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={cofe} title={'COFFEE LIKE'}
+                                                                       address={'Б. овраги 12к5'}/><EnvironmentComponent
+              image={sber} title={'SBER'}
+              address={'Б. овраги 12к6'}/></div>
+            <div className={styles.embla__slide}><EnvironmentComponent image={ya} title={'Я.Маркет'}
+                                                                       address={'Б. овраги 12к7'}/></div>
+          </div>)}
         </div>
 
       </div>

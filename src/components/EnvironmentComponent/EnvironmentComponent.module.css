@@ -73,3 +73,17 @@
     font-size: 30px;
     color: var(--text-color-default);
 }
+
+@media (max-width: 700px) {
+    .title {
+        font-size: 20px;
+        color: var(--text-color-default);
+    }
+
+    .main::before {
+        top: -10px;
+        left: -10px;
+        height: calc(100% + 20px);
+
+    }
+}
