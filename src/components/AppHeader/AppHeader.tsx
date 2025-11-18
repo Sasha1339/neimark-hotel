@@ -7,12 +7,15 @@ import {NavigationContext} from "@/providers/NavigationContext";
 import {TabContext} from "@/providers/TabContext";
 import {ReactComponent as Logo} from "@/assets/svg/logo.svg";
 import {gsap} from "gsap";
+import {useNavigate} from "react-router-dom";
+import {NavigationTab} from "@/shared/types";
 
 export const AppHeader: FC = () => {
 
   const headerContext = useContext(HeaderContext);
   const navigationContext = useContext(NavigationContext);
   const tabContext = useContext(TabContext);
+  const navigate = useNavigate();
 
   const header = useRef<HTMLElement | null>(null);
 
@@ -24,22 +27,25 @@ export const AppHeader: FC = () => {
     }
   }, [headerContext[0], header]);
 
-  useEffect(() => {
-    tabContext[1]('');
-  }, [tabContext[0]]);
+  // useEffect(() => {
+  //   tabContext[1]('');
+  // }, [tabContext[0]]);
 
-
+  const onRoute = (route: NavigationTab) => {
+    tabContext[1](route)
+    navigate('/');
+  }
 
   return (
     <header ref={header} className={`${styles.header}`}>
       <div className={styles.header_left}>
         <Logo className={styles.logo}/>
         <nav className={styles.navigation}>
-          <Tab active={navigationContext[0] === 'home'} title={'Главная'} onClick={() => tabContext[1]('home')} />
-          <Tab active={navigationContext[0] === 'about'} title={'О нас'} onClick={() => tabContext[1]('about')} />
-          <Tab active={navigationContext[0] === 'acco'} title={'Проживание'} onClick={() => tabContext[1]('acco')} />
-          <Tab active={navigationContext[0] === 'price'} title={'Цены'} onClick={() => tabContext[1]('price')} />
-          <Tab active={navigationContext[0] === 'news'} title={'Новости'} onClick={() => tabContext[1]('news')} />
+          <Tab active={navigationContext[0] === 'home'} title={'Главная'} onClick={() => onRoute('home')} />
+          <Tab active={navigationContext[0] === 'about'} title={'О нас'} onClick={() => onRoute('about')} />
+          <Tab active={navigationContext[0] === 'acco'} title={'Проживание'} onClick={() => onRoute('acco')} />
+          <Tab active={navigationContext[0] === 'price'} title={'Цены'} onClick={() => onRoute('price')} />
+          <Tab active={navigationContext[0] === 'news'} title={'Новости'} onClick={() => onRoute('news')} />
         </nav>
       </div>
       <div className={styles.header_right}>

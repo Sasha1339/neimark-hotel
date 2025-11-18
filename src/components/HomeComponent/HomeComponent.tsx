@@ -8,6 +8,7 @@ import {Button} from "@components/Button/Button";
 import {HeaderContext} from "@/providers/HeaderContext";
 import {TabContext} from "@/providers/TabContext";
 import Hls from "hls.js";
+import {SearchComponent} from "@components/SearchComponent/SearchComponent";
 
 gsap.registerPlugin(ScrollTrigger);
 

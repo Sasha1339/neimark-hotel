@@ -10,12 +10,15 @@ import {PriceComponent} from "@components/PriceComponent/PriceComponent";
 import {EnvironmentsComponent} from "@components/EnvironmentsComponent/EnvironmentsComponent";
 import {NewsComponent} from "@components/NewsComponent/NewsComponent";
 import {ContactComponent} from "@components/ContactComponent/ConcactComponent";
+import {useLocation, useNavigate} from "react-router-dom";
+import {HeaderContext} from "@/providers/HeaderContext";
 
 type Props = {}
 
 export const BuilderSections: FC<Props> = ({...props}) => {
 
   const navigationContext = useContext(NavigationContext);
+  const headerContext = useContext(HeaderContext);
   const tabContext = useContext(TabContext);
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -29,6 +32,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
   useEffect(() => {
       switch (tabContext[0]) {
         case 'home': {
+          headerContext[1]('hidden');
           const bunsTopParent = homeRef.current!.getBoundingClientRect().top - homeRef.current!.parentElement!.getBoundingClientRect().top;
           gsap.to(homeRef.current!.parentElement!, {
             scrollTop: homeRef.current!.parentElement!.scrollTop + bunsTopParent,
@@ -74,7 +78,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         }
           break;
       }
-  }, [tabContext[0]]);
+  }, [tabContext]);
 
   const onScrollIngredients = (event: SyntheticEvent) => {
     const homeTopParent = homeRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
