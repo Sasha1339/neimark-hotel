@@ -98,9 +98,11 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
             <div className={styles.description_text}>
               ЖИВИ ТАМ, ГДЕ РАСТЕТ БУДУЩЕЕ
             </div>
-            <Button title={'О гостинице'} onClick={() => {
-            }}/>
           </div>
+          <div className={styles.search}>
+            <SearchComponent />
+          </div>
+
         </div>
       </div>
     </section>
