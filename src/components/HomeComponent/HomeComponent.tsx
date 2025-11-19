@@ -56,7 +56,7 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
         start: "top -10%",
         scrub: false,
         onEnter: () => {
-          headerContext[1]('visible')
+          headerContext[1]('home')
         },
         onLeaveBack: () => {
           headerContext[1]('hidden')

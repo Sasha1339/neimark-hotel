@@ -30,9 +30,14 @@ export const BuilderSections: FC<Props> = ({...props}) => {
   const newsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+      if (tabContext[0] === 'home') {
+        headerContext[1]('hidden');
+      } else {
+        headerContext[1]('home');
+      }
+
       switch (tabContext[0]) {
         case 'home': {
-          headerContext[1]('hidden');
           const bunsTopParent = homeRef.current!.getBoundingClientRect().top - homeRef.current!.parentElement!.getBoundingClientRect().top;
           gsap.to(homeRef.current!.parentElement!, {
             scrollTop: homeRef.current!.parentElement!.scrollTop + bunsTopParent,

@@ -7,7 +7,8 @@ import {NavigationProvider} from "@/providers/NavigationProvider";
 import {Outlet, Route, Routes, useLocation, useNavigate} from "react-router-dom";
 import {BrowserRouter as Router} from "react-router-dom";
 import {TabProvider} from "@/providers/TabProvider";
-import {RoomComponent} from "@components/RoomComponent/RoomComponent";
+import {RoomPageComponent} from "@components/RoomPageComponent/RoomPageComponent";
+import {SearchPageComponent} from "@components/SearchPageComponent/SearchPageComponent";
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
               <AppHeader/>
               <Routes>
                 <Route path="/" element={<BuilderSections />} />
-                <Route path="/room" element={<RoomComponent />} />
+                <Route path="/room" element={<RoomPageComponent />} />
+                <Route path="/search" element={<SearchPageComponent />} />
               </Routes>
             </HeaderProvider>
           </TabProvider>

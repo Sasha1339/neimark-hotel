@@ -40,13 +40,23 @@ export const AppHeader: FC = () => {
     <header ref={header} className={`${styles.header}`}>
       <div className={styles.header_left}>
         <Logo className={styles.logo}/>
-        <nav className={styles.navigation}>
+        {headerContext[0] === 'home' && <nav className={styles.navigation}>
           <Tab active={navigationContext[0] === 'home'} title={'Главная'} onClick={() => onRoute('home')} />
           <Tab active={navigationContext[0] === 'about'} title={'О нас'} onClick={() => onRoute('about')} />
           <Tab active={navigationContext[0] === 'acco'} title={'Проживание'} onClick={() => onRoute('acco')} />
           <Tab active={navigationContext[0] === 'price'} title={'Цены'} onClick={() => onRoute('price')} />
           <Tab active={navigationContext[0] === 'news'} title={'Новости'} onClick={() => onRoute('news')} />
-        </nav>
+        </nav>}
+        {headerContext[0] === 'room' && <nav className={styles.navigation}>
+          <Tab active={false} title={'< Вернуться'} onClick={() => navigate(-1)} />
+          <Tab active={false} title={'Главная'} onClick={() => navigate('/')} />
+          <Tab active={true} title={'Просмотр комнат'} />
+        </nav>}
+        {headerContext[0] === 'search' && <nav className={styles.navigation}>
+          <Tab active={false} title={'< Вернуться'} onClick={() => navigate(-1)} />
+          <Tab active={false} title={'Главная'} onClick={() => navigate('/')} />
+          <Tab active={true} title={'Поиск номеров'} />
+        </nav>}
       </div>
       <div className={styles.header_right}>
         <Button className={styles.header_button} defaultClassName={false} title={'Подать заявку'} onClick={() => {}}/>

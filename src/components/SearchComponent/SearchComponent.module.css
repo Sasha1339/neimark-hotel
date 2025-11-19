@@ -18,6 +18,12 @@
     box-sizing: border-box;
 }
 
+.button:disabled {
+    color: var(--main-gray-dark) !important;
+    background-color: var(--background-black-opacity-25) !important;
+    border: 2px solid var(--main-gray-dark) !important;
+}
+
 .button:hover {
     background-color: var(--main-purple-opacity-25) !important;
     border: 2px solid var(--main-purple) !important;

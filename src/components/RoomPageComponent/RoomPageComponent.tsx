@@ -1,7 +1,7 @@
-import styles from './RoomComponent.module.css';
+import styles from './RoomPageComponent.module.css';
 import {FC, useContext, useEffect, useRef, useState} from "react";
 import {ButtonBorder} from "@components/ButtonBorder/ButtonBorder";
-import room_alpha from '@/assets/svg/room-alpha.svg';
+import room_alpha from '../../assets/svg/room-alpha.svg';
 import {HeaderContext} from "@/providers/HeaderContext";
 import {NavigationContext} from "@/providers/NavigationContext";
 import room1 from '@/assets/images/panoramas/room1.jpg'
@@ -17,7 +17,7 @@ import {TabContext} from "@/providers/TabContext";
 const room = {
   name: 'Номер Альфа',
   title: 'Стандартное размещение в двухкомнатном номере',
-  price: 12.5,
+  price: 12500,
   description: 'просторный четырехместный вариант площадью 35,5 м². Две одинаковые спальни обеспечивают личное пространство каждому, два санузла избавляют от очередей по утрам. Есть прихожая для удобного хранения вещей'
 }
 
@@ -25,7 +25,7 @@ type Props = {
 
 }
 
-export const RoomComponent: FC<Props> = ({...props}) => {
+export const RoomPageComponent: FC<Props> = ({...props}) => {
 
   const headerContext = useContext(HeaderContext);
   const navigationContext = useContext(NavigationContext);
@@ -95,7 +95,7 @@ export const RoomComponent: FC<Props> = ({...props}) => {
   };
 
   useEffect(() => {
-      headerContext[1]('visible');
+      headerContext[1]('room');
       navigationContext[1]('price');
       if (!location.state) {
         tabContext[1]('price');
@@ -159,15 +159,15 @@ export const RoomComponent: FC<Props> = ({...props}) => {
           <div className={styles.description_text}>{room.description}</div>
         </div>
         <div className={styles.price_container}>
-          <div className={styles.price}>{room.price} тыс. руб.</div>
+          <div className={styles.price}>{room.price} ₽/мес.</div>
         </div>
         <div className={styles.button_container}>
           <ButtonBorder className={styles.button} title={'Подать заявку'} onClick={() => {
           }}/>
         </div>
-        <div className={styles.back_text} onClick={() => navigate(-1)}>{'< Назад'}</div>
       </div>
-      <div className={styles.view}>
+      <div className={styles.view} style={{backgroundImage: `url(image/${layout === 'layout' ? 'room-alpha.svg' : 'room1.jpg'})`}}>
+        <div className={styles.overlay_blur}></div>
         <div className={styles.switch}>
           <div><ButtonBorder title={'Планировка номера'} active={layout === 'layout'}
                              onClick={() => setLayout('layout')}/></div>

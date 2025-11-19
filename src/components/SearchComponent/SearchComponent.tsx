@@ -5,6 +5,10 @@ import {Button} from "@components/Button/Button";
 import {ButtonBorder} from "@components/ButtonBorder/ButtonBorder";
 import { ru } from 'date-fns/locale'
 import '@/styles/style.css'
+import {useAppDispatch, useAppSelector} from "@/hooks/useAppDispatch";
+import {searchActions, searchSelectors} from "@/services/search";
+import {useNavigate} from "react-router-dom";
+import {newDate} from "react-datepicker/dist/date_utils";
 
 
 type Props = {
@@ -15,12 +19,18 @@ type Props = {
 
 export const SearchComponent: FC<Props> = () => {
 
-  const [startDate, setStartDate] = useState<Date | null>(null);
-  const [endDate, setEndDate] = useState<Date | null>(null);
+  const filters = useAppSelector(searchSelectors.filters);
+  const isFilterValid = useAppSelector(searchSelectors.isFiltersValid);
+  const dispatch = useAppDispatch();
+  const inputRef = useRef<HTMLInputElement>(null);
+  const navigate =useNavigate();
 
   useEffect(() => {
-    console.log("Start date:", startDate, "End date:", endDate);
-  }, [startDate, endDate]);
+    if (filters.people && inputRef.current) {
+      inputRef.current.value = filters.people + ' чел.';
+    }
+  }, []);
+
 
   const onFocus = (event: FocusEvent<HTMLInputElement, EventTarget>) => {
     event.target.value = event.target.value.replace(' чел.', '')
@@ -32,35 +42,36 @@ export const SearchComponent: FC<Props> = () => {
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.replace(/[^0-9]/g, '');
+    dispatch(searchActions.setPeople(Number(value)))
     e.target.value = value;
   };
 
   const handleStartDateChange = (date: Date | null) => {
-    setStartDate(date);
-    if (date && endDate && date > endDate) {
-      setEndDate(null);
+    dispatch(searchActions.setDateStart(date?.toISOString() ?? null))
+    if (date && filters.dateEnd && date > new Date(filters.dateEnd)) {
+      dispatch(searchActions.setDateEnd(null))
     }
   };
 
   const handleEndDateChange = (date: Date | null) => {
-    if (date && startDate && date < startDate) {
+    if (date && filters.dateStart && date <  new Date(filters.dateStart)) {
       return;
     }
-    setEndDate(date);
+    dispatch(searchActions.setDateEnd(date?.toISOString() ?? null))
   };
 
   return (
     <div className={styles.main}>
       <div className={styles.item}><DatePicker
         locale={ru}
-        selected={startDate}
+        selected={filters.dateStart ? new Date(filters.dateStart) : null}
         onChange={handleStartDateChange}
         selectsStart
         isClearable={false}
         monthsShown={1}
         minDate={new Date()}
-        startDate={startDate}
-        endDate={endDate}
+        startDate={filters.dateStart ? new Date(filters.dateStart) : null}
+        endDate={filters.dateEnd ? new Date(filters.dateEnd) : null}
         dateFormat="dd.MM.yyyy"
         popperPlacement="bottom-start"
         showPopperArrow={false}
@@ -70,13 +81,13 @@ export const SearchComponent: FC<Props> = () => {
       /></div>
       <div className={styles.item}><DatePicker
         locale={ru}
-        selected={endDate}
+        selected={filters.dateEnd ? new Date(filters.dateEnd) : null}
         selectsEnd
         onChange={handleEndDateChange}
         isClearable={false}
         monthsShown={1}
-        startDate={startDate}
-        endDate={endDate}
+        startDate={filters.dateStart ? new Date(filters.dateStart) : null}
+        endDate={filters.dateEnd ? new Date(filters.dateEnd) : null}
         minDate={new Date()}
         dateFormat="dd.MM.yyyy"
         popperPlacement="bottom-start"
@@ -86,27 +97,26 @@ export const SearchComponent: FC<Props> = () => {
         customInput={<CustomInputEnd />}
       /></div>
       <div className={styles.item}>
-        <input className={styles.input_item} type="text" onChange={handleInputChange} onFocus={onFocus} onBlur={onBlur} />
+        <input ref={inputRef} className={styles.input_item} placeholder={'Количество человек'} type="text" onChange={handleInputChange} onFocus={onFocus} onBlur={onBlur} />
       </div>
       <div className={styles.item}>
-        <ButtonBorder className={styles.button} title={'Найти номера'} onClick={() => {
-        }}/>
+        <ButtonBorder className={styles.button} title={'Найти номера'} disabled={!isFilterValid} onClick={() => navigate('/search')}/>
       </div>
     </div>
   )
 
 }
 
-const CustomInputStart = forwardRef<HTMLButtonElement, any>(({value, onClick, title}, ref) => (
+export const CustomInputStart = forwardRef<HTMLButtonElement, any>(({value, onClick, title}, ref) => (
   <button className={styles.custom_date_input} onClick={onClick} ref={ref}>
-    {value || 'Дата заезда'}
+    {value || 'Выберите дату заезда'}
     <span className={styles.arrow_icon}>▼</span>
   </button>
 ));
 
-const CustomInputEnd = forwardRef<HTMLButtonElement, {value?: string, onClick?: () => void, title?: string}>(({value, onClick, title}, ref) => (
+export const CustomInputEnd = forwardRef<HTMLButtonElement, {value?: string, onClick?: () => void, title?: string}>(({value, onClick, title}, ref) => (
   <button className={styles.custom_date_input} onClick={onClick} ref={ref}>
-    {value || 'Дата выездa'}
+    {value || 'Выберите дату выездa'}
     <span className={styles.arrow_icon}>▼</span>
   </button>
 ))

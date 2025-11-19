@@ -5,7 +5,7 @@ import {isMobile} from 'react-device-detect';
 type Props = {
   active: boolean;
   title: string;
-  onClick: (event: SyntheticEvent) => void;
+  onClick?: (event: SyntheticEvent) => void;
 }
 
 export const Tab: FC<Props> = ({active, title, onClick, ...props}) => {
