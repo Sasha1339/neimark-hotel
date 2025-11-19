@@ -24,7 +24,6 @@ export const SearchPageComponent: FC<Props> = ({...props}) => {
   const tabContext = useContext(TabContext);
   const filters = useAppSelector(searchSelectors.filters);
   const isFiltersValid = useAppSelector(searchSelectors.isFiltersValid);
-  const inputRef = useRef<HTMLInputElement>(null);
 
   const dispatch = useAppDispatch();
   const location = useLocation();

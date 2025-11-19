@@ -1,14 +1,12 @@
 import {ChangeEvent, FC, FocusEvent, forwardRef, RefObject, useContext, useEffect, useRef, useState} from "react";
 import styles from "./SearchComponent.module.css";
 import DatePicker, {registerLocale} from "react-datepicker";
-import {Button} from "@components/Button/Button";
 import {ButtonBorder} from "@components/ButtonBorder/ButtonBorder";
 import { ru } from 'date-fns/locale'
 import '@/styles/style.css'
 import {useAppDispatch, useAppSelector} from "@/hooks/useAppDispatch";
 import {searchActions, searchSelectors} from "@/services/search";
 import {useNavigate} from "react-router-dom";
-import {newDate} from "react-datepicker/dist/date_utils";
 
 
 type Props = {
@@ -22,7 +20,6 @@ export const SearchComponent: FC<Props> = () => {
   const filters = useAppSelector(searchSelectors.filters);
   const isFilterValid = useAppSelector(searchSelectors.isFiltersValid);
   const dispatch = useAppDispatch();
-  const inputRef = useRef<HTMLInputElement>(null);
   const navigate =useNavigate();
 
 
