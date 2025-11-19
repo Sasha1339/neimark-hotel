@@ -5,7 +5,7 @@
     align-content: center;
     display: grid;
     position: relative;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     box-sizing: border-box;
     gap: 10px;
     border: 1px solid var(--text-color-default-opacity-25)

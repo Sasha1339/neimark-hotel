@@ -37,26 +37,6 @@ export const SearchPageComponent: FC<Props> = ({...props}) => {
     }
   }, []);
 
-  useEffect(() => {
-    if (filters.people && inputRef.current) {
-      inputRef.current.value = filters.people.toString().length > 0 ? filters.people + ' чел.' : '';
-    }
-  }, []);
-
-  const onFocus = (event: FocusEvent<HTMLInputElement, EventTarget>) => {
-    event.target.value = event.target.value.replace(' чел.', '')
-  }
-
-  const onBlur = (event: FocusEvent<HTMLInputElement, EventTarget>) => {
-    event.target.value = event.target.value + ' чел.'
-  }
-
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.replace(/[^0-9]/g, '');
-    dispatch(searchActions.setPeople(Number(value)))
-    e.target.value = value;
-  };
-
   const handleStartDateChange = (date: Date | null) => {
     dispatch(searchActions.setDateStart(date?.toISOString() ?? null))
     if (date && filters.dateEnd && date > new Date(filters.dateEnd)) {
@@ -112,12 +92,6 @@ export const SearchPageComponent: FC<Props> = ({...props}) => {
             nextMonthButtonLabel="Следующий >"
             customInput={<CustomInputEnd/>}
           /></div>
-        <div className={styles.item}>
-          <p className={styles.description_filter}>Количество человек:</p>
-          <input ref={inputRef} className={styles.input_item} placeholder={'Введите количество'} type="text"
-                 onChange={handleInputChange} onFocus={onFocus} onBlur={onBlur}/>
-
-        </div>
         <div className={styles.item}>
           <div></div>
           <ButtonBorder className={styles.button} title={'Найти номера'} disabled={!isFiltersValid} onClick={() => {}}/>

@@ -14,7 +14,6 @@ const initialState: SearchState = {
   filters: {
     dateStart: null,
     dateEnd: null,
-    people: 0,
   }
 
 }
@@ -25,7 +24,7 @@ const searchSlice = createSlice({
   initialState,
   selectors: {
     filters: (state) => state.filters,
-    isFiltersValid: (state) => !!state.filters.people && !!state.filters.dateStart && !!state.filters.dateEnd,
+    isFiltersValid: (state) => !!state.filters.dateStart && !!state.filters.dateEnd,
     results: (state) => state.results
   },
   reducers: {
@@ -39,11 +38,6 @@ const searchSlice = createSlice({
         state.filters.dateEnd = action.payload;
       }
     },
-    setPeople: (state, action: PayloadAction<number>) => {
-      if (state.filters) {
-        state.filters.people = action.payload;
-      }
-    }
   }
 })
 

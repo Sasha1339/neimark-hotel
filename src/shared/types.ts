@@ -5,5 +5,4 @@ export type NavigationTab = 'home' | 'about' | 'price' | 'acco' | 'news' | strin
 export interface Filter {
   dateStart: string | null;
   dateEnd: string | null;
-  people: number;
 }
