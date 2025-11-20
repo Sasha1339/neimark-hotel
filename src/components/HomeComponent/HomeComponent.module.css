@@ -107,7 +107,7 @@
 
 .description_container {
     width: 400px;
-    height: 60%;
+    height: 70%;
     display: flex;
     backdrop-filter: blur(20px);
     border: 1px solid var(--text-color-default-opacity-25);
@@ -116,7 +116,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 2% 0;
+    padding: 1% 0;
 }
 
 .paragraph_text {
@@ -127,7 +127,7 @@
 
 .description_text {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     width: 250%;
     transform: translate(-50%, -50%);
@@ -223,7 +223,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 5% 0;
+        padding: 5% 0 0;
     }
 
     .description_text {

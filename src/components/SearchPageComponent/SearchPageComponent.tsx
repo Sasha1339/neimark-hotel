@@ -100,34 +100,20 @@ export const SearchPageComponent: FC<Props> = ({...props}) => {
       <div className={styles.results}>
         <div className={styles.list}>
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
-          <hr/>
 
           <RoomCardComponent/>
-          <hr/>
           <RoomCardComponent/>
         </div>
 

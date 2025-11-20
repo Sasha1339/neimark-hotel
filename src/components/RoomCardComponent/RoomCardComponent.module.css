@@ -1,6 +1,6 @@
 .main {
-    width: 100%;
-    height: 400px;
+    width: 35%;
+    height: 250px;
     display: flex;
     user-select: none;
     flex-direction: row;
@@ -11,20 +11,22 @@
 }
 
 .main:hover {
-    background-color: var(--main-gray-dark-opacity-75);
+    background-color: var(--text-color-active);
 }
 
 .main:hover .description {
-    color: var(--text-color-default);
+    color: var(--main-gray-dark);
 }
 
 .main:hover .item_level_two {
-    color: var(--text-color-default-opacity-75);
+    color: var(--main-gray-dark-opacity-75);
 }
 
 .main:hover .item_level_three {
-    color: var(--text-color-default-opacity-50);
+    color: var(--main-gray-dark-opacity-50);
 }
+
+
 
 .image {
 
@@ -70,12 +72,23 @@
     color: var(--main-gray-dark) !important;
 }
 
+.main:hover .button {
+    color: var(--main-gray-dark) !important;
+    border-color: var(--main-gray-dark) !important;
+}
+
+.main:hover .button:hover {
+    color: var(--text-color-active) !important;
+    border-color: var(--text-color-default) !important;
+}
+
+
 .item_level_two {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     color: var(--text-color-default-opacity-75);
-    font-size: 30px;
+    font-size: 17px;
     transition: 0.5s;
 }
 
@@ -84,18 +97,19 @@
     flex-direction: column;
     align-items: flex-start;
     color: var(--text-color-default-opacity-50);
-    font-size: 25px;
+    font-size: 14px;
     transition: 0.5s;
 }
 
 .description {
     font-family: 'Biform', sans-serif;
     color: var(--text-color-default);
-    font-size: 40px;
+    font-size: 20px;
     gap: 5px;
     width: 100%;
     height: 100%;
     display: flex;
+
     justify-content: space-between;
     flex-direction: column;
     transition: 0.5s;

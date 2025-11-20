@@ -124,3 +124,14 @@
     color: var(--text-color-default);
 }
 
+@media (max-width: 700px) {
+    .react-datepicker {
+        font-family: 'Biform', sans-serif;
+        font-size: 10px;
+        display: flex;
+        height: 270px;
+        border: 3px solid var(--text-color-active);
+        box-sizing: border-box;
+    }
+}
+

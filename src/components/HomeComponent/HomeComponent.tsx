@@ -98,8 +98,6 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
             <div className={styles.description_text}>
               ЖИВИ ТАМ, ГДЕ РАСТЕТ БУДУЩЕЕ
             </div>
-          </div>
-          <div className={styles.search}>
             <SearchComponent />
           </div>
 
