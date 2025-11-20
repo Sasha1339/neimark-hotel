@@ -21,7 +21,6 @@ export function SelectableModel({url}: { url: string }) {
   const spotLightRefFront = useRef<THREE.SpotLight>(null);
   const spotLightRefRight = useRef<THREE.SpotLight>(null);
   const spotLightRefBack = useRef<THREE.SpotLight>(null);
-  const lightVisualRefLeft = useRef<THREE.Mesh>(null);
 
   const handleClick = (event: any) => {
     event.stopPropagation();
@@ -48,8 +47,7 @@ export function SelectableModel({url}: { url: string }) {
       && spotLightRefLeft.current
       && spotLightRefRight.current
       && spotLightRefFront.current
-      && spotLightRefBack.current
-      && lightVisualRefLeft.current) {
+      && spotLightRefBack.current) {
       // Получаем bounding box объекта
       const boundingBox = new THREE.Box3().setFromObject(selectedObject);
       const size = new THREE.Vector3();
@@ -63,7 +61,7 @@ export function SelectableModel({url}: { url: string }) {
 
 
       // Вычисляем позицию света - над объектом на высоте равной половине высоты объекта
-      const radius = 0.3;
+      const radius = 0.35;
       const lightHeightY = 1;
 
       // Устанавливаем позицию света
@@ -99,8 +97,6 @@ export function SelectableModel({url}: { url: string }) {
         center.z + (radius * Math.sin(-(rotation.y - Math.PI / 2))), //минус перед углом так как ось z направлена вниз
       );
 
-      lightVisualRefLeft.current.position.copy(spotLightRefFront.current.position);
-      lightVisualRefLeft.current.visible = spotLightRefFront.current.visible;
       // Направляем свет на объект
       spotLightRefUp.current.target = selectedObject;
       spotLightRefLeft.current.target = selectedObject;
@@ -135,8 +131,8 @@ export function SelectableModel({url}: { url: string }) {
       {/* Красный источник света */}
       <spotLight
         ref={spotLightRefUp}
-        color={0xff0000}
-        intensity={20}
+        color={0xFFD29A}
+        intensity={2}
         distance={50}
         angle={Math.PI / 9}
         penumbra={0.1}
@@ -152,12 +148,12 @@ export function SelectableModel({url}: { url: string }) {
 
       <spotLight
         ref={spotLightRefLeft}
-        color={0x00ff00}
+        color={0xFFD29A}
         intensity={1}
         distance={50}
-        angle={Math.PI / 4}
+        angle={Math.PI / 3.5}
         penumbra={0.1}
-        decay={2}
+        decay={1.5}
         visible={false}
         castShadow={true}
         shadow-mapSize-width={2048}
@@ -169,12 +165,12 @@ export function SelectableModel({url}: { url: string }) {
 
       <spotLight
         ref={spotLightRefRight}
-        color={0x00ff00}
+        color={0xFFD29A}
         intensity={1}
         distance={50}
-        angle={Math.PI / 4}
+        angle={Math.PI / 3.5}
         penumbra={0.1}
-        decay={2}
+        decay={1.5}
         visible={false}
         castShadow={true}
         shadow-mapSize-width={2048}
@@ -186,12 +182,12 @@ export function SelectableModel({url}: { url: string }) {
 
       <spotLight
         ref={spotLightRefFront}
-        color={0x00ff00}
+        color={0xFFD29A}
         intensity={1}
         distance={50}
-        angle={Math.PI / 4}
+        angle={Math.PI / 3.5}
         penumbra={0.1}
-        decay={2}
+        decay={1.5}
         visible={false}
         castShadow={true}
         shadow-mapSize-width={2048}
@@ -203,12 +199,12 @@ export function SelectableModel({url}: { url: string }) {
 
       <spotLight
         ref={spotLightRefBack}
-        color={0x00ff00}
+        color={0xFFD29A}
         intensity={1}
         distance={50}
-        angle={Math.PI / 4}
+        angle={Math.PI / 3.5}
         penumbra={0.1}
-        decay={2}
+        decay={1.5}
         visible={false}
         castShadow={true}
         shadow-mapSize-width={2048}
@@ -218,10 +214,6 @@ export function SelectableModel({url}: { url: string }) {
         shadow-camera-far={50}
       />
 
-      <mesh ref={lightVisualRefLeft} visible={false}>
-        <sphereGeometry args={[0.1, 16, 16]}/>
-        <meshBasicMaterial color={0x00ff00}/>
-      </mesh>
     </group>
   );
 }
