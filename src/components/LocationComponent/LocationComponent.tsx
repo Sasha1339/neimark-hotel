@@ -59,7 +59,7 @@ export const LocationComponent: FC<Props> = ({scrollerRef}) => {
         </span>
         ))}</h1>
         <div className={styles.content}>
-          <Canvas camera={{ position: [5, 5, 5] }}>
+          <Canvas shadows camera={{ position: [5, 5, 5] }}>
             <Suspense fallback={null}>
               {/* Освещение */}
               <ambientLight intensity={1} />
