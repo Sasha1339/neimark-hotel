@@ -1,7 +1,8 @@
-import {FC, PropsWithChildren, useState} from "react";
+import {FC, PropsWithChildren, useEffect, useState} from "react";
 import {HeaderAction, NavigationTab} from "@/shared/types";
 import {NavigationContext} from "@/providers/NavigationContext";
 import {TabContext} from "@/providers/TabContext";
+import {useLocation, useNavigate} from "react-router-dom";
 
 export const TabProvider: FC<PropsWithChildren> = ({children}) => {
 

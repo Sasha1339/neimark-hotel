@@ -6,7 +6,7 @@ import omega from '@/assets/images/omega.webp';
 import {Button} from "@components/Button/Button";
 import {gsap} from "gsap";
 import useEmblaCarousel from "embla-carousel-react";
-import {RoomComponent} from "@components/RoomComponent/RoomComponent";
+import {RoomsSlideComponent} from "@components/RoomsSlideComponent/RoomsSlideComponent";
 
 type Props = {
   scrollerRef: RefObject<HTMLElement>;
@@ -84,12 +84,12 @@ export const PriceComponent: FC<Props> = ({scrollerRef}) => {
         <div className={styles.embla} ref={emblaRef}>
           <div className={styles.embla__container}>
 
-            <div className={styles.embla__slide}><RoomComponent title={'Номер Альфа'} image={alpha} price={12.5}
-                                                                description={'Стандартное размещение в двухместном номере'} about={'Площадь 35.5 м | 2 С/У | 4 персоны'}></RoomComponent></div>
-            <div className={styles.embla__slide}><RoomComponent title={'Номер Гамма'} image={gamma} price={16}
-                                                                description={'Номера повышенной комфортности'} about={'Площадь 33.3 м | 2 С/У | 3 персоны'}></RoomComponent></div>
-            <div className={styles.embla__slide}><RoomComponent title={'Номер Омега'} image={omega} price={25}
-                                                                description={'Одноместное размещение'} about={'Площадь 16.7 м | 1 С/У | 2 персоны'}></RoomComponent></div>
+            <div className={styles.embla__slide}><RoomsSlideComponent title={'Номер Альфа'} image={alpha} price={12.5}
+                                                                      description={'Стандартное размещение в двухместном номере'} about={'Площадь 35.5 м | 2 С/У | 4 персоны'}></RoomsSlideComponent></div>
+            <div className={styles.embla__slide}><RoomsSlideComponent title={'Номер Гамма'} image={gamma} price={16}
+                                                                      description={'Номера повышенной комфортности'} about={'Площадь 33.3 м | 2 С/У | 3 персоны'}></RoomsSlideComponent></div>
+            <div className={styles.embla__slide}><RoomsSlideComponent title={'Номер Омега'} image={omega} price={25}
+                                                                      description={'Одноместное размещение'} about={'Площадь 16.7 м | 1 С/У | 2 персоны'}></RoomsSlideComponent></div>
           </div>
         </div>
         <div className={styles.buttons}>

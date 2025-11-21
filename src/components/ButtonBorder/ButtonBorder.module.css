@@ -1,0 +1,55 @@
+.button {
+    font-family: 'Biform', sans-serif;
+    font-size: 16px;
+    transition: 0.5s;
+    color: var(--text-color-active);
+    padding: 10px;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+    background-color: var(--text-color-default);
+    outline: none;
+    border: 2px solid var(--text-color-active);
+    position: relative;
+
+}
+
+.active {
+    color: var(--text-color-default);
+    background-color: var(--text-color-active);
+    border: 2px solid transparent;
+}
+
+
+.button:hover {
+    color: var(--text-color-default);
+    background-color: var(--text-color-active);
+    border: 2px solid transparent;
+}
+
+@keyframes animated_text {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .button {
+        font-family: 'Biform', sans-serif;
+        font-size: 10px;
+        transition: 0.5s;
+        color: var(--text-color-default);
+        padding: 5px;
+        box-sizing: border-box;
+        user-select: none;
+        cursor: pointer;
+        background-color: var(--text-color-active);
+        outline: none;
+        border: none;
+        position: relative;
+    }
+
+}

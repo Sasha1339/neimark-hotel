@@ -8,6 +8,7 @@ import {Button} from "@components/Button/Button";
 import {HeaderContext} from "@/providers/HeaderContext";
 import {TabContext} from "@/providers/TabContext";
 import Hls from "hls.js";
+import {SearchComponent} from "@components/SearchComponent/SearchComponent";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,7 +56,7 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
         start: "top -10%",
         scrub: false,
         onEnter: () => {
-          headerContext[1]('visible')
+          headerContext[1]('home')
         },
         onLeaveBack: () => {
           headerContext[1]('hidden')
@@ -97,9 +98,9 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
             <div className={styles.description_text}>
               ЖИВИ ТАМ, ГДЕ РАСТЕТ БУДУЩЕЕ
             </div>
-            <Button title={'О гостинице'} onClick={() => {
-            }}/>
+            <SearchComponent />
           </div>
+
         </div>
       </div>
     </section>

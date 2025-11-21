@@ -6,6 +6,7 @@ import img2_1 from '@/assets/images/about_im_2_1.jpg';
 import img2_2 from '@/assets/images/about_im_2_2.jpg';
 import {Button} from "@components/Button/Button";
 import {gsap} from "gsap";
+import {useNavigate} from "react-router-dom";
 
 type Props = {
   scrollerRef: RefObject<HTMLElement>;
@@ -16,6 +17,8 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
   const triggerRef = useRef<HTMLElement>(null);
 
   const contentRef = useRef<HTMLDivElement>(null);
+
+  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -89,7 +92,7 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
                 <li>Интернет и коммунальные уже включены в стоимость</li>
               </ul>
             </div>
-            <Button title={'Хочу взглянуть на номера'} onClick={() => {}} />
+            <Button title={'Хочу взглянуть на номера'} onClick={() => navigate('/room')} />
           </div>
           <div className={styles.content_image_right}>
             <div className={`${styles.image_small} ${styles.animate_before_first}`} style={{backgroundImage: `url(${img2_1})`}}></div>

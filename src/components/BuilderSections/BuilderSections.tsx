@@ -10,12 +10,17 @@ import {PriceComponent} from "@components/PriceComponent/PriceComponent";
 import {EnvironmentsComponent} from "@components/EnvironmentsComponent/EnvironmentsComponent";
 import {NewsComponent} from "@components/NewsComponent/NewsComponent";
 import {ContactComponent} from "@components/ContactComponent/ConcactComponent";
+import {useLocation, useNavigate} from "react-router-dom";
+import {HeaderContext} from "@/providers/HeaderContext";
+import {LocationComponent} from "@components/LocationComponent/LocationComponent";
+import {LocationProvider} from "@/providers/LocationProvider";
 
 type Props = {}
 
 export const BuilderSections: FC<Props> = ({...props}) => {
 
   const navigationContext = useContext(NavigationContext);
+  const headerContext = useContext(HeaderContext);
   const tabContext = useContext(TabContext);
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -27,6 +32,12 @@ export const BuilderSections: FC<Props> = ({...props}) => {
   const newsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+      if (tabContext[0] === 'home') {
+        headerContext[1]('hidden');
+      } else {
+        headerContext[1]('home');
+      }
+
       switch (tabContext[0]) {
         case 'home': {
           const bunsTopParent = homeRef.current!.getBoundingClientRect().top - homeRef.current!.parentElement!.getBoundingClientRect().top;
@@ -74,7 +85,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         }
           break;
       }
-  }, [tabContext[0]]);
+  }, [tabContext]);
 
   const onScrollIngredients = (event: SyntheticEvent) => {
     const homeTopParent = homeRef.current!.getBoundingClientRect().top - event.currentTarget.getBoundingClientRect().top;
@@ -109,8 +120,12 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <div ref={priceRef} className={styles.ref_navigation}></div>
         <PriceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <EnvironmentsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <LocationProvider>
+          <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />
+        </LocationProvider>
         <div ref={newsRef} className={styles.ref_navigation}></div>
         <NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+
         <ContactComponent/>
       </div>
     </main>

@@ -10,7 +10,7 @@ import ya from '@/assets/images/ya2.jpg';
 import {Button} from "@components/Button/Button";
 import {gsap} from "gsap";
 import useEmblaCarousel from "embla-carousel-react";
-import {RoomComponent} from "@components/RoomComponent/RoomComponent";
+import {RoomsSlideComponent} from "@components/RoomsSlideComponent/RoomsSlideComponent";
 import {EnvironmentComponent} from "@components/EnvironmentComponent/EnvironmentComponent";
 
 type Props = {
