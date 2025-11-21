@@ -1,8 +1,9 @@
 import {useGLTF} from "@react-three/drei";
 import {useFrame, useThree} from "@react-three/fiber";
 import {Canvas} from '@react-three/fiber';
-import {Suspense, useState, useEffect, useRef} from 'react';
+import {Suspense, useState, useEffect, useRef, useContext} from 'react';
 import * as THREE from 'three';
+import {LocationContext} from "@/providers/LocationContext";
 
 interface MaterialMesh extends THREE.Mesh {
   material: THREE.Material | THREE.Material[];
@@ -12,6 +13,7 @@ export function SelectableModel({url}: { url: string }) {
   const {scene} = useGLTF(url);
   const groupRef = useRef<THREE.Group>(null);
   const {raycaster, mouse, camera} = useThree();
+  const locationContext = useContext(LocationContext);
 
   // Состояние для хранения выбранного объекта
   const [selectedObject, setSelectedObject] = useState<THREE.Object3D | null>(null);
@@ -26,8 +28,8 @@ export function SelectableModel({url}: { url: string }) {
     event.stopPropagation();
     const object = event.object as MaterialMesh;
 
-    console.log('🎯 КЛИК! Объект:', object.name);
-
+    //console.log('🎯 КЛИК! Объект:', object.name);
+    locationContext[1](object ? object.name : null);
     setSelectedObject(object);
   };
 
@@ -70,8 +72,6 @@ export function SelectableModel({url}: { url: string }) {
         center.y + lightHeightY, // Над объектом на половине его высоты
         center.z
       );
-
-      console.log(rotation.y / Math.PI * 180);
 
       spotLightRefLeft.current.position.set(
         center.x + (radius * Math.cos(rotation.y)),
@@ -128,6 +128,7 @@ export function SelectableModel({url}: { url: string }) {
         onPointerOver={() => document.body.style.cursor = 'pointer'}
         onPointerOut={() => document.body.style.cursor = 'default'}
       />
+
       {/* Красный источник света */}
       <spotLight
         ref={spotLightRefUp}

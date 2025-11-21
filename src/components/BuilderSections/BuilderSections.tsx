@@ -13,6 +13,7 @@ import {ContactComponent} from "@components/ContactComponent/ConcactComponent";
 import {useLocation, useNavigate} from "react-router-dom";
 import {HeaderContext} from "@/providers/HeaderContext";
 import {LocationComponent} from "@components/LocationComponent/LocationComponent";
+import {LocationProvider} from "@/providers/LocationProvider";
 
 type Props = {}
 
@@ -119,7 +120,9 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <div ref={priceRef} className={styles.ref_navigation}></div>
         <PriceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <EnvironmentsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />
+        <LocationProvider>
+          <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />
+        </LocationProvider>
         <div ref={newsRef} className={styles.ref_navigation}></div>
         <NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
 

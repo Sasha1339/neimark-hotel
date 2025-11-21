@@ -39,7 +39,7 @@ export const SearchComponent: FC<Props> = () => {
 
   return (
     <div className={styles.main}>
-      <div className={styles.item}><DatePicker
+      <div className={styles.item} style={{position: 'relative', zIndex: 10}}><DatePicker
         locale={ru}
         selected={filters.dateStart ? new Date(filters.dateStart) : null}
         onChange={handleStartDateChange}
@@ -56,7 +56,7 @@ export const SearchComponent: FC<Props> = () => {
         nextMonthButtonLabel="Следующий >"
         customInput={<CustomInputStart/>}
       /></div>
-      <div className={styles.item}><DatePicker
+      <div className={styles.item} style={{position: 'relative', zIndex: 10}}><DatePicker
         locale={ru}
         selected={filters.dateEnd ? new Date(filters.dateEnd) : null}
         selectsEnd
@@ -73,7 +73,7 @@ export const SearchComponent: FC<Props> = () => {
         nextMonthButtonLabel="Следующий >"
         customInput={<CustomInputEnd />}
       /></div>
-      <div className={styles.item}>
+      <div className={`${styles.item} ${styles.item_button}`}>
         <ButtonBorder className={styles.button} title={'Найти номера'} disabled={!isFilterValid} onClick={() => navigate('/search')}/>
       </div>
     </div>
