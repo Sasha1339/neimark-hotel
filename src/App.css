@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: var(--background-main);
+  background-image: url("assets/images/hotel.jpg");
   width: 100vw;
   height: 100vh;
   position: relative;

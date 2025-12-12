@@ -82,9 +82,7 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
             <Logo className={styles.logo}/>
             <nav className={styles.navigation}>
               <Tab active={false} title={'О нас'} onClick={() => tabContext[1]('about')}/>
-              <Tab active={false} title={'Проживание'} onClick={() => tabContext[1]('acco')}/>
-              <Tab active={false} title={'Цены'} onClick={() => tabContext[1]('price')}/>
-              <Tab active={false} title={'Новости'} onClick={() => tabContext[1]('news')}/>
+              <Tab active={false} title={'Номера'} onClick={() => tabContext[1]('price')}/>
             </nav>
           </div>
           <div className={styles.header_right}>
@@ -98,7 +96,10 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
             <div className={styles.description_text}>
               ЖИВИ ТАМ, ГДЕ РАСТЕТ БУДУЩЕЕ
             </div>
-            <SearchComponent />
+            <div className={styles.description_subtext}>
+              Коливинги ИТ-кампуса «НЕЙМАРК» — это современное пространство для студентов ИТ-направлений, исследователей и молодых специалистов, где всё создано для фокуса на учёбе, идеях и личном развитии.
+            </div>
+            {/*<SearchComponent />*/}
           </div>
 
         </div>

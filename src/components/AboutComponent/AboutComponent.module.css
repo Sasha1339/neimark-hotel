@@ -1,7 +1,8 @@
 .main {
     width: 100%;
     height: 120vh;
-    background: var(--gradient-gray-black);
+    background-image: var(--gradient-gray-black-opacity);
+    backdrop-filter: blur(20px);
     border-top: 1px solid var(--text-color-active);
 }
 
@@ -209,6 +210,30 @@
         box-sizing: border-box;
         overflow: hidden;
     }
+}
+
+.embla__slide {
+    flex: 0 0 calc(450px); /* ширина слайда */
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2%;
+    box-sizing: border-box;
+}
+
+
+.embla {
+    overflow: visible;
+    width: 100%;
+    height: 40%;
+    transform: translateY(100vw);
+
+}
+
+.embla__container {
+    display: flex;
+    height: 100%;
 }
 
 @media (max-width: 700px) {

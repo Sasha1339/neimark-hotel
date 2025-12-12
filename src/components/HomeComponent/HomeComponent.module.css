@@ -106,7 +106,7 @@
 }
 
 .description_container {
-    width: 400px;
+    width: 500px;
     height: 70%;
     display: flex;
     backdrop-filter: blur(20px);
@@ -129,11 +129,23 @@
     position: absolute;
     top: 40%;
     left: 50%;
-    width: 250%;
+    width: 200%;
     transform: translate(-50%, -50%);
     font-family: Biform, 'sans-serif';
     color: var(--text-color-default);
     font-size: 100px;
+}
+
+.description_subtext {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    font-family: Biform, 'sans-serif';
+    color: var(--text-color-default-opacity-50);
+    font-size: 20px;
+    text-align: center;
 }
 
 .description_section_mobile {

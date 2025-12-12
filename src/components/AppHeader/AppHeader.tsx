@@ -43,9 +43,7 @@ export const AppHeader: FC = () => {
         {headerContext[0] === 'home' && <nav className={styles.navigation}>
           <Tab active={navigationContext[0] === 'home'} title={'Главная'} onClick={() => onRoute('home')} />
           <Tab active={navigationContext[0] === 'about'} title={'О нас'} onClick={() => onRoute('about')} />
-          <Tab active={navigationContext[0] === 'acco'} title={'Проживание'} onClick={() => onRoute('acco')} />
-          <Tab active={navigationContext[0] === 'price'} title={'Цены'} onClick={() => onRoute('price')} />
-          <Tab active={navigationContext[0] === 'news'} title={'Новости'} onClick={() => onRoute('news')} />
+          <Tab active={navigationContext[0] === 'price'} title={'Номера'} onClick={() => onRoute('price')} />
         </nav>}
         {headerContext[0] === 'room' && <nav className={styles.navigation}>
           <Tab active={false} title={'< Вернуться'} onClick={() => navigate(-1)} />
