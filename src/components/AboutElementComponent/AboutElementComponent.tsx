@@ -21,10 +21,10 @@ export const AboutElementComponent: FC<Props> = ({title, onClick, showDownload =
     <div className={`${styles.main} ${className}`} onClick={onClick}>
       <div className={styles.gradient_overlay}></div>
       <div className={styles.description}>
-        {icon && <Icon name={icon} size={sizeIcon} />}
-        {description && <div className={styles.description_text}>{description}</div>}
-        {description && <hr/>}
+        {icon && <Icon name={icon} size={sizeIcon}/>}
         <div className={styles.title}>{title}</div>
+        {description && <hr/>}
+        {description && <div className={styles.description_text}>{description}</div>}
         {showDownload && <div className={styles.download}>Скачать</div>}
       </div>
     </div>

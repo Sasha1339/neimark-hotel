@@ -21,19 +21,21 @@ export const RoomsSlideComponent: FC<Props> = ({title, className, image, descrip
     <div className={`${styles.main} ${className}`} style={{backgroundImage: `url(${image})`}}>
 
       <div className={styles.description}>
-        <div className={styles.price}><span className={styles.price_text}>от {price} ₽</span></div>
+        <div className={styles.price}><span className={styles.price_text}>от {price.toLocaleString('ru-RU')} ₽</span></div>
         <div className={styles.description_block}>
           <p className={styles.title}>{title}</p>
           <p className={styles.text_description}>{description}</p>
         </div>
-        <div className={styles.about_list}>
+        <ul className={styles.about_list}>
           {about.map((e, i) => (
-            <div key={i} className={styles.about}>{e}</div>
+
+              <li key={i} className={styles.about}>{e}</li>
+
           ))}
-        </div>
+        </ul>
 
 
-        <Button className={styles.button} title={'Оставить заявку'} onClick={() => navigate(`room`, {state: {background: location}})}/>
+        <Button className={styles.button} title={'Оставить заявку'} onClick={() => {}}/>
       </div>
     </div>
   )

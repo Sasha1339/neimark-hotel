@@ -18,11 +18,6 @@ export const ContactComponent = () => {
             <a href={'https://vk.com/neimark_it'}>ВКонтакте</a>
             <a href={'https://t.me/neimarkitlektoriy'}>Телеграм</a>
           </div>
-          <div className={styles.info_column}>
-            <div>Наши ресурсы:</div>
-            <a href="https://neimark-it.ru/">Сайт Неймарк</a>
-            <div>Сотрудничесвто с Неймарк</div>
-          </div>
           <iframe
             className={styles.map_column}
             src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=43.981812%2C56.314407&mode=whatshere&whatshere%5Bpoint%5D=43.981813%2C56.314407&whatshere%5Bzoom%5D=17&z=17"

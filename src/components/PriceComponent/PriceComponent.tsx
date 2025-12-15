@@ -22,16 +22,6 @@ export const PriceComponent: FC<Props> = ({scrollerRef}) => {
 
 
   useEffect(() => {
-    if (!emblaApi) return;
-    const interval = setInterval(() => {
-      if (emblaApi.canScrollNext()) emblaApi.scrollNext();
-      else emblaApi.scrollTo(0); // возвращаемся к первому слайду
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, [emblaApi]);
-
-  useEffect(() => {
     if (!scrollerRef.current) return;
 
     gsap.timeline({
