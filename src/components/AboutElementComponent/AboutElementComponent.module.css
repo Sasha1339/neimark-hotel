@@ -103,4 +103,16 @@ hr {
         height: calc(100% + 20px);
 
     }
+
+    .description_text {
+        font-size: 12px;
+        color: var(--text-color-default);
+        text-align: start;
+    }
+
+    .title {
+        font-size: 18px;
+        color: var(--text-color-default);
+        text-align: start;
+    }
 }

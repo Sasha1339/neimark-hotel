@@ -256,6 +256,36 @@
         opacity: 0;
     }
 
+        .hint_span {
+            font-size: 60px;
+            top: 70px;
+        }
+
+        .content_text {
+            height: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 7px;
+            align-items: center;
+        }
+
+        .header_about {
+            margin: 0;
+            width: 100%;
+            height: 15%;
+            font-family: Biform, 'sans-serif';
+            color: var(--text-color-default);
+            font-size: 18px;
+        }
+
+    .content_item {
+        min-width: 30%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 }
 

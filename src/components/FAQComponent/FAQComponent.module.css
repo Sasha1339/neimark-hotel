@@ -208,7 +208,6 @@
         position: sticky;
         top: 0;/* прилипание */
         padding: 82px 20px 20px 20px;
-        height: calc(100vh);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -298,10 +297,11 @@
     .content {
         width: 100%;
         height: 85%;
+        padding: 70px 10px 70px;
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 5%;
+        gap: 30px;
         justify-content: start;
     }
 
@@ -340,4 +340,10 @@
         background-position: center center;
     }
 
+    .faq_block {
+        color: var(--text-color-active);
+        font-size: 18px;
+        font-family: 'Biform', sans-serif;
+        text-align: center;
+    }
 }
