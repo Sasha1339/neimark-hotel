@@ -15,13 +15,12 @@ export const ContactComponent = () => {
           </div>
           <div className={styles.info_column}>
             <div>Мы в социальных сетях:</div>
-            <div>ВКонтакте</div>
-            <div>Телеграм</div>
-            <div>WhatsApp</div>
+            <a href={'https://vk.com/neimark_it'}>ВКонтакте</a>
+            <a href={'https://t.me/neimarkitlektoriy'}>Телеграм</a>
           </div>
           <div className={styles.info_column}>
             <div>Наши ресурсы:</div>
-            <div>Сайт Неймарк</div>
+            <a href="https://neimark-it.ru/">Сайт Неймарк</a>
             <div>Сотрудничесвто с Неймарк</div>
           </div>
           <iframe

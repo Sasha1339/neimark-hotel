@@ -11,6 +11,7 @@ import {NewsComponent} from "@components/NewsComponent/NewsComponent";
 import {ContactComponent} from "@components/ContactComponent/ContactComponent";
 import {HeaderContext} from "@/providers/HeaderContext";
 import {FAQComponent} from "@components/FAQComponent/FAQComponent";
+import {ExcursionComponent} from "@components/ExcursionComponent/ExcursionComponent";
 type Props = {}
 
 export const BuilderSections: FC<Props> = ({...props}) => {
@@ -122,6 +123,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <div ref={newsRef} className={styles.ref_navigation}></div>
         <NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <FAQComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <ExcursionComponent />
         <ContactComponent/>
       </div>
     </main>
