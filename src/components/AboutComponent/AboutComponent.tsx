@@ -1,20 +1,6 @@
 import {FC, RefObject, useContext, useEffect, useRef} from "react";
 import styles from "./AboutComponent.module.css";
-import img1_1 from '@/assets/images/about_im_1_1.jpeg';
-import img1_2 from '@/assets/images/about_im_1_2.jpeg';
-import img2_1 from '@/assets/images/about_im_2_1.jpg';
-import img2_2 from '@/assets/images/about_im_2_2.jpg';
-import {Button} from "@components/Button/Button";
 import {gsap} from "gsap";
-import {useNavigate} from "react-router-dom";
-import {EnvironmentComponent} from "@components/EnvironmentComponent/EnvironmentComponent";
-import barber from "@/assets/images/barber.png";
-import mola from "@/assets/images/mola.webp";
-import ozon from "@/assets/images/ozon.webp";
-import wild from "@/assets/images/wild.webp";
-import cofe from "@/assets/images/cofe-like.jpeg";
-import sber from "@/assets/images/sber.webp";
-import ya from "@/assets/images/ya2.jpg";
 import useEmblaCarousel from "embla-carousel-react";
 import {AboutElementComponent} from "@components/AboutElementComponent/AboutElementComponent";
 
@@ -100,21 +86,39 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
           <div className={styles.embla__container}>
 
             <div className={styles.embla__slide}><AboutElementComponent title={'Современное пространство'}
-                                                                       description={'Новая гостиница с продуманной архитектурой и функциональными зонами. Среда, созданная для фокуса, развития и комфортной жизни.'}/></div>
+                                                                        icon={'coworking'}
+                                                                        description={'Новая гостиница с продуманной архитектурой и функциональными зонами. Среда, созданная для фокуса, развития и комфортной жизни.'}/>
+            </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Включено все необходимое'}
-                                                                        description={'В стоимость проживания уже включены интернет, коммунальные платежи, уборка номера, замена постельного белья и полотенец, прачечная.'}/></div>
+                                                                        icon={'all-inclusive'}
+                                                                        description={'В стоимость проживания уже включены интернет, коммунальные платежи, уборка номера, замена постельного белья и полотенец, прачечная.'}/>
+            </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Комфорт'}
-                                                                        description={'Современный ремонт, мебель, умные технологии и внимание к деталям — каждый номер продуман так, чтобы вы чувствовали себя как дома, только еще удобнее.'}/></div>
+                                                                        icon={'comfort'}
+                                                                        description={'Современный ремонт, мебель, умные технологии и внимание к деталям — каждый номер продуман так, чтобы вы чувствовали себя как дома, только еще удобнее.'}/>
+            </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Безопасность 24/7'}
-                                                                        description={'Все под контролем: круглосуточная охрана, интеллектуальная система видеонаблюдения и электронная пропускная система.'}/></div>
-            <div className={styles.embla__slide}><AboutElementComponent  title={'Комьюнити'}
-                                                                         description={'НЕЙМАРК — это среда единомышленников. Здесь легко находить друзей, партнёров и наставников, получать поддержку и развиваться вместе.'}/></div>
+                                                                        icon={'security'}
+                                                                        description={'Все под контролем: круглосуточная охрана, интеллектуальная система видеонаблюдения и электронная пропускная система.'}/>
+            </div>
+            <div className={styles.embla__slide}><AboutElementComponent title={'Комьюнити'}
+                                                                        icon={'community'}
+                                                                        description={'НЕЙМАРК — это среда единомышленников. Здесь легко находить друзей, партнёров и наставников, получать поддержку и развиваться вместе.'}/>
+            </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Центр города - центр событий'}
-                                                                        description={'Живите в шаговой доступности от вузов, офисов ИТ-компаний, исторического центра и ключевых городских мероприятий. Меньше времени в дороге — больше времени на развитие и жизнь.'}/></div>
+                                                                        icon={'city'}
+                                                                        description={'Живите в шаговой доступности от вузов, офисов ИТ-компаний, исторического центра и ключевых городских мероприятий. Меньше времени в дороге — больше времени на развитие и жизнь.'}/>
+            </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Подземная парковка'}
-                                                                        description={'Тёплая подземная парковка для автомобилей и электромототранспорта.'}/></div>
+                                                                        icon={'parking'}
+                                                                        description={'Тёплая подземная парковка для автомобилей и электромототранспорта.'}/>
+            </div>
           </div>
         </div>
+          <div className={`${styles.buttons}`}>
+            <div className={styles.button} onClick={() => emblaApi && emblaApi.scrollPrev()}>{'<'}</div>
+            <div className={styles.button} onClick={() => emblaApi && emblaApi.scrollNext()}>{'>'}</div>
+          </div>
       </div>
     </section>
   )
