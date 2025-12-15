@@ -41,21 +41,6 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
         once: true,   // анимация срабатывает только один раз
       },
     })
-      .from(`.${styles.animate_before_first}`, { y: '100vw', opacity: 0, duration: 0.1 })
-      .to(`.${styles.animate_before_first}`, { y: 0, opacity: 1, duration: 0.3 })
-      .to(`.${styles.animate_before_first}`, { duration: 0.05 })
-      .from(`.${styles.animate_before_second}`, { y: '100vw', opacity: 0, duration: 0.1 })
-      .to(`.${styles.animate_before_second}`, { y: 0, opacity: 1, duration: 0.3 })
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        scroller: scrollerRef.current,
-        start: "top 30%",
-        scrub: false, // scrub = false, чтобы анимация не зависела от скролла
-        once: true,   // анимация срабатывает только один раз
-      },
-    })
       .from(`.${styles.embla}`, {y: '100vw', opacity: 0, duration: 0.1})
       .to(`.${styles.embla}`, {y: 0, opacity: 1, duration: 0.5, ease: "sine.out"})
 

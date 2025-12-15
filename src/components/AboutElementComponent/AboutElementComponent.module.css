@@ -13,6 +13,7 @@
     transition: 0.6s;
     position: relative;
     border: 2px solid var(--text-color-default-opacity-50);
+    cursor: pointer;
 }
 
 .main:hover {

@@ -1,4 +1,4 @@
-import styles from './ConcactComponent.module.css';
+import styles from './ContactComponent.module.css';
 import { ReactComponent as Logo } from "@/assets/svg/logo.svg";
 
 export const ContactComponent = () => {
@@ -9,9 +9,9 @@ export const ContactComponent = () => {
         <div className={styles.content}>
           <Logo className={styles.logo}/>
           <div className={styles.info_column}>
-            <div>Гостиница неймарк:</div>
-            <div>+79200520222</div>
-            <div>kgrant@inbox.ru</div>
+            <div>Ресепшен (круглосуточно):</div>
+            <div>+7 831 435 13 15</div>
+            <div>welcome@neimark-it.ru</div>
           </div>
           <div className={styles.info_column}>
             <div>Мы в социальных сетях:</div>

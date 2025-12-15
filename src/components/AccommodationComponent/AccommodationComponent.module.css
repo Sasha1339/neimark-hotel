@@ -5,6 +5,7 @@
     transition: 0.5s;
     background-image: var(--gradient-gray-black-opacity);
     backdrop-filter: blur(20px);
+
 }
 
 .hint_span {
@@ -22,7 +23,7 @@
 .description_section {
     position: sticky;
     top: 0;/* прилипание */
-    padding: 200px 0 0 0;
+    padding: 82px 20px 20px 20px;
     height: calc(100vh);
     display: flex;
     flex-direction: column;
@@ -47,8 +48,23 @@
     justify-content: space-around;
     gap: 50px;
     position: relative;
-    transform: translateY(100vw);
+    transform: translateY(100vh);
     flex-wrap: wrap;
+}
+
+.header_about {
+    margin: 0;
+    width: 55%;
+    height: 30%;
+    font-family: Biform, 'sans-serif';
+    color: var(--text-color-default);
+    font-size: 50px;
+}
+
+.text_header_animated {
+    display: inline-block;
+    transform: translateX(100vw);
+    /*animation: animated_text_words 0.1s forwards;*/
 }
 
 .content_item {

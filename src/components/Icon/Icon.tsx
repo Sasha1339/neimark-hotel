@@ -11,7 +11,7 @@ export const Icon: FC<Props> = ({className, name, rotate = 0, size = 27, ...prop
 
 
   return (
-    <img className={className} style={{transform: `rotate(${rotate}deg)`}} width={size + 'px'} height={size + 'px'} src={`/svg/${name}.svg`} alt={'?'}/>
+    <img className={className} style={{transform: `rotate(${rotate}deg)`, transition: '0.5s'}} width={size + 'px'} height={size + 'px'} src={`/svg/${name}.svg`} alt={'?'}/>
   )
 
 }
