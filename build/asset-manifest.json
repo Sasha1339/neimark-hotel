@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0c96dcbf.css",
+    "main.js": "/static/js/main.06825854.js",
+    "static/js/511.02b9464e.chunk.js": "/static/js/511.02b9464e.chunk.js",
+    "static/media/hotel.jpg": "/static/media/hotel.8ef1645cf43a76282397.jpg",
+    "static/media/room3.jpg": "/static/media/room3.0a5191bb3a403ad9369d.jpg",
+    "static/media/room2.jpg": "/static/media/room2.df3144dc139f3652b155.jpg",
+    "static/media/room1.jpg": "/static/media/room1.f642d27cb6667a8c2bad.jpg",
+    "static/media/new2.jpeg": "/static/media/new2.f7847c96df1ce516d0a6.jpeg",
+    "static/media/alpha.webp": "/static/media/alpha.24bfaa29552d3ea2d203.webp",
+    "static/media/omega.webp": "/static/media/omega.acd4815b0c38366756b2.webp",
+    "static/media/new1.jpeg": "/static/media/new1.f1438098105dc4920bc5.jpeg",
+    "static/media/conditions.webp": "/static/media/conditions.bf943da25d23fabcdc7f.webp",
+    "static/media/gamma.webp": "/static/media/gamma.bf943da25d23fabcdc7f.webp",
+    "static/media/new3.jpeg": "/static/media/new3.92d9e4c67ea7a273dc34.jpeg",
+    "static/media/Paratype - Biform Regular.otf": "/static/media/Paratype - Biform Regular.30ea029c0d3f548d92ff.otf",
+    "static/media/room-alpha.svg": "/static/media/room-alpha.1c15eb69d05a2772d53648af4117558e.svg",
+    "static/media/logo.svg": "/static/media/logo.fc1da68839b9149958e1c074c6fe382f.svg",
+    "index.html": "/index.html",
+    "static/media/marker.svg": "/static/media/marker.30f75dde91b93fc2b372b5925522e32b.svg",
+    "main.0c96dcbf.css.map": "/static/css/main.0c96dcbf.css.map",
+    "main.06825854.js.map": "/static/js/main.06825854.js.map",
+    "511.02b9464e.chunk.js.map": "/static/js/511.02b9464e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c96dcbf.css",
+    "static/js/main.06825854.js"
+  ]
+}
