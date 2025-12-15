@@ -125,8 +125,7 @@ export const NewsComponent: FC<Props> = ({scrollerRef}) => {
 
       <div ref={contentRef} className={styles.description_section}>
         <span className={styles.hint_span}>НОВОСТИ</span>
-        <div className={styles.content} style={{backgroundImage: `url(${image})`}}>
-          <div className={styles.overlay_blur}></div>
+        <div className={styles.content}>
           <div className={styles.content_right}>
             <div className={styles.animate_before_first}>{title}</div>
             <div  className={`${styles.buttons} ${styles.animate_before_second}`}>

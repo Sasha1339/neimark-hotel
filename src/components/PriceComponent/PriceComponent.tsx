@@ -26,7 +26,7 @@ export const PriceComponent: FC<Props> = ({scrollerRef}) => {
     const interval = setInterval(() => {
       if (emblaApi.canScrollNext()) emblaApi.scrollNext();
       else emblaApi.scrollTo(0); // возвращаемся к первому слайду
-    }, 3000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [emblaApi]);
@@ -84,12 +84,23 @@ export const PriceComponent: FC<Props> = ({scrollerRef}) => {
         <div className={styles.embla} ref={emblaRef}>
           <div className={styles.embla__container}>
 
-            <div className={styles.embla__slide}><RoomsSlideComponent title={'Номер Альфа'} image={alpha} price={12.5}
-                                                                      description={'Стандартное размещение в двухместном номере'} about={'Площадь 35.5 м | 2 С/У | 4 персоны'}></RoomsSlideComponent></div>
-            <div className={styles.embla__slide}><RoomsSlideComponent title={'Номер Гамма'} image={gamma} price={16}
-                                                                      description={'Номера повышенной комфортности'} about={'Площадь 33.3 м | 2 С/У | 3 персоны'}></RoomsSlideComponent></div>
-            <div className={styles.embla__slide}><RoomsSlideComponent title={'Номер Омега'} image={omega} price={25}
-                                                                      description={'Одноместное размещение'} about={'Площадь 16.7 м | 1 С/У | 2 персоны'}></RoomsSlideComponent></div>
+            <div className={styles.embla__slide}><RoomsSlideComponent title={'Номер «Альфа»'} image={alpha}
+                                                                      price={12000}
+                                                                      description={'Двухместное размещение'}
+                                                                      about={['2 комнаты в блоке', 'с балконом / без балкона']}></RoomsSlideComponent>
+            </div>
+            <div className={styles.embla__slide}><RoomsSlideComponent title={'Номер «Бета»'} image={omega} price={17000}
+                                                                      description={'Одноместное размещение'}
+                                                                      about={['2 комнаты в блоке', 'с балконом / без балкона']}></RoomsSlideComponent>
+            </div>
+            <div className={styles.embla__slide}><RoomsSlideComponent title={'Номер «Гамма»'} image={gamma} price={14000}
+                                                                      description={'Двухместное размещение'}
+                                                                      about={['1 комната в блоке', 'с балконом / без балкона']}></RoomsSlideComponent>
+            </div>
+            <div className={styles.embla__slide}><RoomsSlideComponent title={'Номер «Омега»'} image={omega} price={20000}
+                                                                      description={'Одноместное размещение'}
+                                                                      about={['2 комнаты в блоке', 'улучшенная планировка', 'с балконом / без балкона']}></RoomsSlideComponent>
+            </div>
           </div>
         </div>
         <div className={styles.buttons}>

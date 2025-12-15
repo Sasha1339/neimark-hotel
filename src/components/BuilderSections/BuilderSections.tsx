@@ -7,14 +7,11 @@ import {gsap} from "gsap";
 import {AboutComponent} from "@components/AboutComponent/AboutComponent";
 import {AccommodationComponent} from "@components/AccommodationComponent/AccommodationComponent";
 import {PriceComponent} from "@components/PriceComponent/PriceComponent";
-import {EnvironmentsComponent} from "@components/EnvironmentsComponent/EnvironmentsComponent";
 import {NewsComponent} from "@components/NewsComponent/NewsComponent";
-import {ContactComponent} from "@components/ContactComponent/ConcactComponent";
-import {useLocation, useNavigate} from "react-router-dom";
+import {ContactComponent} from "@components/ContactComponent/ContactComponent";
 import {HeaderContext} from "@/providers/HeaderContext";
-import {LocationComponent} from "@components/LocationComponent/LocationComponent";
-import {LocationProvider} from "@/providers/LocationProvider";
-
+import {FAQComponent} from "@components/FAQComponent/FAQComponent";
+import {ExcursionComponent} from "@components/ExcursionComponent/ExcursionComponent";
 type Props = {}
 
 export const BuilderSections: FC<Props> = ({...props}) => {
@@ -119,13 +116,14 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={priceRef} className={styles.ref_navigation}></div>
         <PriceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <EnvironmentsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <LocationProvider>
-          <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />
-        </LocationProvider>
+        {/*<EnvironmentsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
+        {/*<LocationProvider>*/}
+        {/*  <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}
+        {/*</LocationProvider>*/}
         <div ref={newsRef} className={styles.ref_navigation}></div>
         <NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-
+        <FAQComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <ExcursionComponent />
         <ContactComponent/>
       </div>
     </main>

@@ -9,6 +9,7 @@ import {HeaderContext} from "@/providers/HeaderContext";
 import {TabContext} from "@/providers/TabContext";
 import Hls from "hls.js";
 import {SearchComponent} from "@components/SearchComponent/SearchComponent";
+import {Icon} from "@components/Icon/Icon";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -82,9 +83,7 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
             <Logo className={styles.logo}/>
             <nav className={styles.navigation}>
               <Tab active={false} title={'О нас'} onClick={() => tabContext[1]('about')}/>
-              <Tab active={false} title={'Проживание'} onClick={() => tabContext[1]('acco')}/>
-              <Tab active={false} title={'Цены'} onClick={() => tabContext[1]('price')}/>
-              <Tab active={false} title={'Новости'} onClick={() => tabContext[1]('news')}/>
+              <Tab active={false} title={'Номера'} onClick={() => tabContext[1]('price')}/>
             </nav>
           </div>
           <div className={styles.header_right}>
@@ -93,12 +92,22 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
           </div>
         </header>
         <div className={styles.content}>
-          <div className={styles.description_container}>
-            <div className={styles.paragraph_text}>ГОСТИНИЦА НЕЙМАРК</div>
-            <div className={styles.description_text}>
-              ЖИВИ ТАМ, ГДЕ РАСТЕТ БУДУЩЕЕ
-            </div>
-            <SearchComponent />
+          {/*<div className={styles.description_container}>*/}
+          {/*  <div className={styles.paragraph_text}>ГОСТИНИЦА НЕЙМАРК</div>*/}
+          {/*  */}
+          {/*  <div className={styles.description_subtext}>*/}
+          {/*    Коливинги ИТ-кампуса «НЕЙМАРК» — это современное пространство для студентов ИТ-направлений, исследователей и молодых специалистов, где всё создано для фокуса на учёбе, идеях и личном развитии.*/}
+          {/*  </div>*/}
+          {/*  /!*<SearchComponent />*!/*/}
+          {/*</div>*/}
+
+          <div className={styles.description_text}>
+
+            <span className={styles.description_inner_text}>ЖИВИ ТАМ, ГДЕ НАЧИНАЕТСЯ БУДУЩЕЕ</span>
+              <div className={styles.description_subtext}>
+                Коливинги ИТ-кампуса «НЕЙМАРК» — это современное пространство для студентов ИТ-направлений, исследователей и молодых специалистов, где всё создано для фокуса на учёбе, идеях и личном развитии.
+              </div>
+            <Icon name={'double-arrow'} size={30}/>
           </div>
 
         </div>

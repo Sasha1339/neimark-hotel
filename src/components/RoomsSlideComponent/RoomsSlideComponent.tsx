@@ -8,7 +8,7 @@ type Props = {
   image: string;
   description: string;
   price: number;
-  about: string;
+  about: string[];
   className?: string;
 }
 
@@ -21,14 +21,19 @@ export const RoomsSlideComponent: FC<Props> = ({title, className, image, descrip
     <div className={`${styles.main} ${className}`} style={{backgroundImage: `url(${image})`}}>
 
       <div className={styles.description}>
-        <div className={styles.price}>от {price} тыс. р.</div>
+        <div className={styles.price}><span className={styles.price_text}>от {price} ₽</span></div>
         <div className={styles.description_block}>
-          <p className={styles.hint}>Супер комфортно</p>
           <p className={styles.title}>{title}</p>
           <p className={styles.text_description}>{description}</p>
         </div>
-        <div className={styles.about}>{about}</div>
-        <Button className={styles.button} title={'Посмотреть'} onClick={() => navigate(`room`, {state: {background: location}})}/>
+        <div className={styles.about_list}>
+          {about.map((e, i) => (
+            <div key={i} className={styles.about}>{e}</div>
+          ))}
+        </div>
+
+
+        <Button className={styles.button} title={'Оставить заявку'} onClick={() => navigate(`room`, {state: {background: location}})}/>
       </div>
     </div>
   )

@@ -1,0 +1,48 @@
+<!-- icon666.com - MILLIONS OF FREE VECTOR ICONS -->
+<svg fill="#fff" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <g id="Down">
+        <path d="m63.414 22.09a1 1 0 0 0 -1.071.156l-30.343 26.428-30.343-26.428a1 1 0 0 0 -1.657.754v10a1 1 0 0 0 .343.754l31 27a1 1 0 0 0 1.314 0l31-27a1 1 0 0 0 .343-.754v-10a1 1 0 0 0 -.586-.91z">
+
+            <animateTransform
+                    attributeName="transform"
+                    type="translate"
+                    fill="freeze"
+                    from="0 0"
+                    to="0 5"
+                    dur="0.5s"
+                    begin="oneEnd.end + 0.75s"/>
+
+            <animateTransform
+                    attributeName="transform"
+                    type="translate"
+                    fill="freeze"
+                    from="0 5"
+                    to="0 0"
+                    dur="0.5s"
+                    begin="oneStart.end + 0.75s"/>
+
+        </path>
+        <path d="m63.414 3.09a1 1 0 0 0 -1.071.156l-30.343 26.428-30.343-26.428a1 1 0 0 0 -1.657.754v10a1 1 0 0 0 .343.754l31 27a1 1 0 0 0 1.314 0l31-27a1 1 0 0 0 .343-.754v-10a1 1 0 0 0 -.586-.91z">
+            <animateTransform
+                    attributeName="transform"
+                    fill="freeze"
+                    type="translate"
+                    from="0 0"
+                    to="0 5"
+                    dur="0.5s"
+                    id="oneStart"
+                    begin="0s;oneEnd.end + 0.25s"/>
+
+            <animateTransform
+                    attributeName="transform"
+                    type="translate"
+                    fill="freeze"
+                    from="0 5"
+                    to="0 0"
+                    dur="0.5s"
+                    id="oneEnd"
+                    begin="oneStart.end + 0.25s"/>
+
+        </path>
+    </g>
+</svg>
