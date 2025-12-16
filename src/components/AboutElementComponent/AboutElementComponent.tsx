@@ -12,7 +12,7 @@ type Props = {
   onClick?: () => void;
 }
 
-export const AboutElementComponent: FC<Props> = ({title, onClick, showDownload = false, icon, className, sizeIcon = 90, description, ...props}) => {
+export const AboutElementComponent: FC<Props> = ({title, onClick, showDownload = false, icon, className, sizeIcon = window.innerWidth < 700 ? 40 : 90, description, ...props}) => {
 
 
 

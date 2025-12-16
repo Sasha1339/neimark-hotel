@@ -230,5 +230,12 @@
         font-size: 20px;
     }
 
+    .embla__slide {
+        flex: 0 0 90%; /* ширина слайда */
+        user-select: none;
+        padding: 0 2%;
+        box-sizing: border-box;
+    }
+
 }
 
