@@ -244,6 +244,8 @@
     align-items: center;
     font-size: 30px;
     transition: 1s;
+    user-select: none;
+    cursor: pointer;
 }
 
 .button:hover {

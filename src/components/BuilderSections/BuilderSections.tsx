@@ -112,8 +112,6 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <HomeComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={aboutRef} className={styles.ref_navigation}></div>
         <AboutComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <div ref={accoRef} className={styles.ref_navigation}></div>
-        <AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={priceRef} className={styles.ref_navigation}></div>
         <PriceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         {/*<EnvironmentsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
@@ -121,9 +119,11 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         {/*  <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}
         {/*</LocationProvider>*/}
         <div ref={newsRef} className={styles.ref_navigation}></div>
-        <NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        {/*<NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         <FAQComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <ExcursionComponent />
+        <div ref={accoRef} className={styles.ref_navigation}></div>
+        <AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <ExcursionComponent/>
         <ContactComponent/>
       </div>
     </main>

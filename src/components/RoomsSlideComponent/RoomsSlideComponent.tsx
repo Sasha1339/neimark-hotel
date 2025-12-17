@@ -21,7 +21,8 @@ export const RoomsSlideComponent: FC<Props> = ({title, className, image, descrip
     <div className={`${styles.main} ${className}`} style={{backgroundImage: `url(${image})`}}>
 
       <div className={styles.description}>
-        <div className={styles.price}><span className={styles.price_text}>от {price.toLocaleString('ru-RU')} ₽</span></div>
+        <div className={styles.inner_description}>
+
         <div className={styles.description_block}>
           <p className={styles.title}>{title}</p>
           <p className={styles.text_description}>{description}</p>
@@ -33,9 +34,16 @@ export const RoomsSlideComponent: FC<Props> = ({title, className, image, descrip
 
           ))}
         </ul>
+        </div>
 
+        <div>
+          <div className={styles.price}><span className={styles.price_text}>от {price.toLocaleString('ru-RU')} ₽</span>
 
-        <Button className={styles.button} title={'Оставить заявку'} onClick={() => {}}/>
+          </div>
+          <Button className={styles.button} title={'Оставить заявку'} onClick={() => {
+          }}/>
+        </div>
+
       </div>
     </div>
   )

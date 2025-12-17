@@ -23,7 +23,6 @@ export const AboutElementComponent: FC<Props> = ({title, onClick, showDownload =
       <div className={styles.description}>
         {icon && <Icon name={icon} size={sizeIcon}/>}
         <div className={styles.title}>{title}</div>
-        {description && <hr/>}
         {description && <div className={styles.description_text}>{description}</div>}
         {showDownload && <div className={styles.download}>Скачать</div>}
       </div>

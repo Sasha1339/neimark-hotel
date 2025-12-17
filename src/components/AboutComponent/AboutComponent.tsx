@@ -72,27 +72,27 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
 
             <div className={styles.embla__slide}><AboutElementComponent title={'Современное пространство'}
                                                                         icon={'coworking'}
-                                                                        description={'Новая гостиница с продуманной архитектурой и функциональными зонами. Среда, созданная для фокуса, развития и комфортной жизни'}/>
+                                                                        description={'Новая гостиница с продуманной архитектурой и зонированием для жизни, работы и развития'}/>
             </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Включено все необходимое'}
                                                                         icon={'all-inclusive'}
-                                                                        description={'В стоимость проживания уже включены интернет, коммунальные платежи, уборка номера, замена постельного белья и полотенец, прачечная'}/>
+                                                                        description={'Интернет, коммунальные услуги, уборка, смена белья и полотенец, прачечная — уже включены в стоимость'}/>
             </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Комфорт'}
                                                                         icon={'comfort'}
-                                                                        description={'Современный ремонт, мебель, умные технологии и внимание к деталям — каждый номер продуман так, чтобы вы чувствовали себя как дома, только еще удобнее'}/>
+                                                                        description={'Современный интерьер, необходимая техника, удобная мебель и умные решения для жизни без лишних забот'}/>
             </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Безопасность 24/7'}
                                                                         icon={'security'}
-                                                                        description={'Все под контролем: круглосуточная охрана, интеллектуальная система видеонаблюдения и электронная пропускная система'}/>
+                                                                        description={'Круглосуточная охрана, видеонаблюдение и электронный доступ в корпуса'}/>
             </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Комьюнити'}
                                                                         icon={'community'}
-                                                                        description={'НЕЙМАРК — это среда единомышленников. Здесь легко находить друзей, партнёров и наставников, получать поддержку и развиваться вместе'}/>
+                                                                        description={'Среда единомышленников для общения, сотрудничества и роста'}/>
             </div>
-            <div className={styles.embla__slide}><AboutElementComponent title={'Центр города - центр событий'}
+            <div className={styles.embla__slide}><AboutElementComponent title={'Центр города'}
                                                                         icon={'city'}
-                                                                        description={'Живите в шаговой доступности от вузов, офисов ИТ-компаний, исторического центра и ключевых городских мероприятий. Меньше времени в дороге — больше времени на развитие и жизнь'}/>
+                                                                        description={'Вы в эпицентре городской жизни и ключевых событий города'}/>
             </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Подземная парковка'}
                                                                         icon={'parking'}
