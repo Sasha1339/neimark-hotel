@@ -119,7 +119,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         {/*  <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}
         {/*</LocationProvider>*/}
         <div ref={newsRef} className={styles.ref_navigation}></div>
-        <NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        {/*<NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         <FAQComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={accoRef} className={styles.ref_navigation}></div>
         <AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>

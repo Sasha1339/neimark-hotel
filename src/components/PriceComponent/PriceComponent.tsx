@@ -87,7 +87,7 @@ export const PriceComponent: FC<Props> = ({scrollerRef}) => {
                                                                       description={'Двухместное размещение'}
                                                                       about={['1 комната в блоке', 'с балконом / без балкона']}></RoomsSlideComponent>
             </div>
-            <div className={styles.embla__slide}><RoomsSlideComponent title={'Номер «Омега»'} image={omega} price={20000}
+            <div className={styles.embla__slide}><RoomsSlideComponent title={'Номер «Дельта»'} image={omega} price={20000}
                                                                       description={'Одноместное размещение'}
                                                                       about={['2 комнаты в блоке', 'улучшенная планировка', 'с балконом / без балкона']}></RoomsSlideComponent>
             </div>
