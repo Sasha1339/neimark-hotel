@@ -1,12 +1,19 @@
-<?xml version="1.0" ?>
-
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg fill="#ffffff" width="800px" height="800px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
-
-<g id="layer1">
-
-<path d="M 4 0 L 4 18 L 17 18 L 17 5 L 17 4 L 13 0 L 12 0 L 4 0 z M 5 1 L 12 1 L 12 4 L 12 5 L 16 5 L 16 17 L 5 17 L 5 1 z M 13 1.3535156 L 15.646484 4 L 13 4 L 13 1.3535156 z M 2 2 L 2 19 L 2 20 L 3 20 L 15 20 L 15 19 L 3 19 L 3 2 L 2 2 z M 6 7 L 6 8 L 15 8 L 15 7 L 6 7 z M 6 9 L 6 10 L 15 10 L 15 9 L 6 9 z M 6 11 L 6 12 L 15 12 L 15 11 L 6 11 z M 6 13 L 6 14 L 15 14 L 15 13 L 6 13 z "/>
-
-</g>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.13 89.26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2956a;
+      }
+    </style>
+  </defs>
+  <g id="_Слой_1-2" data-name="Слой 1">
+    <g>
+      <polygon class="cls-1" points="70.13 0 19.13 0 19.13 6.38 12.75 6.38 12.75 12.75 6.38 12.75 6.38 19.13 57.38 19.13 57.38 12.75 19.13 12.75 19.13 6.38 63.76 6.38 63.76 70.14 57.38 70.14 57.38 19.13 51.01 19.13 51.01 82.88 6.38 82.88 6.38 19.13 0 19.13 0 84.11 0 84.11 0 89.26 56.83 89.26 56.83 89.26 57.38 89.26 57.38 76.51 70.13 76.51 70.13 76.51 70.13 76.51 70.13 6.38 70.13 6.38 70.13 0"/>
+      <rect class="cls-1" x="12.75" y="51" width="31.73" height="6.38"/>
+      <rect class="cls-1" x="12.55" y="63.76" width="31.73" height="6.38"/>
+      <rect class="cls-1" x="12.75" y="38.25" width="31.73" height="6.38"/>
+      <rect class="cls-1" x="12.35" y="25.5" width="32.13" height="6.38"/>
+    </g>
+  </g>
 </svg>
