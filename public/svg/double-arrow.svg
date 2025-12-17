@@ -1,48 +1,17 @@
-<!-- icon666.com - MILLIONS OF FREE VECTOR ICONS -->
-<svg fill="#fff" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-    <g id="Down">
-        <path d="m63.414 22.09a1 1 0 0 0 -1.071.156l-30.343 26.428-30.343-26.428a1 1 0 0 0 -1.657.754v10a1 1 0 0 0 .343.754l31 27a1 1 0 0 0 1.314 0l31-27a1 1 0 0 0 .343-.754v-10a1 1 0 0 0 -.586-.91z">
-
-            <animateTransform
-                    attributeName="transform"
-                    type="translate"
-                    fill="freeze"
-                    from="0 0"
-                    to="0 5"
-                    dur="0.5s"
-                    begin="oneEnd.end + 0.75s"/>
-
-            <animateTransform
-                    attributeName="transform"
-                    type="translate"
-                    fill="freeze"
-                    from="0 5"
-                    to="0 0"
-                    dur="0.5s"
-                    begin="oneStart.end + 0.75s"/>
-
-        </path>
-        <path d="m63.414 3.09a1 1 0 0 0 -1.071.156l-30.343 26.428-30.343-26.428a1 1 0 0 0 -1.657.754v10a1 1 0 0 0 .343.754l31 27a1 1 0 0 0 1.314 0l31-27a1 1 0 0 0 .343-.754v-10a1 1 0 0 0 -.586-.91z">
-            <animateTransform
-                    attributeName="transform"
-                    fill="freeze"
-                    type="translate"
-                    from="0 0"
-                    to="0 5"
-                    dur="0.5s"
-                    id="oneStart"
-                    begin="0s;oneEnd.end + 0.25s"/>
-
-            <animateTransform
-                    attributeName="transform"
-                    type="translate"
-                    fill="freeze"
-                    from="0 5"
-                    to="0 0"
-                    dur="0.5s"
-                    id="oneEnd"
-                    begin="oneStart.end + 0.25s"/>
-
-        </path>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.41 59.35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="_Слой_1-2" data-name="Слой 1">
+    <g>
+      <rect class="cls-1" x="16.96" width="8.49" height="59.35"/>
+      <polygon class="cls-1" points="8.49 33.91 0 33.91 0 42.4 8.48 42.4 8.48 50.88 16.96 50.88 16.96 42.39 8.49 42.39 8.49 33.91"/>
+      <polygon class="cls-1" points="42.41 33.91 33.93 33.91 33.93 42.39 25.45 42.39 25.45 50.88 33.93 50.88 33.93 42.4 42.41 42.4 42.41 33.91"/>
     </g>
+  </g>
 </svg>
