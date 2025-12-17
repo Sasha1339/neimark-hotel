@@ -80,7 +80,7 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
         <div className={`${styles.gradient_overlay}`}></div>
         <header className={`${styles.header}`}>
           <div className={styles.header_left}>
-            <Logo className={styles.logo}/>
+            <Logo className={styles.logo} onClick={() => window.open('https://neimark-it.ru/')}/>
             <nav className={styles.navigation}>
               <Tab active={false} title={'О нас'} onClick={() => tabContext[1]('about')}/>
               <Tab active={false} title={'Номера'} onClick={() => tabContext[1]('price')}/>

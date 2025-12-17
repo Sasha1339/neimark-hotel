@@ -19,7 +19,7 @@
 .description_section {
     position: sticky;
     top: 0;/* прилипание */
-    padding: 82px 20px 20px 20px;
+    padding: 82px 150px 20px 150px;
     height: calc(50vh);
     display: flex;
     flex-direction: column;
@@ -56,9 +56,52 @@ a {
     width: 100%;
     height: 100%;
     display: grid;
-    align-items: start;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 2px solid var(--text-color-default-opacity-25);
+    padding: 50px 0 100px;
+    box-sizing: border-box;
 }
+
+.content_bottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid var(--text-color-default-opacity-25);
+    padding: 50px 0 100px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: Biform, 'sans-serif';
+    font-size: 14px;
+    color: var(--text-color-active);
+}
+
+.paragraph {
+    font-family: Biform, 'sans-serif';
+    font-size: 36px;
+    color: var(--text-color-active);
+}
+
+.text_bottom_left {
+    font-family: Biform, 'sans-serif';
+    font-size: 14px;
+    width: 25vw;
+    text-align: start;
+    color: var(--text-color-default-opacity-50);
+}
+
+.text_bottom_right {
+    font-family: Biform, 'sans-serif';
+    font-size: 14px;
+    width: 30vw;
+    text-align: end;
+    color: var(--text-color-default);
+}
+
 
 @media (max-height: 900px) {
     .info_column {
@@ -93,11 +136,10 @@ a {
     .content {
         width: 100%;
         height: 100%;
-        display: grid;
-        align-items: start;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .logo {
@@ -118,6 +160,34 @@ a {
 
     .map_column {
         grid-column: span 2;
+    }
+
+    .title {
+        font-family: Biform, 'sans-serif';
+        font-size: 8px;
+        color: var(--text-color-active);
+    }
+
+    .paragraph {
+        font-family: Biform, 'sans-serif';
+        font-size: 12px;
+        color: var(--text-color-active);
+    }
+
+    .text_bottom_left {
+        font-family: Biform, 'sans-serif';
+        font-size: 8px;
+        width: 25vw;
+        text-align: start;
+        color: var(--text-color-default-opacity-50);
+    }
+
+    .text_bottom_right {
+        font-family: Biform, 'sans-serif';
+        font-size: 8px;
+        width: 30vw;
+        text-align: end;
+        color: var(--text-color-default);
     }
 
 }

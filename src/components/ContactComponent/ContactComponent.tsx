@@ -7,24 +7,22 @@ export const ContactComponent = () => {
     <footer className={styles.main}>
       <div className={styles.description_section}>
         <div className={styles.content}>
-          <Logo className={styles.logo}/>
           <div className={styles.info_column}>
-            <div>Ресепшен (круглосуточно):</div>
-            <div>+7 831 435 13 15</div>
-            <div>welcome@neimark-it.ru</div>
+            <div className={styles.title}>/ РЕСЕПШЕН(24/7)</div>
+            <div className={styles.paragraph}>+7 831 435 13 15</div>
           </div>
           <div className={styles.info_column}>
-            <div>Мы в социальных сетях:</div>
-            <a href={'https://vk.com/neimark_it'}>ВКонтакте</a>
-            <a href={'https://t.me/neimarkitlektoriy'}>Телеграм</a>
+            <div className={styles.title}>/ E-MAIL</div>
+            <div className={styles.paragraph}>welcome@neimark-it.ru</div>
           </div>
-          <iframe
-            className={styles.map_column}
-            src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=43.981812%2C56.314407&mode=whatshere&whatshere%5Bpoint%5D=43.981813%2C56.314407&whatshere%5Bzoom%5D=17&z=17"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-          ></iframe>
+          <div className={styles.info_column}>
+            <div className={styles.title}>/ АДРЕС</div>
+            <div className={styles.paragraph}>НИЖНИЙ НОВГОРОД, ул. БОЛЬШИЕ ОВРАГИ, д 8</div>
+          </div>
+        </div>
+        <div className={styles.content_bottom}>
+          <div className={styles.text_bottom_left}>© 2025 Автономная некоммерческая организация высшего образования «Университет НЕЙМАРК»</div>
+          <div className={styles.text_bottom_right}>Политика конфиденциальности</div>
         </div>
       </div>
 

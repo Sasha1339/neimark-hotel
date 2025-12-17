@@ -62,7 +62,7 @@ export const AccommodationComponent: FC<Props> = ({scrollerRef}) => {
     <section ref={triggerRef} className={styles.main}>
 
       <div ref={contentRef} className={styles.description_section}>
-        <span className={styles.hint_span}>ПРОЖИВАНИЕ</span>
+        {/*<span className={styles.hint_span}>ПРОЖИВАНИЕ</span>*/}
         <h1 className={styles.header_about}>{textHeader.split(" ").map((word, wi) => (
           <span key={wi} className={styles.word}>
           {word.split("").map((letter, li) => (

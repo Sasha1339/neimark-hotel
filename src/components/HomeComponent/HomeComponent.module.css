@@ -17,6 +17,7 @@
 
 .logo {
     height: 50%;
+    cursor: pointer;
 }
 
 .header {
@@ -261,10 +262,10 @@
 
     .header_left {
         display: flex;
-        flex-direction: column;
-        gap: 1%;
+        flex-direction: row;
+        gap: 5%;
         height: 100%;
-        align-items: start;
+        align-items: center;
         justify-content: center;
     }
 
