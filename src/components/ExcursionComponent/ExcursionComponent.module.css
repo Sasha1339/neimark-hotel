@@ -21,7 +21,7 @@
     position: sticky;
     top: 0;/* прилипание */
     padding: 82px 0 20px 0;
-    height: calc(50vh);
+    height: 500px;
     flex-direction: column;
     font-family: 'Biform', sans-serif;
     color: var(--text-color-default);
@@ -139,8 +139,8 @@ hr {
     .description_section {
         position: sticky;
         top: 0;/* прилипание */
-        padding: 82px 20px 20px 20px;
-        height: calc(60vh);
+        padding: 0 20px 0 20px;
+        height: 500px;
         display: flex;
         flex-direction: column;
         justify-content: start;

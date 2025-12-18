@@ -27,6 +27,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
   const accoRef = useRef<HTMLDivElement>(null);
   const priceRef = useRef<HTMLDivElement>(null);
   const newsRef = useRef<HTMLDivElement>(null);
+  const excursionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
       if (tabContext[0] === 'home') {
@@ -81,6 +82,15 @@ export const BuilderSections: FC<Props> = ({...props}) => {
           });
         }
           break;
+        case 'excursion': {
+          const mainTopParent = excursionRef.current!.getBoundingClientRect().top - excursionRef.current!.parentElement!.getBoundingClientRect().top;
+          gsap.to(excursionRef.current!.parentElement!, {
+            scrollTop: excursionRef.current!.parentElement!.scrollTop + mainTopParent,
+            duration: 0.4,
+            ease: 'power2.inOut'
+          });
+        }
+          break;
       }
   }, [tabContext]);
 
@@ -123,6 +133,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <FAQComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={accoRef} className={styles.ref_navigation}></div>
         <AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <div ref={excursionRef} className={styles.ref_navigation}></div>
         <ExcursionComponent/>
         <ContactComponent/>
       </div>
