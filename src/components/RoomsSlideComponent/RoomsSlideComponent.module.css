@@ -240,7 +240,7 @@ hr {
         mask: linear-gradient(
                 to top,
                 transparent 0%,
-                black 50%,
+                black 25%,
                 black 100%
         );
         font-family: 'Biform', sans-serif;
