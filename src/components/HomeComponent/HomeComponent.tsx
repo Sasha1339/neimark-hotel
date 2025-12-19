@@ -87,8 +87,7 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
             </nav>
           </div>
           <div className={styles.header_right}>
-            <Button title={'Подать заявку'} onClick={() => {
-            }}/>
+            <Button title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}/>
           </div>
         </header>
         <div className={styles.content}>

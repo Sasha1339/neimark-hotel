@@ -1,5 +1,6 @@
 import styles from './ContactComponent.module.css';
 import { ReactComponent as Logo } from "@/assets/svg/logo.svg";
+import {openDoc} from "@/shared/functions";
 
 export const ContactComponent = () => {
 
@@ -22,7 +23,7 @@ export const ContactComponent = () => {
         </div>
         <div className={styles.content_bottom}>
           <div className={styles.text_bottom_left}>© 2025 Автономная некоммерческая организация высшего образования «Университет НЕЙМАРК»</div>
-          <div className={styles.text_bottom_right}>Политика конфиденциальности</div>
+          <div className={styles.text_bottom_right} onClick={() => openDoc('policy')}>Политика конфиденциальности</div>
         </div>
       </div>
 

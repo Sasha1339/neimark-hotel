@@ -40,8 +40,7 @@ export const RoomsSlideComponent: FC<Props> = ({title, className, image, descrip
           <div className={styles.price}><span className={styles.price_text}>от {price.toLocaleString('ru-RU')} ₽</span>
 
           </div>
-          <Button className={styles.button} title={'Оставить заявку'} onClick={() => {
-          }}/>
+          <Button className={styles.button} title={'Оставить заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}/>
         </div>
 
       </div>

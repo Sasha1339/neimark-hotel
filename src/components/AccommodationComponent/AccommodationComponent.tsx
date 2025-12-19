@@ -6,6 +6,7 @@ import docs from '@/assets/images/docs.jpeg';
 import {gsap} from 'gsap';
 import {Button} from "@components/Button/Button";
 import {AboutElementComponent} from "@components/AboutElementComponent/AboutElementComponent";
+import {openDoc} from "@/shared/functions";
 
 type Props = {
   scrollerRef: RefObject<HTMLElement>;
@@ -51,10 +52,6 @@ export const AccommodationComponent: FC<Props> = ({scrollerRef}) => {
 
 
   }, [scrollerRef]);
-
-  const openDoc = (name: string) => {
-    window.open(`/documents/${name}.pdf`, '_blank')
-  }
 
   const textHeader = 'Собрали всю необходимую информацию здесь'.toUpperCase();
 
