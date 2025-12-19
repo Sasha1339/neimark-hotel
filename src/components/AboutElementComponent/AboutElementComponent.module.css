@@ -85,6 +85,25 @@ hr {
     text-align: start;
 }
 
+.animated_text {
+    background: linear-gradient(-90deg, white, var(--text-color-active), white);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 1.5s linear infinite;
+    -moz-animation: animated_text 1.5s linear infinite;
+    -webkit-animation: animated_text 1.5s linear infinite;
+}
+
+@keyframes animated_text {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
 .download {
     font-size: 20px;
     color: var(--text-color-default-opacity-50);
@@ -102,7 +121,7 @@ hr {
     }
 
     .description_text {
-        font-size: 10px;
+        font-size: clamp(10px, 3vh, 15px);
         color: var(--text-color-default);
         text-align: start;
     }
@@ -121,7 +140,7 @@ hr {
     }
 
     .title {
-        font-size: 14px;
+        font-size: clamp(14px, 3vh, 20px);
         color: var(--text-color-default);
         text-align: start;
     }

@@ -83,7 +83,7 @@ export const AccommodationComponent: FC<Props> = ({scrollerRef}) => {
                                    onClick={() => openDoc('public')}/>
           </div>
           <div className={styles.content_item}>
-            <AboutElementComponent title={'Приказ об оплате проживания'} icon={'document'} showDownload={true}
+            <AboutElementComponent title={'Приказ об\u00A0оплате проживания'} icon={'document'} showDownload={true}
                                    onClick={() => openDoc('public')}/>
           </div>
         </div>

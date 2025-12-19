@@ -35,7 +35,7 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
     } else if (videoRef.current && videoRef.current.canPlayType("application/vnd.apple.mpegurl")) {
       videoRef.current.src = "/hls/index.m3u8";
     }
-  }, [videoRef.current]);
+  }, []);
 
   useEffect(() => {
 

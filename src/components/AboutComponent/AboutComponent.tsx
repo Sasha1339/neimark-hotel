@@ -71,32 +71,39 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
           <div className={styles.embla__container}>
 
             <div className={styles.embla__slide}><AboutElementComponent title={'Современное пространство'}
+                                                                        animateText={true}
                                                                         icon={'coworking'}
-                                                                        description={'Новая гостиница с продуманной архитектурой и зонированием для жизни, работы и развития'}/>
+                                                                        description={'Новая гостиница с\u00A0продуманной архитектурой и\u00A0зонированием для\u00A0жизни, работы и\u00A0развития'}/>
             </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Включено все необходимое'}
+                                                                        animateText={true}
                                                                         icon={'all-inclusive'}
-                                                                        description={'Интернет, коммунальные услуги, уборка, смена белья и полотенец, прачечная — уже включены в стоимость'}/>
+                                                                        description={'Интернет, коммунальные услуги, уборка, смена белья и\u00A0полотенец, прачечная — уже включены в\u00A0стоимость'}/>
             </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Комфорт'}
+                                                                        animateText={true}
                                                                         icon={'comfort'}
-                                                                        description={'Современный интерьер, необходимая техника, удобная мебель и умные решения для жизни без лишних забот'}/>
+                                                                        description={'Современный интерьер, необходимая техника, удобная мебель и\u00A0умные решения для\u00A0жизни без\u00A0лишних забот'}/>
             </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Безопасность 24/7'}
+                                                                        animateText={true}
                                                                         icon={'security'}
-                                                                        description={'Круглосуточная охрана, видеонаблюдение и электронный доступ в корпуса'}/>
+                                                                        description={'Круглосуточная охрана, видеонаблюдение и\u00A0электронный доступ в\u00A0корпуса'}/>
             </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Комьюнити'}
+                                                                        animateText={true}
                                                                         icon={'community'}
-                                                                        description={'Среда единомышленников для общения, сотрудничества и роста'}/>
+                                                                        description={'Среда единомышленников для\u00A0общения, сотрудничества и\u00A0роста'}/>
             </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Центр города'}
+                                                                        animateText={true}
                                                                         icon={'city'}
-                                                                        description={'Вы в эпицентре городской жизни и ключевых событий города'}/>
+                                                                        description={'Вы в\u00A0эпицентре городской жизни и\u00A0ключевых событий города'}/>
             </div>
             <div className={styles.embla__slide}><AboutElementComponent title={'Подземная парковка'}
+                                                                        animateText={true}
                                                                         icon={'parking'}
-                                                                        description={'Тёплая подземная парковка для автомобилей и электромототранспорта'}/>
+                                                                        description={'Тёплая подземная парковка для\u00A0автомобилей и\u00A0электромототранспорта'}/>
             </div>
           </div>
         </div>

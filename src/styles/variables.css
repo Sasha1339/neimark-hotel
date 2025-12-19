@@ -17,6 +17,8 @@
     --main-gray-dark-opacity-50: rgba(35, 51, 70, 0.50);
     --main-gray-dark-opacity-25: rgba(35, 51, 70, 0.25);
     --main-black: #161A1F;
+    --main-black-dark-opacity-50: rgba(22, 26, 31, 0.5);
+    --main-black-dark-opacity-75: rgba(22, 26, 31, 0.75);
     --main-purple: #8E92FB;
     --main-purple-opacity-25: rgba(142, 146, 251, 0.25);
 

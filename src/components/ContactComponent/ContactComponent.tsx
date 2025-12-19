@@ -9,7 +9,7 @@ export const ContactComponent = () => {
       <div className={styles.description_section}>
         <div className={styles.content}>
           <div className={styles.info_column}>
-            <div className={styles.title}>/ РЕСЕПШЕН(24/7)</div>
+            <div className={styles.title}>/ РЕСЕПШЕН (24/7)</div>
             <div className={styles.paragraph}>+7 831 435 13 15</div>
           </div>
           <div className={styles.info_column}>

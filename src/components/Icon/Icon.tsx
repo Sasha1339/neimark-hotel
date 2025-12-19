@@ -1,4 +1,5 @@
 import {type FC, useContext, useEffect, useState} from "react";
+import styles from './Icon.module.css';
 
 type Props = {
   className?: string;
