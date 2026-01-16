@@ -18,12 +18,19 @@ export const ContactComponent = () => {
           </div>
           <div className={styles.info_column}>
             <div className={styles.title}>/ АДРЕС</div>
-            <div className={styles.paragraph}>НИЖНИЙ НОВГОРОД, ул. БОЛЬШИЕ ОВРАГИ, д 8</div>
+            <div className={styles.paragraph}>НИЖНИЙ НОВГОРОД, ул. БОЛЬШИЕ ОВРАГИ, д 12</div>
           </div>
         </div>
         <div className={styles.content_bottom}>
-          <div className={styles.text_bottom_left}>© 2025 Автономная некоммерческая организация высшего образования «Университет НЕЙМАРК»</div>
+          <div className={styles.text_bottom_left}>© 2025 Автономная некоммерческая организация высшего образования
+            «Университет НЕЙМАРК»
+          </div>
           <div className={styles.text_bottom_right} onClick={() => openDoc('policy')}>Политика конфиденциальности</div>
+        </div>
+        <div className={styles.content_bottom}>
+          <div  className={styles.text_bottom_justify}>ИТ-Кампус НЕЙМАРК. Гостиница. Номер реестровой записи: С002025006007. Даты действия: с 08.08.2025 по 08.08.2028. Адрес: Российская Федерация, Нижегородская область, город Нижний Новгород,
+          улица Большие Овраги, дом 12
+          </div>
         </div>
       </div>
 

@@ -101,6 +101,14 @@ a {
     cursor: pointer;
 }
 
+.text_bottom_justify {
+    font-family: Biform, 'sans-serif';
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    color: var(--text-color-default-opacity-50);
+}
+
 
 @media (max-height: 900px) {
     .info_column {
@@ -188,6 +196,14 @@ a {
         width: 30vw;
         text-align: end;
         color: var(--text-color-default);
+    }
+
+    .text_bottom_justify {
+        font-family: Biform, 'sans-serif';
+        font-size: 8px;
+        width: 100%;
+        text-align: center;
+        color: var(--text-color-default-opacity-50);
     }
 
 }

@@ -83,7 +83,7 @@ export const SearchComponent: FC<Props> = () => {
 
 export const CustomInputStart = forwardRef<HTMLButtonElement, any>(({value, onClick, title}, ref) => (
   <button className={styles.custom_date_input} onClick={onClick} ref={ref}>
-    {value || 'Выберите дату заезда'}
+    {value || 'Выберите дату заезда'}x
     <span className={styles.arrow_icon}>▼</span>
   </button>
 ));
