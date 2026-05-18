@@ -1,6 +1,7 @@
 .main {
     width: 100%;
     background: var(--gradient-gray-black);
+    border-top: 1px solid var(--text-color-active);
 }
 
 .hint_span {

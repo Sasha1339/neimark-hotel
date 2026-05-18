@@ -75,15 +75,21 @@ export const AccommodationComponent: FC<Props> = ({scrollerRef}) => {
         ))}</h1>
         <div ref={imageRef} className={styles.content}>
           <div className={styles.content_item}>
-            <AboutElementComponent title={'Публичная оферта'} icon={'document'} showDownload={true}
+            <AboutElementComponent
+                                   description={'Публичная оферта'} icon={'document'} showDownload={true}
+                                   sizeIcon={window.innerWidth < 700 ? 50 : 70}
                                    onClick={() => openDoc('public')}/>
           </div>
           <div className={styles.content_item}>
-            <AboutElementComponent title={'Стоимость проживания'} icon={'document'} showDownload={true}
+            <AboutElementComponent
+                                   description={'Стоимость проживания'} icon={'document'} showDownload={true}
+                                   sizeIcon={window.innerWidth < 700 ? 50 : 70}
                                    onClick={() => openDoc('price')}/>
           </div>
           <div className={styles.content_item}>
-            <AboutElementComponent title={'Правила проживания'} icon={'document'} showDownload={true}
+            <AboutElementComponent
+                                   description={'Правила проживания'} icon={'document'} showDownload={true}
+                                   sizeIcon={window.innerWidth < 700 ? 50 : 70}
                                    onClick={() => openDoc('rules')}/>
           </div>
         </div>

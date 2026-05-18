@@ -111,13 +111,13 @@ export const PriceV2Component: FC<Props> = ({scrollerRef}) => {
           <div className={styles.container_left}>
             <div className={styles.switch}>
               <span onClick={() => setType('one_place')}
-                    className={`${styles.case} ${type === 'one_place' && styles.active}`}>Одноместное размещение</span>
+                    className={`${styles.case} ${type === 'one_place' && styles.active}`}>ОДНОМЕСТНОЕ РАЗМЕЩЕНИЕ</span>
               <span>•</span>
               <span onClick={() => setType('two_place')}
-                    className={`${styles.case} ${type === 'two_place' && styles.active}`}>Двухместное размещение</span>
+                    className={`${styles.case} ${type === 'two_place' && styles.active}`}>ДВУХМЕСТНОЕ РАЗМЕЩЕНИЕ</span>
               <span>•</span>
               <span onClick={() => setType('living_room')}
-                    className={`${styles.case} ${type === 'living_room' && styles.active}`}>Гостинная</span>
+                    className={`${styles.case} ${type === 'living_room' && styles.active}`}>ГОСТИНАЯ</span>
             </div>
             <div className={styles.embla} ref={emblaRef}>
               <div className={styles.embla__container}>

@@ -1,7 +1,9 @@
 .main {
     width: 100%;
-    background: var(--gradient-gray-black);
-    border-top: 1px solid var(--text-color-default-opacity-25);
+    height: 120vh;
+    backdrop-filter: blur(20px);
+    background-image: var(--gradient-gray-black-opacity);
+    border-top: 1px solid var(--text-color-active);
 }
 
 .animate_before_first {
@@ -43,9 +45,12 @@
     flex-direction: row;
     justify-content: center;
     gap: 50px;
-    width: 50%;
+    flex: 1;
+    width: 100%;
+    padding: 40px 0;
     align-items: center;
     box-sizing: border-box;
+    transform: translateY(100vh);
 }
 
 .buttons {
@@ -99,8 +104,9 @@
 .description_section {
     position: sticky;
     top: 0;/* прилипание */
+    padding: 82px 20px 20px 20px;
+    height: calc(100vh);
     display: flex;
-    padding: 20px;
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -180,6 +186,14 @@
 }
 
 .header_about {
+    margin: 0;
+    height: 20%;
+    font-family: Biform, 'sans-serif';
+    color: var(--text-color-default);
+    font-size: 50px;
+}
+
+.header_about_mini {
     margin: 0;
     height: 20%;
     font-family: Biform, 'sans-serif';
