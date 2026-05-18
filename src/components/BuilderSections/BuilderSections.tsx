@@ -12,6 +12,7 @@ import {ContactComponent} from "@components/ContactComponent/ContactComponent";
 import {HeaderContext} from "@/providers/HeaderContext";
 import {FAQComponent} from "@components/FAQComponent/FAQComponent";
 import {ExcursionComponent} from "@components/ExcursionComponent/ExcursionComponent";
+import {PriceV2Component} from "@components/PriceV2Component/PriceV2Component";
 type Props = {}
 
 export const BuilderSections: FC<Props> = ({...props}) => {
@@ -123,7 +124,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <div ref={aboutRef} className={styles.ref_navigation}></div>
         <AboutComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={priceRef} className={styles.ref_navigation}></div>
-        <PriceComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <PriceV2Component scrollerRef={scrollRef as RefObject<HTMLElement>} />
         {/*<EnvironmentsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         {/*<LocationProvider>*/}
         {/*  <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}

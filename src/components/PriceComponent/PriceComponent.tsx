@@ -12,6 +12,9 @@ type Props = {
   scrollerRef: RefObject<HTMLElement>;
 }
 
+/**
+  @deprecated
+ */
 export const PriceComponent: FC<Props> = ({scrollerRef}) => {
 
   const triggerRef = useRef<HTMLElement>(null);

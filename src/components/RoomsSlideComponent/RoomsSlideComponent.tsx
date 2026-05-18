@@ -12,6 +12,9 @@ type Props = {
   className?: string;
 }
 
+/**
+ @deprecated
+ */
 export const RoomsSlideComponent: FC<Props> = ({title, className, image, description, price, about, ...props}) => {
 
   const location = useLocation();
