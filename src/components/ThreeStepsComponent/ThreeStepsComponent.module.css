@@ -109,7 +109,7 @@
     color: transparent;
     white-space: nowrap;
     font-size: 300px;
-    -webkit-text-stroke: 1px var(--text-color-default-opacity-25);
+    -webkit-text-stroke: 1px var(--main-gray-dark-opacity-25);
 }
 
 .description_section {
@@ -200,7 +200,7 @@
     margin: 0;
     height: 20%;
     font-family: Biform, 'sans-serif';
-    color: var(--text-color-default);
+    color: var(--main-gray-dark);
     font-size: 50px;
 }
 
@@ -287,7 +287,6 @@
         width: 100%;
         height: 15%;
         font-family: Biform, 'sans-serif';
-        color: var(--text-color-default);
         font-size: 35px;
     }
 
@@ -344,7 +343,7 @@
         width: 100%;
         height: 15%;
         font-family: Biform, 'sans-serif';
-        color: var(--text-color-default);
+
         font-size: 20px;
     }
 

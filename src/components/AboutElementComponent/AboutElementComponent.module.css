@@ -12,12 +12,12 @@
     box-sizing: border-box;
     transition: 0.6s;
     position: relative;
-    border: 2px solid var(--text-color-default-opacity-50);
+    border: 2px solid var(--main-gray-dark-opacity-50);
     cursor: pointer;
 }
 
 .main:hover {
-    box-shadow: 0px 50px 100px var(--text-color-default-opacity-50);
+    box-shadow: 0px 50px 100px var(--main-gray-dark-opacity-50);
     transform: translateY(-20px);
 
 }
@@ -42,11 +42,12 @@
     transition: 0.6s;
     z-index: 0;
     /*background-color: var(--text-color-default-opacity-25);*/
-    background-image: var(--gradient-orange-gray);
+    background-image: var(--gradient-purple-gray);
 }
 
 .list {
     text-align: start;
+    color: var(--main-gray-dark);
 }
 
 .description {
@@ -64,7 +65,7 @@
 
 .description_text {
     font-size: 16px;
-    color: var(--text-color-default);
+    color: var(--main-gray-dark);
     text-align: start;
     white-space: pre-line;
 }
@@ -86,12 +87,12 @@ hr {
 
 .title {
     font-size: 22px;
-    color: var(--text-color-default);
+    color: var(--main-gray-dark);
     text-align: start;
 }
 
 .animated_text {
-    background: linear-gradient(-90deg, white, var(--text-color-active), white);
+    background: linear-gradient(-90deg, var(--main-gray-dark), var(--main-purple), var(--main-gray-dark));
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -127,7 +128,6 @@ hr {
 
     .description_text {
         font-size: clamp(10px, 3vh, 15px);
-        color: var(--text-color-default);
         text-align: start;
     }
 
@@ -146,13 +146,11 @@ hr {
 
     .title {
         font-size: clamp(14px, 3vh, 20px);
-        color: var(--text-color-default);
         text-align: start;
     }
 
     .download {
         font-size: 12px;
-        color: var(--text-color-default-opacity-50);
         text-align: start;
         opacity: 0;
         transition: 0.6s;

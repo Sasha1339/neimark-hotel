@@ -1,6 +1,7 @@
 .main {
     width: 100%;
-    background-color: var(--main-gray-dark);
+    background: var(--text-color-default);
+    /*backdrop-filter: blur(20px);*/
     box-sizing: border-box;
 }
 
@@ -133,7 +134,6 @@ hr {
     .main {
         width: 100%;
         height: auto;
-        background-color: var(--main-gray-dark);
     }
 
     .description_section {
