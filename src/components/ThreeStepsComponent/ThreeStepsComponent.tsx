@@ -59,11 +59,11 @@ export const ThreeStepsComponent: FC<Props> = ({scrollerRef}) => {
           <AboutElementComponent className={styles.block_instruction}
                                  title={'Подай заявку на сайте'}
                                  animateText={true}/>
-          <Icon name={'double-arrow'} rotate={-90} size={50}/>
+          <Icon name={'double-arrow'} rotate={window.innerWidth < 700 ? 0 : -90} size={window.innerWidth < 700 ? 20 : 50}/>
           <AboutElementComponent className={styles.block_instruction}
                                  title={'Подтверди успеваемость и специальность справкой из вуза'}
                                  animateText={true}/>
-          <Icon name={'double-arrow'} rotate={-90} size={50}/>
+          <Icon name={'double-arrow'} rotate={window.innerWidth < 700 ? 0 : -90} size={window.innerWidth < 700 ? 20 : 50}/>
           <AboutElementComponent className={styles.block_instruction}
                                  title={'Заселяйся в кампус в любое удобное время!'}
                                  animateText={true}/>

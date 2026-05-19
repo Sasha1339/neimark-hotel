@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     gap: 40px;
     /*border-bottom: solid 1px var(--text-color-default-opacity-50);*/
@@ -104,6 +104,7 @@
     padding-inline-start: 20px;
     padding: 0 60px;
     margin: 0;
+    box-sizing: border-box;
     /*list-style-type: square*/
 }
 
@@ -384,7 +385,116 @@
 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1600px) {
+    .switch {
+        font-size: 20px;
+    }
+
+    .header_right {
+        font-size: 20px;
+    }
+
+    .about {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .switch {
+        font-size: 16px;
+    }
+
+    .header_right {
+        font-size: 16px;
+    }
+
+    .about {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header_about {
+        margin: 0;
+        width: 100%;
+        height: 15%;
+        font-family: Biform, 'sans-serif';
+        color: var(--text-color-default);
+        font-size: 40px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        width: 100%;
+        flex: 1;
+        transform: translateY(100vw);
+    }
+
+    .container_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 100%;
+        height: 100%;
+        gap: 20px;
+        /*border-bottom: solid 1px var(--text-color-default-opacity-50);*/
+        border-right: solid 1px var(--text-color-default-opacity-50);
+    }
+
+    .switch {
+        font-size: 14px;
+    }
+
+    .header_right {
+        font-size: 14px;
+    }
+
+    .about {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 25px;
+    }
+}
+
+/*@media (max-width: 900px) {*/
+/*    .header_about {*/
+/*        margin: 0;*/
+/*        width: 100%;*/
+/*        height: 15%;*/
+/*        font-family: Biform, 'sans-serif';*/
+/*        color: var(--text-color-default);*/
+/*        font-size: 40px;*/
+/*    }*/
+
+/*    .switch {*/
+/*        font-size: 12px;*/
+/*    }*/
+
+/*    .header_right {*/
+/*        font-size: 12px;*/
+/*    }*/
+
+/*    .about {*/
+/*        font-size: 10px;*/
+/*    }*/
+
+/*    .price {*/
+/*        font-size: 20px;*/
+/*    }*/
+/*}*/
+
+@media (max-width: 900px) {
     .hint_span {
         font-size: 100px;
 
@@ -404,6 +514,91 @@
         user-select: none;
         padding: 0 2%;
         box-sizing: border-box;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 60% 40%;
+        width: 100%;
+        gap: 10px;
+        flex: 1;
+        transform: translateY(100vw);
+    }
+
+    .switch {
+        display: flex;
+        width: 100%;
+        justify-content: start;
+        gap: 10px;
+        font-size: 12px;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+
+    .about {
+        color: var(--text-color-default-opacity-50);
+        font-size: 10px;
+        margin: 0;
+        width: 100%;
+        text-align: start;
+        transform: translateY(100vw);
+        animation: 1s animated_block forwards;
+    }
+
+    .about_list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        padding: 0;
+        padding-inline-start: 20px;
+        margin: 0;
+        /*list-style-type: square*/
+    }
+
+    .header_right {
+        display: flex;
+        width: 100%;
+        justify-content: start;
+        gap: 20px;
+        font-size: 16px;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+
+    .container_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 100%;
+        height: 100%;
+        gap: 10px;
+        padding: 20px 0;
+        box-sizing: border-box;
+        /*border-bottom: solid 1px var(--text-color-default-opacity-50);*/
+        border-right: none;
+        border-bottom: solid 1px var(--text-color-default-opacity-50);
+    }
+
+    .container_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+    }
+
+    .price {
+        font-family: 'Biform', sans-serif;
+        color: var(--text-color-default);
+        font-size: 20px;
+        line-height: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: end;
     }
 
 }

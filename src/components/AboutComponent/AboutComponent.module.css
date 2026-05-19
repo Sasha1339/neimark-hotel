@@ -168,6 +168,28 @@
 
 }
 
+@media (max-height: 1600px) {
+    .header_about {
+        margin: 0;
+        width: 70%;
+        height: 15%;
+        font-family: Biform, 'sans-serif';
+        color: var(--text-color-default);
+        font-size: 40px;
+    }
+}
+
+@media (max-height: 1400px) {
+    .header_about {
+        margin: 0;
+        width: 70%;
+        height: 15%;
+        font-family: Biform, 'sans-serif';
+        color: var(--text-color-default);
+        font-size: 30px;
+    }
+}
+
 @media (max-height: 900px) {
     .header_about {
         margin: 0;

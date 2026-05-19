@@ -4,6 +4,8 @@ import {gsap} from "gsap";
 import useEmblaCarousel from "embla-carousel-react";
 import {AboutElementComponent} from "@components/AboutElementComponent/AboutElementComponent";
 import {Icon} from "@components/Icon/Icon";
+import {Button} from "@components/Button/Button";
+import {ButtonBorder} from "@components/ButtonBorder/ButtonBorder";
 
 type Props = {
   scrollerRef: RefObject<HTMLElement>;
@@ -73,25 +75,28 @@ export const PartnerComponent: FC<Props> = ({scrollerRef}) => {
         ))}</h1>
         <div className={styles.container}>
 
-          <AboutElementComponent
+          <AboutElementComponent className={styles.slide}
                                  title={'Корпоративное проживание под ключ'}
                                  description={'Организуем проживание для сотрудников, участников и гостей ИТ-событий в центре города с удобной логистикой до ключевых площадок проведения мероприятий. \n\nПодходит:'}
                                  optionDescriptions={optionsPartner[0]}
                                  animateText={true}/>
 
-          <AboutElementComponent
+          <AboutElementComponent className={styles.slide}
                                  title={'Аренда помещений'}
                                  description={'Арендуйте помещение в НЕЙМАРК и станьте частью среды, где студенты живут, учатся, работают и развивают технологические проекты. \n\nПодходит:'}
                                  optionDescriptions={optionsPartner[1]}
                                  animateText={true}/>
 
-          <AboutElementComponent
+          <AboutElementComponent className={styles.slide}
                                  title={'Площадка для мероприятий'}
                                  description={'Готовые площадки для деловых, образовательных и технологических событий. \n\nПодходит:'}
                                  optionDescriptions={optionsPartner[2]}
                                  animateText={true}/>
         </div>
-
+        <div className={styles.contacts}>
+          <ButtonBorder className={styles.button_contacts} title={'Позвонить нам'} onClick={() => window.location.href = 'tel:+78888888888'} />
+          <ButtonBorder className={styles.button_contacts} title={'Написать нам на почту'} onClick={() => window.location.href = 'mailto:example@example.com'} />
+        </div>
       </div>
     </section>
   )
