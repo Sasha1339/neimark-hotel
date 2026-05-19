@@ -1,10 +1,10 @@
 .main {
     width: 100%;
     height: auto;
-    border-top: 1px solid var(--text-color-active);
     transition: 0.5s;
-    background-image: var(--gradient-black-gray);
-
+    /*backdrop-filter: blur(20px);*/
+    background: var(--text-color-default);
+    border-top: 1px solid var(--text-color-active);
 }
 
 .hint_span {
@@ -54,7 +54,7 @@
     width: 55%;
     height: 30%;
     font-family: Biform, 'sans-serif';
-    color: var(--text-color-default);
+    color: var(--main-gray-dark);
     font-size: 50px;
 }
 
@@ -276,7 +276,6 @@
             width: 100%;
             height: auto;
             font-family: Biform, 'sans-serif';
-            color: var(--text-color-default);
             font-size: 18px;
         }
 

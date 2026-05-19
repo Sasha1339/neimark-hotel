@@ -1,6 +1,7 @@
 .main {
     width: 100%;
-    background: var(--gradient-gray-black);
+    background: var(--gradient-gray-white);
+    backdrop-filter: blur(20px);
     border-top: 1px solid var(--text-color-default-opacity-25);
 }
 

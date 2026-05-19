@@ -1,6 +1,7 @@
 .main {
     width: 100%;
     height: auto;
+    min-height: 100vh;
     backdrop-filter: blur(20px);
     background-image: var(--gradient-gray-black-opacity);
     border-top: 1px solid var(--text-color-active);
@@ -116,14 +117,14 @@
     color: transparent;
     white-space: nowrap;
     font-size: 300px;
-    -webkit-text-stroke: 1px var(--text-color-default-opacity-25);
+    -webkit-text-stroke: 1px var(--main-gray-dark-opacity-25);
 }
 
 .description_section {
     position: sticky;
     top: 0;/* прилипание */
     padding: 82px 20px 20px 20px;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -207,7 +208,7 @@
     margin: 0;
     height: 20%;
     font-family: Biform, 'sans-serif';
-    color: var(--text-color-default);
+    color: var(--main-gray-dark);
     font-size: 50px;
 }
 
@@ -258,8 +259,6 @@
         width: 100%;
         height: auto;
         backdrop-filter: blur(20px);
-        background-image: var(--gradient-gray-black-opacity);
-        border-top: 1px solid var(--text-color-active);
     }
 
     .container {
@@ -280,27 +279,23 @@
         width: 100%;
         height: 15%;
         font-family: Biform, 'sans-serif';
-        color: var(--text-color-default);
         font-size: 40px;
     }
 
     .slide div[id="AboutElementComponent_title"] {
         font-size: 18px;
-        color: var(--text-color-default);
         text-align: start;
         width: 100%;
     }
 
     .slide div[id="AboutElementComponent_description_text"] {
         font-size: 14px;
-        color: var(--text-color-default);
         text-align: start;
         width: 100%;
     }
 
     .slide ul[id="AboutElementComponent_list"] {
         font-size: 14px;
-        color: var(--text-color-default);
         width: 100%;
         padding-inline-start: 10px;
         box-sizing: border-box;
@@ -318,8 +313,6 @@
         width: 100%;
         height: auto;
         backdrop-filter: blur(20px);
-        background-image: var(--gradient-gray-black-opacity);
-        border-top: 1px solid var(--text-color-active);
     }
 
     .container {
@@ -336,27 +329,23 @@
         width: 100%;
         height: 15%;
         font-family: Biform, 'sans-serif';
-        color: var(--text-color-default);
         font-size: 30px;
     }
 
     .slide div[id="AboutElementComponent_title"] {
         font-size: 16px;
-        color: var(--text-color-default);
         text-align: start;
         width: 100%;
     }
 
     .slide div[id="AboutElementComponent_description_text"] {
         font-size: 12px;
-        color: var(--text-color-default);
         text-align: start;
         width: 100%;
     }
 
     .slide ul[id="AboutElementComponent_list"] {
         font-size: 12px;
-        color: var(--text-color-default);
         width: 100%;
         padding-inline-start: 10px;
         box-sizing: border-box;
@@ -368,8 +357,6 @@
         width: 100%;
         height: auto;
         backdrop-filter: blur(20px);
-        background-image: var(--gradient-gray-black-opacity);
-        border-top: 1px solid var(--text-color-active);
     }
 
     .hint_span {
@@ -387,7 +374,6 @@
         justify-content: start;
         align-items: center;
         font-family: 'Biform', sans-serif;
-        color: var(--text-color-default);
         box-sizing: border-box;
         overflow: hidden;
         gap: 2%
@@ -398,7 +384,6 @@
         width: 100%;
         height: 15%;
         font-family: Biform, 'sans-serif';
-        color: var(--text-color-default);
         font-size: 20px;
     }
 
@@ -424,21 +409,18 @@
 
     .slide div[id="AboutElementComponent_title"] {
         font-size: 16px;
-        color: var(--text-color-default);
         text-align: start;
         width: 100%;
     }
 
     .slide div[id="AboutElementComponent_description_text"] {
         font-size: 12px;
-        color: var(--text-color-default);
         text-align: start;
         width: 100%;
     }
 
     .slide ul[id="AboutElementComponent_list"] {
         font-size: 12px;
-        color: var(--text-color-default);
         width: 100%;
         padding-inline-start: 10px;
         box-sizing: border-box;

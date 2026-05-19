@@ -76,19 +76,19 @@ export const AccommodationComponent: FC<Props> = ({scrollerRef}) => {
         <div ref={imageRef} className={styles.content}>
           <div className={styles.content_item}>
             <AboutElementComponent
-                                   description={'Публичная оферта'} icon={'document'} showDownload={true}
+                                   description={'Публичная оферта'} icon={'document_dark'} showDownload={true}
                                    sizeIcon={window.innerWidth < 700 ? 50 : 70}
                                    onClick={() => openDoc('public')}/>
           </div>
           <div className={styles.content_item}>
             <AboutElementComponent
-                                   description={'Стоимость проживания'} icon={'document'} showDownload={true}
+                                   description={'Стоимость проживания'} icon={'document_dark'} showDownload={true}
                                    sizeIcon={window.innerWidth < 700 ? 50 : 70}
                                    onClick={() => openDoc('price')}/>
           </div>
           <div className={styles.content_item}>
             <AboutElementComponent
-                                   description={'Правила проживания'} icon={'document'} showDownload={true}
+                                   description={'Правила проживания'} icon={'document_dark'} showDownload={true}
                                    sizeIcon={window.innerWidth < 700 ? 50 : 70}
                                    onClick={() => openDoc('rules')}/>
           </div>

@@ -106,7 +106,7 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
               <div className={styles.description_subtext}>
                 Гостиница ИТ-кампуса «НЕЙМАРК» — это современное пространство для студентов ИТ-направлений, исследователей и молодых специалистов, где всё создано для фокуса на учёбе, идеях и личном развитии
               </div>
-            <Icon name={'double-arrow'} size={30}/>
+            <Icon name={'double-arrow_dark'} size={30}/>
           </div>
 
         </div>

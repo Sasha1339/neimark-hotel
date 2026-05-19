@@ -1,6 +1,6 @@
 .main {
     width: 100%;
-    background-image: var(--gradient-gray-black-opacity);
+    background-image: var(--gradient-gray-black-opacity-base);
     backdrop-filter: blur(20px);
     border-top: 1px solid var(--text-color-active);
 }
