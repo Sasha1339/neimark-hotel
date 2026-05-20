@@ -128,23 +128,23 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <div ref={aboutRef} className={styles.ref_navigation}></div>
         <AboutComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={priceRef} className={styles.ref_navigation}></div>
-        <PriceV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        {/*<PriceV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         {/*<EnvironmentsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         {/*<LocationProvider>*/}
         {/*  <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}
         {/*</LocationProvider>*/}
         {/*<div ref={threeStepsRef} className={styles.ref_navigation}></div>*/}
-        <ThreeStepsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        {/*<ThreeStepsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         {/*<div className={styles.ref_navigation}></div>*/}
         {/*<ExcursionComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         <div ref={accoRef} className={styles.ref_navigation}></div>
-        <AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        {/*<AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         <div ref={excursionRef} className={styles.ref_navigation}></div>
-        <CallbackFormComponent/>
-        <PartnerComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />
+        {/*<CallbackFormComponent/>*/}
+        {/*<PartnerComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}
         <div ref={newsRef} className={styles.ref_navigation}></div>
         {/*<NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
-        <FAQComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        {/*<FAQComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
 
         <ContactComponent/>
       </div>

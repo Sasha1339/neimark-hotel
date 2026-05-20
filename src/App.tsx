@@ -18,7 +18,7 @@ function App() {
         <NavigationProvider>
           <TabProvider>
             <HeaderProvider>
-              <AppHeader/>
+              {/*<AppHeader/>*/}
               <Routes>
                 <Route path="/" element={<BuilderSections />} />
                 <Route path="/room" element={<RoomPageComponent />} />
