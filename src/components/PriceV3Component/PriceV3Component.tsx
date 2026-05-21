@@ -93,7 +93,7 @@ export const PriceV3Component: FC<Props> = ({scrollerRef}) => {
               // Задаем маску
               mask: `
                 linear-gradient(to bottom, transparent 0%, black 40%, black 100%),
-                linear-gradient(to right, transparent 0%, black ${progress * window.innerWidth < 450 ? 0 : 20}%, black 100%),
+                linear-gradient(to right, transparent 0%, black ${progress * (window.innerWidth < 450 ? 0 : 20)}%, black 100%),
                 linear-gradient(to top, transparent 0%, black 40%, black 100%)
               `,
             });
