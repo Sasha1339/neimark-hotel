@@ -16,6 +16,7 @@ import {PriceV2Component} from "@components/PriceV2Component/PriceV2Component";
 import {ThreeStepsComponent} from "@components/ThreeStepsComponent/ThreeStepsComponent";
 import {ExcursionComponent} from "@components/ExcursionComponent/ExcursionComponent";
 import {PartnerComponent} from "@components/PartnerComponent/PartnerComponent";
+import {PriceV3Component} from "@components/PriceV3Component/PriceV3Component";
 type Props = {}
 
 export const BuilderSections: FC<Props> = ({...props}) => {
@@ -128,7 +129,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <div ref={aboutRef} className={styles.ref_navigation}></div>
         <AboutComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={priceRef} className={styles.ref_navigation}></div>
-        {/*<PriceV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
+        <PriceV3Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         {/*<EnvironmentsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         {/*<LocationProvider>*/}
         {/*  <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}
