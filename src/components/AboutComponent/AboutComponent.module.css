@@ -1,8 +1,10 @@
 .main {
     width: 100%;
     height: auto;
-    background-image: var(--gradient-gray-black-opacity);
-    backdrop-filter: blur(20px);
+    background-image: var(--gradient-white-300-black-opacity-25);
+    /*backdrop-filter: blur(20px);*/
+    /*border-top: 4px solid var(--main-gray-dark);*/
+    /*box-sizing: border-box;*/
 }
 
 .animate_before_first {

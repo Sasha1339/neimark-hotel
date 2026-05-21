@@ -14,6 +14,7 @@ import {SearchPageComponent} from "@components/SearchPageComponent/SearchPageCom
 function App() {
   return (
     <div className="App">
+      <div className="App_overlay"></div>
       <Router>
         <NavigationProvider>
           <TabProvider>

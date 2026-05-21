@@ -135,7 +135,7 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         {/*  <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}
         {/*</LocationProvider>*/}
         {/*<div ref={threeStepsRef} className={styles.ref_navigation}></div>*/}
-        {/*<ThreeStepsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
+        <ThreeStepsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         {/*<div className={styles.ref_navigation}></div>*/}
         {/*<ExcursionComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         <div ref={accoRef} className={styles.ref_navigation}></div>
