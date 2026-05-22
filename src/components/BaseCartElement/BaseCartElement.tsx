@@ -8,12 +8,14 @@ type Props = {
   className?: string;
   children?: ReactNode;
   image?: ReactNode;
+  activeHover?: boolean;
+  onClick?: () => void;
 }
 
-export const BaseCartElement: FC<Props & PropsWithChildren> = ({children, image, className, background, ...props}) => {
+export const BaseCartElement: FC<Props & PropsWithChildren> = ({children, onClick, activeHover, image, className, background, ...props}) => {
 
   return (
-    <div className={`${BaseCartElementStyles.main}`}>
+    <div className={`${BaseCartElementStyles.main} ${(activeHover && BaseCartElementStyles.active_hover) ?? ''}`} onClick={onClick}>
       <div className={BaseCartElementStyles.gradient_overlay} style={{ ...background, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
       <div className={BaseCartElementStyles.image_layer}>
         {image}

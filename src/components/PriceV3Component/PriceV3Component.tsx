@@ -98,11 +98,35 @@ export const PriceV3Component: FC<Props> = ({scrollerRef}) => {
               `,
             });
 
-            videoRef.current?.style.setProperty('mask-composite', 'intersect')
+            videoRef.current?.style.setProperty('mask-composite', 'intersect');
+
+            gsap.set(`.${styles.header_rooms}`, {
+              // Задаем маску
+              padding: window.innerWidth > 1000 ? `${(1 - progress) * 20}px` : 20,
+            });
           },
         }
       }
     );
+
+  }, [scrollerRef]);
+
+  useEffect(() => {
+    if (!scrollerRef.current) return;
+
+    gsap.to(`.${styles.glass_block_header}`, {
+      scrollTrigger: {
+        trigger: contentRef.current,
+        scroller: scrollerRef.current,
+        start: "100px top",    // Когда начинаем двигать (30% от верха вьюпорта)
+        end: "400px top",   // Когда заканчиваем двигать
+        scrub: true,
+        // markers: true
+      },
+      keyframes: [
+        { flex: window.innerWidth > 1000 ? 1 : '0 0 auto', borderRadius: window.innerWidth > 1000 ? 0 : 20, duration: 0.8 } // выход (последние 30%)
+      ]
+    });
 
 
   }, [scrollerRef]);

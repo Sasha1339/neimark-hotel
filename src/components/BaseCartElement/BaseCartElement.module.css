@@ -8,6 +8,15 @@
     box-sizing: border-box;
     /*border: 1px solid var(--main-gray-dark-opacity-25);*/
     /*overflow: hidden;*/
+
+}
+
+.active_hover {
+    transition: 0.5s;
+}
+
+.active_hover:hover {
+    transform: scale(1.05);
 }
 
 .gradient_overlay {

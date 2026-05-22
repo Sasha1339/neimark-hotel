@@ -38,6 +38,7 @@
 
 .description {
     font-size: 20px;
+    white-space: pre-line;
 }
 
 @media (max-width: 1300px) {
@@ -49,6 +50,40 @@
     .description {
         font-size: 18px;
     }
+
+    .glass {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 24px;
+        width: min-content;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .glass {
+        padding: 17px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .title {
+        font-size: 22px;
+        width: min-content;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .glass {
+        padding: 15px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -59,5 +94,10 @@
 
     .description {
         font-size: 15px;
+    }
+
+    .glass {
+        padding: 10px;
+        border-radius: 15px;
     }
 }

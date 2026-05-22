@@ -22,9 +22,10 @@ export const FAQComponent: FC<Props> = ({scrollerRef}) => {
       scrollTrigger: {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
-        start: "top 30%",
+        start: "top 70%",
         scrub: false, // scrub = false, чтобы анимация не зависела от скролла
         once: true,   // анимация срабатывает только один раз
+        // markers: true
       },
     })
       .from(`.${styles.text_header_animated}`, { x: '100vw', opacity: 0, stagger: 0.01, duration: 0.01 })
@@ -38,7 +39,6 @@ export const FAQComponent: FC<Props> = ({scrollerRef}) => {
     <section ref={triggerRef} className={styles.main}>
       <div className={styles.main_overlay}></div>
       <div ref={contentRef} className={styles.description_section}>
-        <span className={styles.hint_span}>FAQ</span>
         <h1 className={styles.header_about}>{textHeader.split(" ").map((word, wi) => (
           <span key={wi} className={styles.word}>
           {word.split("").map((letter, li) => (
