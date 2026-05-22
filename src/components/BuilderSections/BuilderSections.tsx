@@ -5,17 +5,15 @@ import {NavigationContext} from "@/providers/NavigationContext";
 import {TabContext} from "@/providers/TabContext";
 import {gsap} from "gsap";
 import {AboutComponent} from "@components/AboutComponent/AboutComponent";
-import {AccommodationComponent} from "@components/AccommodationComponent/AccommodationComponent";
-import {PriceComponent} from "@components/PriceComponent/PriceComponent";
-import {NewsComponent} from "@components/NewsComponent/NewsComponent";
 import {ContactComponent} from "@components/ContactComponent/ContactComponent";
 import {HeaderContext} from "@/providers/HeaderContext";
 import {FAQComponent} from "@components/FAQComponent/FAQComponent";
-import {CallbackFormComponent} from "@components/CallbackFormComponent/CallbackFormComponent";
-import {PriceV2Component} from "@components/PriceV2Component/PriceV2Component";
-import {ThreeStepsComponent} from "@components/ThreeStepsComponent/ThreeStepsComponent";
-import {ExcursionComponent} from "@components/ExcursionComponent/ExcursionComponent";
-import {PartnerComponent} from "@components/PartnerComponent/PartnerComponent";
+import {PriceV3Component} from "@components/PriceV3Component/PriceV3Component";
+import {ThreeStepsV2Component} from "@components/ThreeStepsV2Component/ThreeStepsV2Component";
+import {CallbackFormV2Component} from "@components/CallbackFormV2Component/CallbackFormV2Component";
+import {PartnerV2Component} from "@components/PartnerV2Component/PartnerV2Component";
+import {AccommodationComponent} from "@components/AccommodationComponent/AccommodationComponent";
+import {AccommodationV2Component} from "@components/AccommodationV2Component/AccommodationV2Component";
 type Props = {}
 
 export const BuilderSections: FC<Props> = ({...props}) => {
@@ -128,24 +126,24 @@ export const BuilderSections: FC<Props> = ({...props}) => {
         <div ref={aboutRef} className={styles.ref_navigation}></div>
         <AboutComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={priceRef} className={styles.ref_navigation}></div>
-        <PriceV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <PriceV3Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         {/*<EnvironmentsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         {/*<LocationProvider>*/}
         {/*  <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}
         {/*</LocationProvider>*/}
         {/*<div ref={threeStepsRef} className={styles.ref_navigation}></div>*/}
-        <ThreeStepsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <ThreeStepsV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         {/*<div className={styles.ref_navigation}></div>*/}
         {/*<ExcursionComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         <div ref={accoRef} className={styles.ref_navigation}></div>
-        <AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        {/*<AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         <div ref={excursionRef} className={styles.ref_navigation}></div>
-        <CallbackFormComponent/>
-        <PartnerComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />
+        <CallbackFormV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <PartnerV2Component scrollerRef={scrollRef as RefObject<HTMLElement>} />
         <div ref={newsRef} className={styles.ref_navigation}></div>
         {/*<NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         <FAQComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-
+        <AccommodationV2Component scrollerRef={scrollRef as RefObject<HTMLElement>} />
         <ContactComponent/>
       </div>
     </main>

@@ -2,7 +2,8 @@ import {FC, RefObject, useContext, useEffect, useRef} from "react";
 import styles from "./AboutComponent.module.css";
 import {gsap} from "gsap";
 import useEmblaCarousel from "embla-carousel-react";
-import {AboutElementComponent} from "@components/AboutElementComponent/AboutElementComponent";
+import {BaseCartElement, TwoBlurGlass} from "@components/BaseCartElement/BaseCartElement";
+import {Icon} from "@components/Icon/Icon";
 
 type Props = {
   scrollerRef: RefObject<HTMLElement>;
@@ -15,6 +16,8 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({loop: true});
+
+  const headerRef = useRef<HTMLHeadingElement>(null)
 
 
   useEffect(() => {
@@ -51,10 +54,8 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
 
   return (
     <section ref={triggerRef} className={styles.main}>
-      <div className={styles.main_overlay}></div>
       <div ref={contentRef} className={styles.description_section}>
-        <span className={styles.hint_span}>О НАС</span>
-        <h1 className={styles.header_about}>{textHeader.split(" ").map((word, wi) => (
+        <h1 ref={headerRef} className={styles.header_about}>{textHeader.split(" ").map((word, wi) => (
           <span key={wi} className={styles.word}>
           {word.split("").map((letter, li) => (
             <span
@@ -69,48 +70,96 @@ export const AboutComponent: FC<Props> = ({scrollerRef}) => {
         ))}</h1>
         <div className={styles.embla} ref={emblaRef}>
           <div className={styles.embla__container}>
+            <div className={styles.embla__slide}>
+              <BaseCartElement background={{background: 'url("/image/space.webp")'}}>
+                <TwoBlurGlass title={'Современное пространство'}
+                              description={'Новая гостиница с\u00A0продуманной архитектурой и\u00A0зонированием для\u00A0жизни, работы и\u00A0развития'}
 
-            <div className={styles.embla__slide}><AboutElementComponent title={'Современное пространство'}
-                                                                        animateText={true}
-                                                                        icon={'coworking_dark'}
-                                                                        description={'Новая гостиница с\u00A0продуманной архитектурой и\u00A0зонированием для\u00A0жизни, работы и\u00A0развития'}/>
+                              positionUp='center'
+                              positionDown='center'
+                              justifyContent='start'
+                              maxWidthDown={50}
+                              theme='light'/>
+              </BaseCartElement>
             </div>
-            <div className={styles.embla__slide}><AboutElementComponent title={'Включено все необходимое'}
-                                                                        animateText={true}
-                                                                        icon={'all-inclusive_dark'}
-                                                                        description={'Интернет, коммунальные услуги, уборка, смена белья и\u00A0полотенец, прачечная — уже включены в\u00A0стоимость'}/>
+            <div className={styles.embla__slide}>
+              <BaseCartElement background={{background: 'url("/image/all-inclusive.jpg")'}}>
+                <TwoBlurGlass title={'Включено\u00A0все необходимое'}
+                              description={'Интернет, коммунальные услуги, уборка, смена белья и\u00A0полотенец, прачечная — уже включены в\u00A0стоимость'}
+
+                              positionUp={'start'}
+                              positionDown='end'
+                              justifyContent='end'
+                              maxWidthDown={55}
+                              theme='light'/>
+              </BaseCartElement>
             </div>
-            <div className={styles.embla__slide}><AboutElementComponent title={'Комфорт'}
-                                                                        animateText={true}
-                                                                        icon={'comfort_dark'}
-                                                                        description={'Современный интерьер, необходимая техника, удобная мебель и\u00A0умные решения для\u00A0жизни без\u00A0лишних забот'}/>
+            <div className={styles.embla__slide}>
+              <BaseCartElement background={{background: 'url("/image/comfort.jpg")'}}>
+                <TwoBlurGlass title={'Комфорт'}
+                              description={'Современный интерьер, необходимая техника, удобная мебель и\u00A0умные решения для\u00A0жизни без\u00A0лишних забот'}
+
+                              positionUp={'start'}
+                              positionDown='start'
+                              justifyContent='end'
+                              maxWidthDown={55}
+                              theme='light'/>
+              </BaseCartElement>
             </div>
-            <div className={styles.embla__slide}><AboutElementComponent title={'Безопасность 24/7'}
-                                                                        animateText={true}
-                                                                        icon={'security_dark'}
-                                                                        description={'Круглосуточная охрана, видеонаблюдение и\u00A0электронный доступ в\u00A0корпуса'}/>
+            <div className={styles.embla__slide}>
+              <BaseCartElement
+                background={{backgroundImage: 'linear-gradient(-45deg, var(--main-purple), var(--main-gray-dark) 30%, var(--main-gray-dark) 70%, var(--main-light-green) 100%)'}}
+                image={<Icon name={'security'} size={200}/>}>
+                <TwoBlurGlass title={'Безопасность 24/7'}
+                              description={'Круглосуточная охрана, видеонаблюдение и\u00A0электронный доступ в\u00A0корпуса'}
+
+                              positionUp={'start'}
+                              positionDown='end'
+                              justifyContent='space-between'
+                              maxWidthDown={55}
+                              theme='dark'/>
+              </BaseCartElement>
             </div>
-            <div className={styles.embla__slide}><AboutElementComponent title={'Комьюнити'}
-                                                                        animateText={true}
-                                                                        icon={'community_dark'}
-                                                                        description={'Среда единомышленников для\u00A0общения, сотрудничества и\u00A0роста'}/>
+            <div className={styles.embla__slide}>
+              <BaseCartElement background={{background: 'url("/image/community.webp")'}}>
+                <TwoBlurGlass title={'Комьюнити'}
+                              description={'Среда единомышленников для\u00A0общения, сотрудничества и\u00A0роста'}
+                              justifyContent='end'
+                              maxWidthDown={40}
+                              theme='dark'/>
+              </BaseCartElement>
             </div>
-            <div className={styles.embla__slide}><AboutElementComponent title={'Центр города'}
-                                                                        animateText={true}
-                                                                        icon={'city_dark'}
-                                                                        description={'Вы в\u00A0эпицентре городской жизни и\u00A0ключевых событий города'}/>
+            <div className={styles.embla__slide}>
+              <BaseCartElement background={{background: 'url("/image/city.jpg")'}}>
+                <TwoBlurGlass title={'Центр\u00A0города'}
+                              description={'Вы в\u00A0эпицентре городской жизни и\u00A0ключевых событий города'}
+                              justifyContent='start'
+                              positionUp='start'
+                              positionDown='start'
+                              maxWidthDown={40}
+                              theme='light'/>
+              </BaseCartElement>
             </div>
-            <div className={styles.embla__slide}><AboutElementComponent title={'Подземная парковка'}
-                                                                        animateText={true}
-                                                                        icon={'parking_dark'}
-                                                                        description={'Тёплая подземная парковка для\u00A0автомобилей и\u00A0электромототранспорта'}/>
+            <div className={styles.embla__slide}>
+              <BaseCartElement
+                background={{backgroundImage: 'linear-gradient(45deg, var(--text-color-active), var(--main-purple) 100%)'}}
+                image={<Icon name={'parking_dark'} size={200}/>}>
+                <TwoBlurGlass title={'Подземная парковка'}
+                              description={'Тёплая подземная парковка для\u00A0автомобилей и\u00A0электромототранспорта'}
+
+                              positionUp={'end'}
+                              positionDown='start'
+                              justifyContent='space-between'
+                              maxWidthDown={55}
+                              theme='light'/>
+              </BaseCartElement>
             </div>
           </div>
         </div>
-          <div className={`${styles.buttons}`}>
-            <div className={styles.button} onClick={() => emblaApi && emblaApi.scrollPrev()}>{'<'}</div>
-            <div className={styles.button} onClick={() => emblaApi && emblaApi.scrollNext()}>{'>'}</div>
-          </div>
+        <div className={`${styles.buttons}`}>
+          <div className={styles.button} onClick={() => emblaApi && emblaApi.scrollPrev()}>{'<'}</div>
+          <div className={styles.button} onClick={() => emblaApi && emblaApi.scrollNext()}>{'>'}</div>
+        </div>
       </div>
     </section>
   )

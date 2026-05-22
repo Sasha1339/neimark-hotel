@@ -1,8 +1,6 @@
 .main {
     width: 100%;
-    background-image: var(--gradient-gray-black-opacity-base);
-    backdrop-filter: blur(20px);
-    border-top: 1px solid var(--text-color-active);
+    background-image: var(--gradient-white-300-transparent);
 }
 
 .animate_before_first {
@@ -44,7 +42,7 @@
 .description_section {
     position: sticky;
     top: 0;/* прилипание */
-    padding: 82px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     min-height: calc(100vh);
     display: flex;
     flex-direction: column;
@@ -138,7 +136,7 @@
     width: 55%;
     height: 30%;
     font-family: Biform, 'sans-serif';
-    color: var(--text-color-default);
+    color: var(--main-gray-dark);
     font-size: 50px;
 }
 
@@ -182,7 +180,6 @@
         width: 70%;
         height: 15%;
         font-family: Biform, 'sans-serif';
-        color: var(--text-color-default);
         font-size: 40px;
     }
 
@@ -270,11 +267,67 @@
     height: 100%;
 }
 
-@media (max-width: 700px) {
-    .hint_span {
-        font-size: 100px;
+@media (max-width: 1630px) {
 
+    .header_about {
+        font-size: 40px;
     }
+
+}
+
+@media (max-width: 1300px) {
+
+    .header_about {
+        font-size: 30px;
+    }
+
+    .content {
+        padding: 50px 10% 50px;
+    }
+
+
+}
+
+@media (max-width: 1000px) {
+
+
+    .header_about {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .header_about {
+        width: 75%;
+    }
+
+    .faq_block {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .header_about {
+        font-size: 20px;
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .header_about {
+        font-size: 18px;
+        width: 70%;
+    }
+
+}
+
+/**/
+
+@media (max-width: 700px) {
 
     .content_text {
         height: 65%;
@@ -283,15 +336,6 @@
         justify-content: start;
         gap: 7px;
         align-items: center;
-    }
-
-    .header_about {
-        margin: 0;
-        width: 100%;
-        height: 15%;
-        font-family: Biform, 'sans-serif';
-        color: var(--text-color-default);
-        font-size: 18px;
     }
 
     .content {

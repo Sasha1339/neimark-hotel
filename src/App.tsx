@@ -14,11 +14,12 @@ import {SearchPageComponent} from "@components/SearchPageComponent/SearchPageCom
 function App() {
   return (
     <div className="App">
+      <div className="App_overlay"></div>
       <Router>
         <NavigationProvider>
           <TabProvider>
             <HeaderProvider>
-              <AppHeader/>
+              {/*<AppHeader/>*/}
               <Routes>
                 <Route path="/" element={<BuilderSections />} />
                 <Route path="/room" element={<RoomPageComponent />} />
