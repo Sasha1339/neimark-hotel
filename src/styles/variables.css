@@ -41,6 +41,10 @@
     --gradient-white-300-black-opacity: linear-gradient(var(--text-color-default-opacity-25), rgba(0, 0, 0, 0) 300px, rgba(0, 0, 0, 0)  calc(100% - 300px), var(--text-color-default-opacity-25) calc(100%) );
     --gradient-white-300-black: linear-gradient(var(--text-color-default-opacity-25), rgba(0, 0, 0, 0) calc(100%) );
     --gradient-white-300-transparent: linear-gradient(var(--text-color-default), rgba(0, 0, 0, 0) 300px, rgba(0, 0, 0, 0) calc(100%) );
+    --gradient-white-20-300-transparent: linear-gradient(var(--text-color-default), var(--text-color-default) 20px, rgba(0, 0, 0, 0) calc(100%) );
+    --gradient-transparent-white-25: linear-gradient(rgba(0, 0, 0, 0), var(--text-color-default-opacity-25) calc(100%) );
+    --gradient-white-white-25: linear-gradient(var(--text-color-default), var(--text-color-default-opacity-25) calc(100%) );
+    --gradient-white-trasparent: linear-gradient(var(--text-color-default), var(--text-color-default-opacity-25) 300px, rgba(0, 0,  0,  0) calc(100%) );
     --gradient-white-300-black-opacity-25: linear-gradient(var(--text-color-default), var(--text-color-default-opacity-25) calc(100%) );
     --gradient-difference-color: linear-gradient(to bottom, var(--text-color-default-opacity-25), var(--text-color-default-opacity-50) 100vh, var(--text-color-default-opacity-50)  );
     --gradient-gray-black-opacity-base: linear-gradient(var(--main-black), rgba(0, 0, 0, 0));

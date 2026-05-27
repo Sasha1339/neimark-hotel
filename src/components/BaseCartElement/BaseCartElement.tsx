@@ -1,6 +1,7 @@
 import {FC, PropsWithChildren, ReactNode} from "react";
 import BaseCartElementStyles from "./BaseCartElement.module.css";
 import TwoBlurGlassStyles from "./TwoBlurGlass.module.css";
+import TwoBlurGlassSmallStyles from "./TwoBlurGlassSmall.module.css";
 import {Icon} from "@components/Icon/Icon";
 
 type Props = {
@@ -71,6 +72,52 @@ export const TwoBlurGlass: FC<TwoBlurProps> = ({title, icon,maxWidthUp = 50, max
           backgroundColor: theme === 'dark' ? 'var(--main-gray-dark-opacity-50)' : 'var(--text-color-default-opacity-50)'
         }}>
           <span className={TwoBlurGlassStyles.description} style={{
+            textAlign: positionDown,
+            color: theme === 'dark' ? 'var(--text-color-active)' : 'var(--main-gray-dark)'
+          }}>
+            {description}
+          </span>
+        </div>
+      </div>}
+    </div>
+  )
+
+}
+
+
+export const TwoBlurGlassSmall: FC<TwoBlurProps> = ({title, icon,maxWidthUp = 50, maxWidthDown = 60, justifyContent = 'end', positionUp = 'end', positionDown = 'end', theme = 'dark', description, ...props}) => {
+
+  return (
+    <div className={TwoBlurGlassSmallStyles.main} style={{justifyContent}}>
+      <div className={TwoBlurGlassSmallStyles.icon_title_rows}>
+        {icon && <div className={TwoBlurGlassSmallStyles.up_row} style={{justifyContent: positionUp}}>
+          <div className={TwoBlurGlassSmallStyles.glass} style={{
+            alignItems: positionUp,
+            backgroundColor: theme === 'dark' ? 'var(--main-gray-dark-opacity-50)' : 'var(--text-color-default-opacity-50)'
+          }}>
+            <Icon name={`${icon}${theme === 'light' ? '_dark' : ''}`} size={190} />
+          </div>
+        </div>}
+        {title && <div className={TwoBlurGlassSmallStyles.up_row} style={{justifyContent: positionUp}}>
+          <div className={TwoBlurGlassSmallStyles.glass} style={{
+            maxWidth: window.innerWidth < 1300 ? '100%' : `${maxWidthUp}%`,
+            alignItems: positionUp,
+            backgroundColor: theme === 'dark' ? 'var(--main-gray-dark-opacity-50)' : 'var(--text-color-default-opacity-50)'
+          }}>
+          <span className={TwoBlurGlassSmallStyles.title} style={{
+            textAlign: positionUp,
+            color: theme === 'dark' ? 'var(--text-color-default)' : 'var(--main-gray-dark-second)'
+          }}>{title}</span>
+            {/*<Icon name={`${icon}${theme === 'light' ? '_dark' : ''}`} size={190} />*/}
+          </div>
+        </div>}
+      </div>
+      {description && <div className={TwoBlurGlassSmallStyles.down_row} style={{justifyContent: positionDown}}>
+        <div className={TwoBlurGlassSmallStyles.glass} style={{
+          maxWidth: window.innerWidth < 1300 ? '100%' : `${maxWidthDown}%`,
+          backgroundColor: theme === 'dark' ? 'var(--main-gray-dark-opacity-50)' : 'var(--text-color-default-opacity-50)'
+        }}>
+          <span className={TwoBlurGlassSmallStyles.description} style={{
             textAlign: positionDown,
             color: theme === 'dark' ? 'var(--text-color-active)' : 'var(--main-gray-dark)'
           }}>

@@ -27,59 +27,19 @@ export const ThreeStepsComponent: FC<Props> = ({scrollerRef}) => {
       scrollTrigger: {
         trigger: triggerRef.current,
         scroller: scrollerRef.current,
-        start: "top 30%",
+        start: "top bottom",
         scrub: false, // scrub = false, чтобы анимация не зависела от скролла
         once: true,   // анимация срабатывает только один раз
       },
     })
       .from(`.${styles.text_header_animated}`, { x: '100vw', opacity: 0, stagger: 0.01, duration: 0.01 })
       .to(`.${styles.text_header_animated}`, { x: 0, opacity: 1, stagger: 0.01, duration: 0.7 })
-
-    gsap.to(`.${styles.item_1}`, {
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        scroller: scrollerRef.current,
-        start: "100px top",
-        end: "40% top",
-        scrub: true,
-        // markers: true
-      },
-      keyframes: [
-        { x: "-100vw", duration: 0.0 },    // вход (30% пути)
-        { x: 0, duration: 1.0 } // выход (последние 30%)
-      ]
-    });
-
-    gsap.to(`.${styles.item_2}`, {
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        scroller: scrollerRef.current,
-        start: "30% top",
-        end: "70% top",
-        scrub: true,
-        // markers: true
-      },
-      keyframes: [
-        { x: "-100vw", duration: 0.0 },    // вход (30% пути)
-        { x: 0, duration: 1.0 } // выход (последние 30%)
-      ]
-    });
-
-    gsap.to(`.${styles.item_3}`, {
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        scroller: scrollerRef.current,
-        start: "60% top",
-        end: "bottom bottom",
-        scrub: true,
-        // markers: true
-      },
-      keyframes: [
-        { x: "-100vw", duration: 0.0 },    // вход (30% пути)
-        { x: 0, duration: 1.0 } // выход (последние 30%)
-      ]
-    });
-
+      .from(`.${styles.item_1}`, { x: '-100vw', opacity: 0, stagger: 0.01, duration: 0.01 })
+      .to(`.${styles.item_1}`, { x: 0, opacity: 1, stagger: 0.01, duration: 0.7 })
+      .from(`.${styles.item_2}`, { x: '-100vw', opacity: 0, stagger: 0.01, duration: 0.01 })
+      .to(`.${styles.item_2}`, { x: 0, opacity: 1, stagger: 0.01, duration: 0.7 })
+      .from(`.${styles.item_3}`, { x: '-100vw', opacity: 0, stagger: 0.01, duration: 0.01 })
+      .to(`.${styles.item_3}`, { x: 0, opacity: 1, stagger: 0.01, duration: 0.7 })
 
   }, [scrollerRef]);
 
