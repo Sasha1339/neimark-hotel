@@ -1,5 +1,6 @@
 import styles from './CallbackFormV2Component.module.css';
 import {FC, RefObject, useEffect, useLayoutEffect, useRef} from "react";
+import './B24-form.css';
 
 type Props = {
   scrollerRef: RefObject<HTMLElement>;
@@ -36,7 +37,8 @@ export const CallbackFormV2Component: FC<Props> = ({scrollerRef, ...props}) => {
       <div className={styles.description_section}>
         <div className={styles.wrapper} ref={formContainerRef}>
           <div className={styles.wrapper_overlay}></div>
-          <div className={styles.text_task}>Экскурсия для студентов / Экскурсия для абитуриентов</div>
+          <div className={styles.text_task}></div>
+          {/*<div className={styles.text_task}>Экскурсия для студентов / Экскурсия для абитуриентов</div>*/}
         </div>
       </div>
     </div>

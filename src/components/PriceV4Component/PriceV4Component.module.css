@@ -1,0 +1,475 @@
+.main {
+    width: 100%;
+    height: 100vh;
+    background: var(--gradient-white-300-black);
+    position: relative;
+}
+
+.description_section {
+    position: sticky;
+    top: 0;/* прилипание */
+    padding: 0;
+    /*height: calc(100vh - var(--header-height));*/
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Biform', sans-serif;
+    color: var(--text-color-default);
+    box-sizing: border-box;
+    overflow: hidden;
+    gap: 2%
+}
+
+.header_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.header_about {
+    margin: 20px 0 0;
+    width: 55%;
+    height: auto;
+    font-family: Biform, 'sans-serif';
+    color: var(--text-color-default);
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.text_header_animated {
+    display: inline-block;
+    transform: translateX(100vw);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header_rooms {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: var(--main-gray-dark-opacity-50);
+    gap: 20px;
+    font-size: 40px;
+    z-index: 100;
+}
+
+.glass_header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+    background: var(--text-color-active-opacity-75);
+    border-radius: 20px;
+    box-sizing: border-box;
+    gap: 20px;
+    /*backdrop-filter: blur(20px);*/
+}
+
+.active_room {
+    color: var(--text-color-default);
+    transition: 0.4s;
+}
+
+.description_side {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: 30% 70%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.room_flex {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 100;
+    /*transform: translateY(10%);*/
+}
+
+.glass_block, .glass_block_button {
+    padding: 20px 40px;
+    background: var(--text-color-default-opacity-50);
+    border-radius: 20px;
+    box-sizing: border-box;
+    /*backdrop-filter: blur(20px);*/
+}
+
+.glass_block_button {
+    background: var(--text-color-active-opacity-50);
+    flex: 1;
+    transition: 0.4s;
+}
+
+.glass_block_button:hover {
+    background: var(--text-color-active-opacity-75);
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.title {
+    font-size: 30px;
+    text-align: start;
+    color: var(--main-gray-dark);
+}
+
+.options, button {
+    font-size: 20px;
+    text-align: start;
+    box-sizing: border-box;
+    color: var(--main-gray-dark);
+    margin: 0;
+}
+
+.button {
+    color: var(--text-color-default);
+    width: 100%;
+    text-align: center;
+}
+
+.option {
+    /*padding: 20px;*/
+}
+
+.living_room {
+    position: absolute;
+    width: 100%;
+    top: calc( 400px);
+}
+
+.two_place_room {
+    position: absolute;
+    width: 100%;
+    top: calc(2.1 / 7 * (100% - 300px) + 400px);
+}
+
+.one_place_room {
+    position: absolute;
+    width: 100%;
+    top: calc(4 / 7 * (100% - 300px) + 400px);
+}
+
+.end {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.video_background {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.img_item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    object-fit: cover;
+    opacity: 0;
+    animation: img_animated 5s infinite;
+    mask: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 20%,
+            black 100%
+    ), linear-gradient(
+            to top,
+            transparent 0%,
+            black 10%,
+            black 100%
+    ), linear-gradient(
+            to right,
+            transparent 0%,
+            black 20%,
+            black 100%
+    ), linear-gradient(
+            to left,
+            transparent 0%,
+            black 10%,
+            black 100%
+    );
+    mask-composite: intersect;
+}
+
+@keyframes img_animated {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1630px) {
+    .header_rooms {
+        font-size: 32px;
+    }
+
+    .header_about {
+        font-size: 40px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .options {
+        font-size: 18px;
+    }
+
+    .glass_block_button {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .header_rooms {
+        gap: 10px;
+        font-size: 22px;
+    }
+
+    .header_about {
+        font-size: 30px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .options {
+        font-size: 16px;
+    }
+
+    .glass_block_button {
+        padding: 15px 20px;
+        backdrop-filter: blur(20px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .description_side {
+        grid-template-columns: 40% 60%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .header_about {
+        font-size: 30px;
+    }
+
+    .header_rooms {
+        flex-direction: column;
+        justify-content: start;
+        padding: 20px;
+        gap: 10px;
+        font-size: 22px;
+    }
+
+    .glass_header {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: 20px 10px;
+        background: var(--main-gray-dark-opacity-50);
+        backdrop-filter: blur(20px);
+        color: var(--text-color-default-opacity-50);
+    }
+
+    .description_side {
+        grid-template-columns: 60% 40%;
+    }
+
+    .glass_block {
+        backdrop-filter: blur(20px);
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .options {
+        font-size: 16px;
+    }
+
+    .img {
+        width: 80vw;
+        left: 0;
+        right: auto;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .description_side {
+        grid-template-columns: 80% 20%;
+    }
+
+    .img {
+        width: 90vw;
+        left: -40vw;
+        right: auto;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .header_about {
+        font-size: 20px;
+        width: 70%;
+    }
+
+    .header_rooms {
+        position: static;
+        flex-direction: column;
+        justify-content: start;
+        padding: 20px;
+        gap: 10px;
+        font-size: 18px;
+    }
+
+    .glass_header {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: 15px 10px;
+        background: var(--main-gray-dark-opacity-50);
+        backdrop-filter: blur(20px);
+        color: var(--text-color-default-opacity-50);
+    }
+
+    .room_flex {
+        gap: 10px;
+    }
+
+    .description_side {
+        grid-template-columns: 1fr;
+    }
+
+    .glass_block {
+        backdrop-filter: blur(20px);
+        padding: 15px 30px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .options {
+        font-size: 14px;
+    }
+
+    .img {
+        width: 100vw;
+        height: 80vh;
+        left: 0;
+        right: auto;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .glass_block_button {
+        padding: 15px 15px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 530px) {
+    .button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .header_rooms {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 5px;
+        font-size: 16px;
+    }
+
+    .glass_header {
+        padding: 15px 15px;
+    }
+
+    .img {
+        width: 100vw;
+        height: 50vh;
+        left: -20px;
+        bottom: -20vh;
+        right: auto;
+    }
+
+}

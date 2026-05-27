@@ -14,6 +14,10 @@ import {CallbackFormV2Component} from "@components/CallbackFormV2Component/Callb
 import {PartnerV2Component} from "@components/PartnerV2Component/PartnerV2Component";
 import {AccommodationComponent} from "@components/AccommodationComponent/AccommodationComponent";
 import {AccommodationV2Component} from "@components/AccommodationV2Component/AccommodationV2Component";
+import {ThreeStepsComponent} from "@components/ThreeStepsComponent/ThreeStepsComponent";
+import {AboutV2Component} from "@components/AboutV2Component/AboutV2Component";
+import {PriceV4Component} from "@components/PriceV4Component/PriceV4Component";
+import {PartnerV3Component} from "@components/PartnerV3Component/PartnerV3Component";
 type Props = {}
 
 export const BuilderSections: FC<Props> = ({...props}) => {
@@ -123,27 +127,27 @@ export const BuilderSections: FC<Props> = ({...props}) => {
       <div ref={scrollRef} className={styles.container} onScroll={onScrollIngredients}>
         <div ref={homeRef} className={styles.ref_navigation}></div>
         <HomeComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <ThreeStepsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={aboutRef} className={styles.ref_navigation}></div>
-        <AboutComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <AboutV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={priceRef} className={styles.ref_navigation}></div>
-        <PriceV3Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <PriceV4Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         {/*<EnvironmentsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         {/*<LocationProvider>*/}
         {/*  <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}
         {/*</LocationProvider>*/}
         {/*<div ref={threeStepsRef} className={styles.ref_navigation}></div>*/}
-        <ThreeStepsV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         {/*<div className={styles.ref_navigation}></div>*/}
         {/*<ExcursionComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         <div ref={accoRef} className={styles.ref_navigation}></div>
         {/*<AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         <div ref={excursionRef} className={styles.ref_navigation}></div>
         <CallbackFormV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <PartnerV2Component scrollerRef={scrollRef as RefObject<HTMLElement>} />
+        <PartnerV3Component scrollerRef={scrollRef as RefObject<HTMLElement>} />
         <div ref={newsRef} className={styles.ref_navigation}></div>
         {/*<NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         <FAQComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <AccommodationV2Component scrollerRef={scrollRef as RefObject<HTMLElement>} />
+        {/*<AccommodationV2Component scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}
         <ContactComponent/>
       </div>
     </main>

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.51bf7730.css",
-    "main.js": "/static/js/main.60742871.js",
+    "main.css": "/static/css/main.6e611851.css",
+    "main.js": "/static/js/main.ab216ea9.js",
     "static/js/511.02b9464e.chunk.js": "/static/js/511.02b9464e.chunk.js",
     "static/media/zasel.jpg": "/static/media/zasel.2e8e9b4aedb38020cfea.jpg",
     "static/media/hotel.jpg": "/static/media/hotel.8ef1645cf43a76282397.jpg",
@@ -13,12 +13,12 @@
     "static/media/logo.svg": "/static/media/logo.fc1da68839b9149958e1c074c6fe382f.svg",
     "index.html": "/index.html",
     "static/media/marker.svg": "/static/media/marker.30f75dde91b93fc2b372b5925522e32b.svg",
-    "main.51bf7730.css.map": "/static/css/main.51bf7730.css.map",
-    "main.60742871.js.map": "/static/js/main.60742871.js.map",
+    "main.6e611851.css.map": "/static/css/main.6e611851.css.map",
+    "main.ab216ea9.js.map": "/static/js/main.ab216ea9.js.map",
     "511.02b9464e.chunk.js.map": "/static/js/511.02b9464e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51bf7730.css",
-    "static/js/main.60742871.js"
+    "static/css/main.6e611851.css",
+    "static/js/main.ab216ea9.js"
   ]
 }
