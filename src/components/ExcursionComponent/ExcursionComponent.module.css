@@ -20,7 +20,7 @@
     position: sticky;
     top: 0;/* прилипание */
     padding: 82px 0 20px 0;
-    height: 500px;
+    /*height: 500px;*/
     flex-direction: column;
     font-family: 'Biform', sans-serif;
     color: var(--text-color-default);
@@ -139,7 +139,7 @@ hr {
         position: sticky;
         top: 0;/* прилипание */
         padding: 0 20px 0 20px;
-        height: 500px;
+        /*height: 500px;*/
         display: flex;
         flex-direction: column;
         justify-content: start;

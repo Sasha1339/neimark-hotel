@@ -12,3 +12,7 @@
 .window_alpha:hover ~ .window_alpha {
   fill: #FFEF4A;
 }
+
+.b24-form-wrapper {
+  background: #fff !important;
+}
