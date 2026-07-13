@@ -7,6 +7,18 @@
     --text-color-active-opacity-50: rgba(230, 143, 97, 0.5);
     --text-color-active-opacity-25: rgba(230, 143, 97, 0.25);
     --text-color-active-opacity-75: rgba(230, 143, 97, 0.75);
+    --color-text-main: #123c52;
+    --color-text-main-50: rgba(18, 60, 82, 0.5);
+    --color-button-main: #1d3a50;
+    --color-button-main-50: rgba(29, 58, 80, 0.5);
+    --color-button-second: #2A5270;
+    --color-button-third: #0F2635;
+    --color-text-dark-main: #123C52;
+    --color-text-dark-main-hover: #0E2F42;
+    --color-text-dark-main-active: #0A2433;
+    --color-text-dark-second: #233346;
+    --color-text-dark-second-50: rgba(35, 51, 70, 0.50);
+    --color-text-dark-second-75: rgba(35, 51, 70, 0.75);
     --background-main: #161A1F;
     --background-black-opacity-25: rgba(0, 0, 0, 0.25);
     --background-gray-black-opacity-75: rgba(35, 51, 70, 0.75);
@@ -17,7 +29,10 @@
     --gray-on-white-back: rgb(232, 232, 237);
     --gray-on-white-back-second: rgb(236, 236, 239);
     --main-gray-dark-second: #282E39;
+    --main-light-green-50-not-opacity: #D7FFFB;
     --main-light-green: #AFFEF6;
+    --main-light-green-hover: #7DF0E4;
+    --main-light-green-active: #4DD4C6;
     --main-gray-dark-opacity-75: rgba(35, 51, 70, 0.75);
     --main-gray-dark-opacity-50: rgba(35, 51, 70, 0.50);
     --main-gray-dark-opacity-25: rgba(35, 51, 70, 0.25);
@@ -25,9 +40,22 @@
     --main-black-dark-opacity-25: rgba(22, 26, 31, 0.25);
     --main-black-dark-opacity-50: rgba(22, 26, 31, 0.5);
     --main-black-dark-opacity-75: rgba(22, 26, 31, 0.75);
-    --main-purple: #8E92FB;
-    --main-purple-opacity-25: rgba(142, 146, 251, 0.25);
-    --main-purple-opacity-50: rgba(142, 146, 251, 0.50);
+    --main-purple: #8088FF;
+    --main-purple-opacity-25: rgba(128, 136, 255, 0.25);
+    --main-purple-opacity-50: rgba(128, 136, 255, 0.50);
+    --main-purple-opacity-75: rgba(128, 136, 255, 0.75);
+    --main-orange: #FF8A4B;
+    --main-orange-second: #E6732E;
+    --main-orangethird: #CC5C1A;
+    --main-orange-opacity-25: rgba(255, 138, 75, 0.25);
+    --main-orange-opacity-50: rgba(255, 138, 75, 0.50);
+    --main-orange-second-opacity-50: rgba(230, 115, 46, 0.5);
+    --main-orange-third-opacity-50: rgba(204, 92, 26, 0.5);
+    --main-orange-opacity-75: rgba(255, 138, 75, 0.75);
+
+    --gradient-backdrop-orange-purple-75: linear-gradient(90deg, var(--main-purple-opacity-75), var(--main-orange-opacity-75));
+    --gradient-line-white-green: linear-gradient(90deg, var(--text-color-default), var(--main-light-green));
+    --gradient-shadow-purple-green: linear-gradient(90deg, var(--main-purple), var(--main-light-green));
 
     --gradient-gray-black: linear-gradient(var(--main-gray-dark), var(--main-black));
     --gradient-purple-gray-green: linear-gradient(var(--main-purple),30% var(--main-gray-dark),70% var(--main-light-green));

@@ -87,26 +87,19 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
             </nav>
           </div>
           <div className={styles.header_right}>
-            <Button title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}/>
           </div>
         </header>
         <div className={styles.content}>
-          {/*<div className={styles.description_container}>*/}
-          {/*  <div className={styles.paragraph_text}>ГОСТИНИЦА НЕЙМАРК</div>*/}
-          {/*  */}
-          {/*  <div className={styles.description_subtext}>*/}
-          {/*    Коливинги ИТ-кампуса «НЕЙМАРК» — это современное пространство для студентов ИТ-направлений, исследователей и молодых специалистов, где всё создано для фокуса на учёбе, идеях и личном развитии.*/}
-          {/*  </div>*/}
-          {/*  /!*<SearchComponent />*!/*/}
-          {/*</div>*/}
 
           <div className={styles.description_text}>
 
-            <span className={styles.description_inner_text}>ЖИВИ ТАМ, ГДЕ НАЧИНАЕТСЯ БУДУЩЕЕ</span>
-              <div className={styles.description_subtext}>
-                Гостиница ИТ-кампуса «НЕЙМАРК» — это современное пространство для студентов ИТ-направлений, исследователей и молодых специалистов, где всё создано для фокуса на учёбе, идеях и личном развитии
-              </div>
-            <Icon name={'double-arrow_dark'} size={30}/>
+            <span className={styles.description_place_text}>
+              <span className={styles.description_inner_text}>{'Гостиница'}</span>
+              <span className={styles.description_inner_text}>{'ИТ\u00A0-кампуса\u00A0НЕЙМАРК'}</span>
+            </span>
+
+            <Button title={'Подать заявку'} onClick={() => {
+            }}/>
           </div>
 
         </div>

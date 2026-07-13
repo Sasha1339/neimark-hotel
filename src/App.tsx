@@ -22,8 +22,6 @@ function App() {
               {/*<AppHeader/>*/}
               <Routes>
                 <Route path="/" element={<BuilderSections />} />
-                <Route path="/room" element={<RoomPageComponent />} />
-                <Route path="/search" element={<SearchPageComponent />} />
               </Routes>
             </HeaderProvider>
           </TabProvider>

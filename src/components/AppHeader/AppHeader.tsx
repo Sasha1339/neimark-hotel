@@ -57,7 +57,6 @@ export const AppHeader: FC = () => {
         </nav>}
       </div>
       <div className={styles.header_right}>
-        <Button className={styles.header_button} defaultClassName={false} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}/>
       </div>
     </header>
   )
