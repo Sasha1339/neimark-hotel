@@ -27,8 +27,8 @@ const images = {
 }
 
 const priceByRoomType = {
-  'one_place': '12 000 ₽',
-  'two_place': '17 000 ₽',
+  'one_place': '17 000 ₽',
+  'two_place': '12 000 ₽',
   'living_room': undefined,
 }
 
