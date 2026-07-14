@@ -1,47 +1,60 @@
 :root {
-
     --font-title-slide-size: 48px;
     --font-description-slide-size: 28px;
+}
 
-    @media (max-width: 1800px) {
+@media (max-width: 1800px) {
+    :root {
         --font-title-slide-size: 46px;
         --font-description-slide-size: 26px;
     }
+}
 
-    @media (max-width: 1600px) {
+@media (max-width: 1600px) {
+    :root {
         --font-title-slide-size: 42px;
         --font-description-slide-size: 24px;
     }
+}
 
-    @media (max-width: 1400px) {
+@media (max-width: 1400px) {
+    :root {
         --font-title-slide-size: 38px;
         --font-description-slide-size: 22px;
     }
+}
 
-    @media (max-width: 1200px) {
+@media (max-width: 1200px) {
+    :root {
         --font-title-slide-size: 34px;
         --font-description-slide-size: 20px;
     }
+}
 
-    @media (max-width: 1000px) {
+@media (max-width: 1000px) {
+    :root {
         --font-title-slide-size: 28px;
         --font-description-slide-size: 19px;
     }
+}
 
-    @media (max-width: 800px) {
+@media (max-width: 800px) {
+    :root {
         --font-title-slide-size: 26px;
         --font-description-slide-size: 18px;
     }
+}
 
-    @media (max-width: 600px) {
+@media (max-width: 600px) {
+    :root {
         --font-title-slide-size: 24px;
         --font-description-slide-size: 14px;
     }
+}
 
-    @media (max-width: 400px) {
+@media (max-width: 400px) {
+    :root {
         --font-title-slide-size: 20px;
         --font-description-slide-size: 10px;
     }
-
-
 }
