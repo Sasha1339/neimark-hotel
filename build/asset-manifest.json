@@ -1,30 +1,30 @@
 {
   "files": {
     "main.css": "/static/css/main.22c9e154.css",
-    "main.js": "/static/js/main.9643e2c5.js",
+    "main.js": "/static/js/main.68f65fd1.js",
     "static/js/511.02b9464e.chunk.js": "/static/js/511.02b9464e.chunk.js",
     "static/media/hotel.jpg": "/static/media/hotel.8ef1645cf43a76282397.jpg",
     "static/media/Paratype - Biform Regular.otf": "/static/media/Paratype - Biform Regular.30ea029c0d3f548d92ff.otf",
     "static/media/form-image.svg": "/static/media/form-image.993ca02cd870daadca14b8d49a25f382.svg",
     "static/media/Paratype - Biform Pixel.otf": "/static/media/Paratype - Biform Pixel.c23e6322f59bc78c6ee3.otf",
     "static/media/three_steps_image.svg": "/static/media/three_steps_image.8e534e33c3a3e4aaf7fa88716ca38569.svg",
-    "static/media/category_faq.svg": "/static/media/category_faq.5f2081cd40bb6e7b7d9aceac4246e565.svg",
     "static/media/form_up_backdrop.svg": "/static/media/form_up_backdrop.e3e3837e17f250b6c52115b6f5f151f5.svg",
-    "static/media/category_partner.svg": "/static/media/category_partner.ac4ac67a0840ab43bafabb1e5b8aec91.svg",
-    "static/media/three_steps_backdrop.svg": "/static/media/three_steps_backdrop.5da8ace2c1d9a9458e0fc8cbdf862d65.svg",
-    "static/media/category_backdrop.svg": "/static/media/category_backdrop.3d5c3158c3ec456b16a339713691f002.svg",
     "static/media/logo.svg": "/static/media/logo.fc1da68839b9149958e1c074c6fe382f.svg",
     "index.html": "/index.html",
+    "static/media/three_steps_backdrop.svg": "/static/media/three_steps_backdrop.c4a302ff4759579614fbc4b6af64b560.svg",
     "static/media/form-backdrop.svg": "/static/media/form-backdrop.0822f6eb295a99d59eb6050c25840065.svg",
+    "static/media/category_backdrop.svg": "/static/media/category_backdrop.c9d834aac44e644dba883ca5b3ee8ff5.svg",
     "static/media/partner_1_backdrop.svg": "/static/media/partner_1_backdrop.5c715c7643dead51155cb5be95adfd9f.svg",
     "static/media/partner_2_backdrop.svg": "/static/media/partner_2_backdrop.5c715c7643dead51155cb5be95adfd9f.svg",
+    "static/media/category_faq.svg": "/static/media/category_faq.ad9aa5158e41f2ad02654b89e8a4e379.svg",
+    "static/media/category_partner.svg": "/static/media/category_partner.2713f2915f4fcc2a88d04fc7257328a6.svg",
     "static/media/partner_3_backdrop.svg": "/static/media/partner_3_backdrop.5a20549cdba9ae41c4d06a6f34751eb0.svg",
     "main.22c9e154.css.map": "/static/css/main.22c9e154.css.map",
-    "main.9643e2c5.js.map": "/static/js/main.9643e2c5.js.map",
+    "main.68f65fd1.js.map": "/static/js/main.68f65fd1.js.map",
     "511.02b9464e.chunk.js.map": "/static/js/511.02b9464e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.22c9e154.css",
-    "static/js/main.9643e2c5.js"
+    "static/js/main.68f65fd1.js"
   ]
 }

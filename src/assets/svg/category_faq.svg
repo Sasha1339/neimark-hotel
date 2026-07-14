@@ -1,4 +1,7 @@
 <svg width="1920" height="1165" viewBox="0 0 1920 1165" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_f_692_54)">
+        <path d="M513 253H791.987V266H1082.02V325H1415.08V413H1684.56V532H1961.56V723H1984V965H1860V774H1616V673H1339V611H982.084V566H737.016V537H446.987V493H167V485H-1.79297V226H167V200H513V253Z" fill="url(#paint0_linear_692_54)"/>
+    </g>
     <defs>
         <filter id="filter0_f_692_54" x="-201.793" y="0" width="2385.79" height="1165" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
             <feFlood flood-opacity="0" result="BackgroundImageFix"/>
@@ -10,51 +13,4 @@
             <stop offset="1" stop-color="#FF8A4B"/>
         </linearGradient>
     </defs>
-
-    <g filter="url(#filter0_f_692_54)">
-        <!-- Левая часть - хаотично: много вправо-влево, чуть вверх-вниз -->
-        <path d="M513 253H791.987V266H1082.02V325H1415.08V413H1684.56V532H1961.56V723H1984V965H1860V774H1616V673H1339V611H982.084V566H737.016V537H446.987V493H167V485H-1.79297V226H167V200H513V253Z" fill="url(#paint0_linear_692_54)" opacity="0.8">
-            <animateTransform attributeName="transform" type="translate" values="
-                0,0;
-                -80,15;
-                30,-10;
-                60,20;
-                -90,-15;
-                -20,10;
-                70,-20;
-                40,25;
-                -60,5;
-                0,0" dur="8s" repeatCount="indefinite"/>
-        </path>
-
-        <!-- Правая часть - хаотично: много вправо-влево, чуть вверх-вниз -->
-        <path d="M513 253H791.987V266H1082.02V325H1415.08V413H1684.56V532H1961.56V723H1984V965H1860V774H1616V673H1339V611H982.084V566H737.016V537H446.987V493H167V485H-1.79297V226H167V200H513V253Z" fill="url(#paint0_linear_692_54)" opacity="0.7">
-            <animateTransform attributeName="transform" type="translate" values="
-                0,0;
-                90,-20;
-                -40,15;
-                -70,-10;
-                110,25;
-                30,-15;
-                -80,10;
-                -50,-25;
-                60,20;
-                0,0" dur="9s" repeatCount="indefinite"/>
-        </path>
-
-        <!-- Центральная часть - хаотично: много вправо-влево, чуть вверх-вниз -->
-        <path d="M513 253H791.987V266H1082.02V325H1415.08V413H1684.56V532H1961.56V723H1984V965H1860V774H1616V673H1339V611H982.084V566H737.016V537H446.987V493H167V485H-1.79297V226H167V200H513V253Z" fill="url(#paint0_linear_692_54)" opacity="0.6">
-            <animateTransform attributeName="transform" type="translate" values="
-                0,0;
-                -60,25;
-                80,-15;
-                -30,-20;
-                50,10;
-                -90,30;
-                40,-25;
-                70,15;
-                -50,-10;
-                0,0" dur="10s" repeatCount="indefinite"/>
-        </path>
-    </g>
 </svg>
