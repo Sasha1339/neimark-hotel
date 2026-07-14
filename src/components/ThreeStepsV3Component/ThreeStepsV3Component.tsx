@@ -38,8 +38,7 @@ export const ThreeStepsV3Component: FC<Props> = ({scrollerRef}) => {
             <span className={clsx(styles.item, styles.item_3)}>Заселяйся кампус в любое удобное время</span>
           </div>
         </div>
-        <Button className={styles.button} title={'Подать заявку'} onClick={() => {
-        }}/>
+        <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}/>
       </div>
 
     </section>

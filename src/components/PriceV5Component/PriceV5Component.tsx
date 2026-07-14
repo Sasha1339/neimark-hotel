@@ -121,7 +121,7 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
 
 
             <div className={clsx(styles.main_block, styles.image_room)}>
-              {images['one_place'].map((e, i) => <img className={styles.image_src}
+              {images['one_place'].map((e, i) => <img key={i} className={styles.image_src}
                                                       style={{opacity: i === index ? 1 : 0}}
                                                       src={`/image/${e}`}/>)}
             </div>
@@ -129,10 +129,9 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
               className={clsx(styles.main_block, styles.all_accom)}>{optionsByRoomType['one_place'].map((e) => `· ${e}\n`)}</div>
             <div className={clsx(styles.main_block, styles.price_block)}>
               <div className={styles.price_text}>от {priceByRoomType['one_place']}</div>
-              <div className={styles.open_price_list}>Открыть прайс-лист</div>
+              <div className={styles.open_price_list} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
             </div>
-            <Button className={styles.button} title={'Подать заявку'} onClick={() => {
-            }}></Button>
+            <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>
           </div>
           <div className={styles.content_grid}>
             <div ref={categories} className={clsx(styles.main_block, styles.categories)}>
@@ -142,7 +141,7 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
 
 
             <div className={clsx(styles.main_block, styles.image_room)}>
-              {images['two_place'].map((e, i) => <img className={styles.image_src}
+              {images['two_place'].map((e, i) => <img key={i} className={styles.image_src}
                                                       style={{opacity: i === index ? 1 : 0}}
                                                       src={`/image/${e}`}/>)}
             </div>
@@ -150,10 +149,9 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
               className={clsx(styles.main_block, styles.all_accom)}>{optionsByRoomType['two_place'].map((e) => `· ${e}\n`)}</div>
             <div className={clsx(styles.main_block, styles.price_block)}>
               <div className={styles.price_text}>от {priceByRoomType['two_place']}</div>
-              <div className={styles.open_price_list}>Открыть прайс-лист</div>
+              <div className={styles.open_price_list} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
             </div>
-            <Button className={styles.button} title={'Подать заявку'} onClick={() => {
-            }}></Button>
+            <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>
           </div>
           <div className={styles.content_grid}>
             <div ref={categories} className={clsx(styles.main_block, styles.categories)}>
@@ -163,17 +161,16 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
 
 
             <div className={clsx(styles.main_block, styles.image_room)}>
-              {images['living_room'].map((e, i) => <img className={styles.image_src}
+              {images['living_room'].map((e, i) => <img key={i} className={styles.image_src}
                                                       style={{opacity: i === index ? 1 : 0}}
                                                       src={`/image/${e}`}/>)}
             </div>
             <div
               className={clsx(styles.main_block, styles.all_accom)}>{optionsByRoomType['living_room'].map((e) => `· ${e}\n`)}</div>
             <div className={clsx(styles.main_block, styles.price_block)}>
-              <div className={styles.price_list_text_living}>Открыть прайс-лист</div>
+              <div className={styles.price_list_text_living} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
             </div>
-            <Button className={styles.button} title={'Подать заявку'} onClick={() => {
-            }}></Button>
+            <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>
           </div>
         </>
 
@@ -193,17 +190,16 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
           <div
             className={clsx(styles.main_block, styles.all_accom)}>{optionsByRoomType[type].map((e) => `· ${e}\n`)}</div>
           <div className={clsx(styles.main_block, styles.image_room)}>
-            {images[type].map((e, i) => <img className={styles.image_src} style={{opacity: i === index ? 1 : 0}}
+            {images[type].map((e, i) => <img key={i} className={styles.image_src} style={{opacity: i === index ? 1 : 0}}
                                              src={`/image/${e}`}/>)}
           </div>
           {type !== 'living_room' ? <div className={clsx(styles.main_block, styles.price_block)}>
             <div className={styles.price_text}>от {priceByRoomType[type]}</div>
-            <div className={styles.open_price_list}>Открыть прайс-лист</div>
+            <div className={styles.open_price_list} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
           </div> : <div className={clsx(styles.main_block, styles.price_block)}>
-            <div className={styles.price_list_text_living}>Открыть прайс-лист</div>
+            <div className={styles.price_list_text_living} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
           </div>}
-          <Button className={styles.button} title={'Подать заявку'} onClick={() => {
-          }}></Button>
+          <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>
         </div>
       )
     } else {
@@ -222,17 +218,16 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
           <div
             className={clsx(styles.main_block, styles.all_accom)}>{optionsByRoomType[type].map((e) => `· ${e}\n`)}</div>
           <div className={clsx(styles.main_block, styles.image_room)}>
-            {images[type].map((e, i) => <img className={styles.image_src} style={{opacity: i === index ? 1 : 0}}
+            {images[type].map((e, i) => <img key={i} className={styles.image_src} style={{opacity: i === index ? 1 : 0}}
                                              src={`/image/${e}`}/>)}
           </div>
           {type !== 'living_room' ? <div className={clsx(styles.main_block, styles.price_block)}>
             <div className={styles.price_text}>от {priceByRoomType[type]}</div>
-            <div className={styles.open_price_list}>Открыть прайс-лист</div>
+            <div className={styles.open_price_list} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
           </div> : <div className={clsx(styles.main_block, styles.price_block)}>
-            <div className={styles.price_list_text_living}>Открыть прайс-лист</div>
+            <div className={styles.price_list_text_living} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
           </div>}
-          <Button className={styles.button} title={'Подать заявку'} onClick={() => {
-          }}></Button>
+          <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>
         </div>
       )
     }

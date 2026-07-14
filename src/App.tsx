@@ -9,6 +9,8 @@ import {BrowserRouter as Router} from "react-router-dom";
 import {TabProvider} from "@/providers/TabProvider";
 import {RoomPageComponent} from "@components/RoomPageComponent/RoomPageComponent";
 import {SearchPageComponent} from "@components/SearchPageComponent/SearchPageComponent";
+import {FormExcursionPage} from "@components/FormExcursionPage/FormExcursionPage";
+import {FormPartnerPage} from "@components/FormPartnerPage/FormPartnerPage";
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
               {/*<AppHeader/>*/}
               <Routes>
                 <Route path="/" element={<BuilderSections />} />
+                <Route path="/excursion-form" element={<FormExcursionPage />} />
+                <Route path="/partner-form" element={<FormPartnerPage />} />
               </Routes>
             </HeaderProvider>
           </TabProvider>

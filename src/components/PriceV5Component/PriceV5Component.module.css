@@ -65,6 +65,7 @@
     font-size: 20px;
     color: var(--color-text-main);
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .price_text {
@@ -91,6 +92,7 @@
     font-size: 16px;
     color: var(--color-text-main-50);
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .categories {

@@ -3,6 +3,7 @@
     --text-color-default-opacity-50: rgba(255, 255, 255, 0.5);
     --text-color-default-opacity-75: rgba(255, 255, 255, 0.75);
     --text-color-default-opacity-25: rgba(255, 255, 255, 0.25);
+    --text-color-default-opacity-10: rgba(255, 255, 255, 0.10);
     --text-color-active: #E68F61;
     --text-color-active-opacity-50: rgba(230, 143, 97, 0.5);
     --text-color-active-opacity-25: rgba(230, 143, 97, 0.25);
@@ -52,6 +53,7 @@
     --main-orange-second-opacity-50: rgba(230, 115, 46, 0.5);
     --main-orange-third-opacity-50: rgba(204, 92, 26, 0.5);
     --main-orange-opacity-75: rgba(255, 138, 75, 0.75);
+    --main-red: #F00;
 
     --gradient-backdrop-orange-purple-75: linear-gradient(90deg, var(--main-purple-opacity-75), var(--main-orange-opacity-75));
     --gradient-line-white-green: linear-gradient(90deg, var(--text-color-default), var(--main-light-green));
