@@ -16,7 +16,7 @@ export const ExcursionV2Component: FC<Props> = ({scrollerRef}) => {
     <section className={styles.main}>
       <span className={styles.header}>Посмотрите <span className={styles.pixel}>гостиницу</span> своими глазами</span>
       <div className={styles.description}>
-        {'Пройдитесь по территории, оцените номера и общественные пространства, почувствуйте атмосферу и задайте все интересующие вопросы'}
+        {'Пройдитесь по территории, оцените номера и общественные пространства, задайте все интересующие вопросы'}
       </div>
       <Button className={styles.button} title={'Записаться на экскурсию'} onClick={() => navigate('/excursion-form')}/>
     </section>

@@ -55,6 +55,11 @@
     color: var(--color-text-main);
 }
 
+.empty_block {
+    border-color: transparent;
+    background-color: transparent;
+}
+
 .price_block {
     display: flex;
     flex-direction: column;
@@ -171,6 +176,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.button_span {
+    grid-column: span 2;
 }
 
 .button:hover {

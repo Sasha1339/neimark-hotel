@@ -1,0 +1,60 @@
+<svg width="1920" height="1161" viewBox="0 0 1920 1161" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="filter0_f_692_63" x="-234" y="0" width="2395.79" height="1161" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_692_63"/>
+        </filter>
+        <linearGradient id="paint0_linear_692_63" x1="1962" y1="710" x2="42.0003" y2="710" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#8085FF"/>
+            <stop offset="1" stop-color="#FF8A4B"/>
+        </linearGradient>
+    </defs>
+
+    <g filter="url(#filter0_f_692_63)">
+        <!-- Левая часть - хаотично: много вправо-влево, чуть вверх-вниз -->
+        <path d="M1447 908H1168.01V895H877.984V836H544.916V748H275.436V629H-1.56445V438H-34V200H73V387H344V488H621V550H977.916V595H1222.98V624H1513.01V668H1793V676H1961.79V935H1793V961H1447V908Z" fill="url(#paint0_linear_692_63)" opacity="0.8">
+            <animateTransform attributeName="transform" type="translate" values="
+                0,0;
+                -80,15;
+                30,-10;
+                60,20;
+                -90,-15;
+                -20,10;
+                70,-20;
+                40,25;
+                -60,5;
+                0,0" dur="8s" repeatCount="indefinite"/>
+        </path>
+
+        <!-- Правая часть - хаотично: много вправо-влево, чуть вверх-вниз -->
+        <path d="M1447 908H1168.01V895H877.984V836H544.916V748H275.436V629H-1.56445V438H-34V200H73V387H344V488H621V550H977.916V595H1222.98V624H1513.01V668H1793V676H1961.79V935H1793V961H1447V908Z" fill="url(#paint0_linear_692_63)" opacity="0.7">
+            <animateTransform attributeName="transform" type="translate" values="
+                0,0;
+                90,-20;
+                -40,15;
+                -70,-10;
+                110,25;
+                30,-15;
+                -80,10;
+                -50,-25;
+                60,20;
+                0,0" dur="9s" repeatCount="indefinite"/>
+        </path>
+
+        <!-- Центральная часть - хаотично: много вправо-влево, чуть вверх-вниз -->
+        <path d="M1447 908H1168.01V895H877.984V836H544.916V748H275.436V629H-1.56445V438H-34V200H73V387H344V488H621V550H977.916V595H1222.98V624H1513.01V668H1793V676H1961.79V935H1793V961H1447V908Z" fill="url(#paint0_linear_692_63)" opacity="0.6">
+            <animateTransform attributeName="transform" type="translate" values="
+                0,0;
+                -60,25;
+                80,-15;
+                -30,-20;
+                50,10;
+                -90,30;
+                40,-25;
+                70,15;
+                -50,-10;
+                0,0" dur="10s" repeatCount="indefinite"/>
+        </path>
+    </g>
+</svg>

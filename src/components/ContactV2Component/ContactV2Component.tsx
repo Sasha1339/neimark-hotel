@@ -9,16 +9,19 @@ export const ContactV2Component = () => {
       <div className={styles.description_section}>
         <div className={styles.content}>
           <div className={styles.info_column}>
-            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDoc('public')}>Публичная
-              оферта</div>
+            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDoc('price')}>Стоимость
+              проживания
+            </div>
           </div>
           <div className={styles.info_column}>
-            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDoc('price')}>Стоимость
-              проживания</div>
+            {/*<div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDoc('public')}>Публичная*/}
+            {/*  оферта*/}
+            {/*</div>*/}
           </div>
           <div className={styles.info_column}>
             <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDoc('rules')}>Правила
-              проживания</div>
+              проживания
+            </div>
           </div>
         </div>
         <div className={styles.content}>

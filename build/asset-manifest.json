@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.22c9e154.css",
-    "main.js": "/static/js/main.9643e2c5.js",
+    "main.css": "/static/css/main.5fde4e1c.css",
+    "main.js": "/static/js/main.e19ab1a9.js",
     "static/js/511.02b9464e.chunk.js": "/static/js/511.02b9464e.chunk.js",
     "static/media/hotel.jpg": "/static/media/hotel.8ef1645cf43a76282397.jpg",
     "static/media/Paratype - Biform Regular.otf": "/static/media/Paratype - Biform Regular.30ea029c0d3f548d92ff.otf",
@@ -19,12 +19,12 @@
     "static/media/partner_1_backdrop.svg": "/static/media/partner_1_backdrop.5c715c7643dead51155cb5be95adfd9f.svg",
     "static/media/partner_2_backdrop.svg": "/static/media/partner_2_backdrop.5c715c7643dead51155cb5be95adfd9f.svg",
     "static/media/partner_3_backdrop.svg": "/static/media/partner_3_backdrop.5a20549cdba9ae41c4d06a6f34751eb0.svg",
-    "main.22c9e154.css.map": "/static/css/main.22c9e154.css.map",
-    "main.9643e2c5.js.map": "/static/js/main.9643e2c5.js.map",
+    "main.5fde4e1c.css.map": "/static/css/main.5fde4e1c.css.map",
+    "main.e19ab1a9.js.map": "/static/js/main.e19ab1a9.js.map",
     "511.02b9464e.chunk.js.map": "/static/js/511.02b9464e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22c9e154.css",
-    "static/js/main.9643e2c5.js"
+    "static/css/main.5fde4e1c.css",
+    "static/js/main.e19ab1a9.js"
   ]
 }

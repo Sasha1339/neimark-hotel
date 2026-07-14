@@ -15,20 +15,20 @@ type Props = {
 type RoomType = 'one_place' | 'two_place' | 'living_room';
 
 const optionsByRoomType = {
-  'one_place': ['Кровать с пастельным бельем', 'Шкаф', 'Стол и стул', 'Ростовое зеркало', 'Умная колонка СБЕР', 'Санузел', 'Полотенца', 'Душевые принадлежности', 'Фен'],
-  'two_place': ['2 кровати с пастельным бельем', 'Шкаф', 'Стол и стул', 'Ростовое зеркало', 'Умная колонка СБЕР', 'Санузел', 'Полотенца', 'Душевые принадлежности', 'Фен'],
-  'living_room': ['Диван', 'ТВ', 'Чайник', 'Холодильники', 'Аэрогриль и мультиварка', 'Посуда', 'Прачечная'],
+  'one_place': ['Кровать с постельным бельем', 'Шкаф', 'Стол и стул', 'Ростовое зеркало', 'Умная колонка СБЕР', 'Санузел', 'Полотенца', 'Душевые принадлежности', 'Фен'],
+  'two_place': ['2 кровати с постельным бельем', 'Шкаф', '2 стола и стула', 'Ростовое зеркало', 'Умная колонка СБЕР', 'Санузел', 'Полотенца', 'Душевые принадлежности', 'Фен'],
+  'living_room': ['Аэрогриль', 'Мультиварка', 'Микроволновки'],
 }
 
 const images = {
-  'one_place': ['one_place_1.jpg', 'one_place_2.jpg', 'one_place_3.jpg', 'one_place_4.jpg', 'one_place_5.jpg'],
+  'one_place': ['one_place_1.jpg', 'one_place_2.jpg', 'one_place_4.jpg', 'one_place_5.jpg'],
   'two_place': ['two_place_1.jpg', 'two_place_2.jpg', 'two_place_3.jpg', 'two_place_4.jpg', 'two_place_5.jpg', 'two_place_6.jpg'],
   'living_room': ['living_place_1.jpg', 'living_place_2.jpg', 'living_place_3.jpg', 'living_place_4.jpg', 'living_place_5.jpg', 'living_place_6.jpg', 'living_place_7.jpg', 'living_place_8.jpg', 'living_place_9.jpg', 'living_place_10.jpg', 'living_place_11.jpg'],
 }
 
 const priceByRoomType = {
-  'one_place': '12000 ₽',
-  'two_place': '17000 ₽',
+  'one_place': '12 000 ₽',
+  'two_place': '17 000 ₽',
   'living_room': undefined,
 }
 
@@ -60,7 +60,7 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
     // Создаём новый интервал
     intervalRef.current = setInterval(() => {
 
-      setIndex((prev) => isMobile ? (prev + 1 >= 5 ? 0 : prev + 1) : (prev + 1 >= images[type].length ? 0 : prev + 1));
+      setIndex((prev) => isMobile ? (prev + 1 >= 4 ? 0 : prev + 1) : (prev + 1 >= images[type].length ? 0 : prev + 1));
 
     }, 3000);
 
@@ -167,10 +167,8 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
             </div>
             <div
               className={clsx(styles.main_block, styles.all_accom)}>{optionsByRoomType['living_room'].map((e) => `· ${e}\n`)}</div>
-            <div className={clsx(styles.main_block, styles.price_block)}>
-              <div className={styles.price_list_text_living} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
-            </div>
-            <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>
+            <Button className={clsx(styles.button, styles.button_span)} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>
+
           </div>
         </>
 
@@ -196,8 +194,7 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
           {type !== 'living_room' ? <div className={clsx(styles.main_block, styles.price_block)}>
             <div className={styles.price_text}>от {priceByRoomType[type]}</div>
             <div className={styles.open_price_list} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
-          </div> : <div className={clsx(styles.main_block, styles.price_block)}>
-            <div className={styles.price_list_text_living} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
+          </div> : <div className={clsx(styles.main_block, styles.empty_block)}>
           </div>}
           <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>
         </div>
@@ -224,8 +221,7 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
           {type !== 'living_room' ? <div className={clsx(styles.main_block, styles.price_block)}>
             <div className={styles.price_text}>от {priceByRoomType[type]}</div>
             <div className={styles.open_price_list} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
-          </div> : <div className={clsx(styles.main_block, styles.price_block)}>
-            <div className={styles.price_list_text_living} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
+          </div> : <div className={clsx(styles.main_block, styles.empty_block)}>
           </div>}
           <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>
         </div>

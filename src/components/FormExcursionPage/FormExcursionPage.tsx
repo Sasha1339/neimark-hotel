@@ -58,7 +58,7 @@ export const FormExcursionPage: FC<Props> = () => {
         <img className={styles.form_image} src={FormImage} alt="" />
         <div className={styles.left_content}>
           <span className={styles.header}>
-            Запишись на <span className={styles.pixel}>экскурсию</span> в гостиницу
+            Запишитесь на <span className={styles.pixel}>экскурсию</span> в гостиницу
           </span>
           <div className={styles.description}>
             {'Если есть вопросы мы перезвоним\n и все расскажем'}
