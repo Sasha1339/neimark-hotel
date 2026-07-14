@@ -1,0 +1,87 @@
+.b24-form-wrapper {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+.b24-form-header-padding {
+  padding: 0 !important;
+}
+
+.b24-form-content {
+  padding: 0 !important;
+}
+
+.b24-form-sign {
+  padding-left: 0 !important;
+}
+
+.b24-form-control[aria-invalid="true"] {
+  border-color: var(--main-red) !important;
+}
+
+.b24-window-scrollable .b24-window-popup-head .b24-window-popup-title {
+  font-family: Biform, sans-serif !important;
+}
+
+.b24-window-scrollable > .b24-window-popup-body > div > div {
+  font-family: Biform, sans-serif !important;
+}
+
+.b24-form-state-text p {
+  font-family: Biform, 'sans-serif';
+  color: var(--text-color-default) !important;
+}
+
+
+.b24-form-control-container[aria-invalid="true"] input {
+  border-color: var(--main-red) !important;
+}
+
+.b24-form-control-alert-message {
+  font-family: Biform, sans-serif !important;
+  background-color: var(--main-red) !important;
+}
+
+.b24-form-control-label {
+  color: var(--text-color-default-opacity-75) !important;
+  font-family: Biform, sans-serif !important;
+}
+
+.b24-form-control {
+  color: var(--text-color-default) !important;
+  font-family: Biform, sans-serif !important;
+  background-color: var(--text-color-default-opacity-10) !important;
+  border-radius: 10px !important;
+  outline: none !important;
+  /*border-color: var(--main-light-green) !important;*/
+}
+
+.b24-form-control-required {
+  font-family: Biform, sans-serif !important;
+  color: var(--main-red) !important;
+}
+
+.b24-form-field-agreement-link {
+  font-family: Biform, sans-serif !important;
+  color: var(--text-color-default) !important;
+}
+
+.b24-form-sign-abuse-link {
+  font-family: Biform, sans-serif !important;
+  color: var(--text-color-default) !important;
+}
+
+.b24-form-btn {
+  background-color: var(--main-purple) !important;
+  font-family: Biform, sans-serif !important;
+  color: var(--text-color-default) !important;
+  border-radius: 10px !important;
+}
+
+.b24-form-control-container:after {
+  border-color: var(--text-color-default) !important;
+}
+
+.b24-form-icon-after::after, .b24-form-icon-after::before {
+  background-color: var(--text-color-default) !important;
+}

@@ -1,8 +1,14 @@
 @import './styles/variables.css';
+@import './styles/fonts-size.css';
 
 @font-face {
   font-family: 'Biform';
   src: local('Biform'), url('./fonts/Paratype - Biform Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'BiformPixel';
+  src: local('BiformPixel'), url('./fonts/Paratype - Biform Pixel.otf') format('opentype');
 }
 
 .room_alpha:hover ~ .window_alpha {

@@ -1,38 +1,29 @@
 .button {
     font-family: 'Biform', sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     transition: 0.5s;
     color: var(--text-color-default);
-    padding: 10px;
+    padding: 20px 40px;
     box-sizing: border-box;
     user-select: none;
     cursor: pointer;
-    background-color: var(--text-color-active);
+    background-color: var(--color-button-main);
     outline: none;
     border: none;
     position: relative;
-}
-
-.button:hover::after {
-    top: -10px;
-    left: -10px;
+    border-radius: 20px;
+    -webkit-tap-highlight-color: transparent;
+    /*z-index: 10;*/
 }
 
 .button:hover {
-    color: var(--text-color-active);
-    background-color: var(--text-color-default);
+    color: var(--text-color-default);
+    background-color: var(--color-button-second);
 }
 
-.button::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 10px;
-    left: 10px;
-    transition: 0.3s;
-    border: 1px solid var(--text-color-active);
-    z-index: -1;
+.button:active {
+    color: var(--text-color-default);
+    background-color: var(--color-button-third);
 }
 
 .button_element__highlight {
@@ -54,30 +45,22 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
+
     .button {
-        font-family: 'Biform', sans-serif;
-        font-size: 10px;
-        transition: 0.5s;
-        color: var(--text-color-default);
-        padding: 5px;
-        box-sizing: border-box;
-        user-select: none;
-        cursor: pointer;
-        background-color: var(--text-color-active);
-        outline: none;
-        border: none;
-        position: relative;
+        padding: 15px 30px;
+        font-size: 20px;
+        border-radius: 15px;
     }
 
-    .button::after {
-        top: 2px;
-        left: 2px;
-    }
+}
 
-    .button:hover::after {
-        top: -2px;
-        left: -2px;
+@media (max-width: 600px) {
+
+    .button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 10px;
     }
 
 }

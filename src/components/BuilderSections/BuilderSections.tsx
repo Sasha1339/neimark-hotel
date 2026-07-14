@@ -4,20 +4,15 @@ import {HomeComponent} from "../HomeComponent/HomeComponent";
 import {NavigationContext} from "@/providers/NavigationContext";
 import {TabContext} from "@/providers/TabContext";
 import {gsap} from "gsap";
-import {AboutComponent} from "@components/AboutComponent/AboutComponent";
-import {ContactComponent} from "@components/ContactComponent/ContactComponent";
 import {HeaderContext} from "@/providers/HeaderContext";
-import {FAQComponent} from "@components/FAQComponent/FAQComponent";
-import {PriceV3Component} from "@components/PriceV3Component/PriceV3Component";
-import {ThreeStepsV2Component} from "@components/ThreeStepsV2Component/ThreeStepsV2Component";
-import {CallbackFormV2Component} from "@components/CallbackFormV2Component/CallbackFormV2Component";
-import {PartnerV2Component} from "@components/PartnerV2Component/PartnerV2Component";
-import {AccommodationComponent} from "@components/AccommodationComponent/AccommodationComponent";
-import {AccommodationV2Component} from "@components/AccommodationV2Component/AccommodationV2Component";
-import {ThreeStepsComponent} from "@components/ThreeStepsComponent/ThreeStepsComponent";
-import {AboutV2Component} from "@components/AboutV2Component/AboutV2Component";
-import {PriceV4Component} from "@components/PriceV4Component/PriceV4Component";
-import {PartnerV3Component} from "@components/PartnerV3Component/PartnerV3Component";
+import {AboutV3Component} from "@components/AboutV3Component/AboutV3Component";
+import {PriceV5Component} from "@components/PriceV5Component/PriceV5Component";
+import {ExcursionV2Component} from "@components/ExcursionV2Component/ExcursionV2Component";
+import {ThreeStepsV3Component} from "@components/ThreeStepsV3Component/ThreeStepsV3Component";
+import {FAQV2Component} from "@components/FAQV2Component/FAQV2Component";
+import {PartnerV4Component} from "@components/PartnerV4Component/PartnerV4Component";
+import {LinkWithUsComponent} from "@components/LinkWithUsComponent/LinkWithUsComponent";
+import {ContactV2Component} from "@components/ContactV2Component/ContactV2Component";
 type Props = {}
 
 export const BuilderSections: FC<Props> = ({...props}) => {
@@ -127,28 +122,19 @@ export const BuilderSections: FC<Props> = ({...props}) => {
       <div ref={scrollRef} className={styles.container} onScroll={onScrollIngredients}>
         <div ref={homeRef} className={styles.ref_navigation}></div>
         <HomeComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <ThreeStepsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={aboutRef} className={styles.ref_navigation}></div>
-        <AboutV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <AboutV3Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={priceRef} className={styles.ref_navigation}></div>
-        <PriceV4Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        {/*<EnvironmentsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
-        {/*<LocationProvider>*/}
-        {/*  <LocationComponent scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}
-        {/*</LocationProvider>*/}
-        {/*<div ref={threeStepsRef} className={styles.ref_navigation}></div>*/}
-        {/*<div className={styles.ref_navigation}></div>*/}
-        {/*<ExcursionComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
+        <PriceV5Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <ExcursionV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <ThreeStepsV3Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <FAQV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <PartnerV4Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
+        <LinkWithUsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
         <div ref={accoRef} className={styles.ref_navigation}></div>
-        {/*<AccommodationComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
         <div ref={excursionRef} className={styles.ref_navigation}></div>
-        <CallbackFormV2Component scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        <PartnerV3Component scrollerRef={scrollRef as RefObject<HTMLElement>} />
         <div ref={newsRef} className={styles.ref_navigation}></div>
-        {/*<NewsComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>*/}
-        <FAQComponent scrollerRef={scrollRef as RefObject<HTMLElement>}/>
-        {/*<AccommodationV2Component scrollerRef={scrollRef as RefObject<HTMLElement>} />*/}
-        <ContactComponent/>
+        <ContactV2Component/>
       </div>
     </main>
   )
