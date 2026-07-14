@@ -2,7 +2,7 @@ import {FC, RefObject, useEffect, useRef, useState} from "react";
 import styles from "./PriceV4Component.module.css";
 import {gsap} from "gsap";
 import Hls from "hls.js";
-import {openDoc} from "@/shared/functions";
+import {openPdf} from "@/shared/functions";
 
 type Props = {
   scrollerRef: RefObject<HTMLElement>;
@@ -121,7 +121,7 @@ export const PriceV4Component: FC<Props> = ({scrollerRef}) => {
                 <div className={`${styles.glass_block} ${styles.title}`}>Цена {priceByRoomType[type]}</div>}
               <div className={`${styles.buttons}`}>
                 <div className={`${styles.button} ${styles.glass_block_button}`} onClick={() => window.open('https://neimark.ukmira.ru/login')}>Подать заявку</div>
-                <div className={`${styles.button} ${styles.glass_block_button}`} onClick={() => openDoc('price')}>Прайс-лист</div>
+                <div className={`${styles.button} ${styles.glass_block_button}`} onClick={() => openPdf('price')}>Прайс-лист</div>
               </div>
             </div>
             <div className={styles.video_background}>

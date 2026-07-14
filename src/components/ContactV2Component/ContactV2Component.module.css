@@ -53,6 +53,7 @@ a {
     border-top: 2px solid var(--background-black-opacity-25);
     padding: 50px 0 50px;
     box-sizing: border-box;
+    row-gap: 50px;
 }
 
 .content_bottom {

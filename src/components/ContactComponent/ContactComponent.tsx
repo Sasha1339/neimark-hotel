@@ -1,6 +1,6 @@
 import styles from './ContactComponent.module.css';
 import { ReactComponent as Logo } from "@/assets/svg/logo.svg";
-import {openDoc} from "@/shared/functions";
+import {openPdf} from "@/shared/functions";
 
 export const ContactComponent = () => {
 
@@ -9,15 +9,15 @@ export const ContactComponent = () => {
       <div className={styles.description_section}>
         <div className={styles.content}>
           <div className={styles.info_column}>
-            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDoc('public')}>Публичная
+            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openPdf('public')}>Публичная
               оферта</div>
           </div>
           <div className={styles.info_column}>
-            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDoc('price')}>Стоимость
+            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openPdf('price')}>Стоимость
               проживания</div>
           </div>
           <div className={styles.info_column}>
-            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDoc('rules')}>Правила
+            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openPdf('rules')}>Правила
               проживания</div>
           </div>
         </div>
@@ -39,7 +39,7 @@ export const ContactComponent = () => {
           <div className={styles.text_bottom_left}>© 2025 Автономная некоммерческая организация высшего образования
             «Университет НЕЙМАРК»
           </div>
-          <div className={styles.text_bottom_right} onClick={() => openDoc('policy')}>Политика конфиденциальности</div>
+          <div className={styles.text_bottom_right} onClick={() => openPdf('policy')}>Политика конфиденциальности</div>
         </div>
         <div className={styles.content_bottom}>
           <div className={styles.text_bottom_justify}>ИТ-Кампус НЕЙМАРК. Гостиница. Номер реестровой записи:

@@ -1,6 +1,6 @@
 import styles from './ContactV2Component.module.css';
 import { ReactComponent as Logo } from "@/assets/svg/logo.svg";
-import {openDoc} from "@/shared/functions";
+import {openDocx, openPdf} from "@/shared/functions";
 
 export const ContactV2Component = () => {
 
@@ -9,18 +9,24 @@ export const ContactV2Component = () => {
       <div className={styles.description_section}>
         <div className={styles.content}>
           <div className={styles.info_column}>
-            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDoc('price')}>Стоимость
+            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openPdf('public')}>Публичная оферта
+            </div>
+          </div>
+          <div className={styles.info_column}>
+            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openPdf('rules')}>Правила
               проживания
             </div>
           </div>
           <div className={styles.info_column}>
-            {/*<div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDoc('public')}>Публичная*/}
-            {/*  оферта*/}
-            {/*</div>*/}
+            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openPdf('order')}>Приказ об оплате
+            </div>
           </div>
           <div className={styles.info_column}>
-            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDoc('rules')}>Правила
-              проживания
+            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDocx('form_personal_data', 'Форма согласия на обработку персональных данных')}>Форма согласия на обработку персональных данных
+            </div>
+          </div>
+          <div className={styles.info_column}>
+            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDocx('form_teenager', 'Форма согласия на заселение несовершеннолетнего')}>Форма согласия на заселение несовершеннолетнего
             </div>
           </div>
         </div>
@@ -42,7 +48,7 @@ export const ContactV2Component = () => {
           <div className={styles.text_bottom_left}>© 2025 Автономная некоммерческая организация высшего образования
             «Университет НЕЙМАРК»
           </div>
-          <div className={styles.text_bottom_right} onClick={() => openDoc('policy')}>Политика конфиденциальности</div>
+          <div className={styles.text_bottom_right} onClick={() => openPdf('policy')}>Политика конфиденциальности</div>
         </div>
         <div className={styles.content_bottom}>
           <div className={styles.text_bottom_justify}>ИТ-Кампус НЕЙМАРК. Гостиница. Номер реестровой записи:

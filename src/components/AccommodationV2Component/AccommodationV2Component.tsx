@@ -6,7 +6,7 @@ import docs from '@/assets/images/docs.jpeg';
 import {gsap} from 'gsap';
 import {Button} from "@components/Button/Button";
 import {AboutElementComponent} from "@components/AboutElementComponent/AboutElementComponent";
-import {openDoc} from "@/shared/functions";
+import {openPdf} from "@/shared/functions";
 import {BaseCartElement, TwoBlurGlass} from "@components/BaseCartElement/BaseCartElement";
 import {Icon} from "@components/Icon/Icon";
 
@@ -76,7 +76,7 @@ export const AccommodationV2Component: FC<Props> = ({scrollerRef}) => {
             <BaseCartElement
               activeHover
               background={{backgroundImage: 'linear-gradient(-45deg, var(--main-light-green), var(--text-color-default))'}}
-              onClick={() => openDoc('public')}
+              onClick={() => openPdf('public')}
               image={<Icon name={'document_dark'} size={80}/>}>
               <TwoBlurGlass title="Скачать" maxWidthDown={100} maxWidthUp={100} description={'Публичная\nоферта'} justifyContent="space-between" positionUp="end" positionDown="start" theme="light"></TwoBlurGlass>
             </BaseCartElement>
@@ -85,7 +85,7 @@ export const AccommodationV2Component: FC<Props> = ({scrollerRef}) => {
             <BaseCartElement
               activeHover
               background={{backgroundImage: 'linear-gradient(-45deg, var(--main-purple), var(--text-color-default))'}}
-              onClick={() => openDoc('price')}
+              onClick={() => openPdf('price')}
               image={<Icon name={'document_dark'} size={80}/>}>
               <TwoBlurGlass title="Скачать" maxWidthDown={100} maxWidthUp={100} description={'Стоимость\nпроживания'} justifyContent="space-between" positionUp="end" positionDown="start" theme="light"></TwoBlurGlass>
             </BaseCartElement>
@@ -94,7 +94,7 @@ export const AccommodationV2Component: FC<Props> = ({scrollerRef}) => {
             <BaseCartElement
               activeHover
               background={{backgroundImage: 'linear-gradient(-45deg, var(--text-color-active), var(--text-color-default))'}}
-              onClick={() => openDoc('rules')}
+              onClick={() => openPdf('rules')}
               image={<Icon name={'document_dark'} size={80}/>}>
               <TwoBlurGlass title="Скачать" maxWidthDown={100} maxWidthUp={100} description={'Правила\nпроживания'} justifyContent="space-between" positionUp="end" positionDown="start" theme="light"></TwoBlurGlass>
             </BaseCartElement>

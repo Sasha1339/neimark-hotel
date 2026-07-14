@@ -2,7 +2,7 @@ import {FC, RefObject, useEffect, useRef, useState} from "react";
 import styles from "./PriceV5Component.module.css";
 import {gsap} from "gsap";
 import Hls from "hls.js";
-import {openDoc} from "@/shared/functions";
+import {openPdf} from "@/shared/functions";
 import CategoryBackdrop from "../../assets/svg/category_backdrop.svg";
 import clsx from "clsx";
 import {Button} from "@components/Button/Button";
@@ -129,7 +129,7 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
               className={clsx(styles.main_block, styles.all_accom)}>{optionsByRoomType['one_place'].map((e) => `· ${e}\n`)}</div>
             <div className={clsx(styles.main_block, styles.price_block)}>
               <div className={styles.price_text}>от {priceByRoomType['one_place']}</div>
-              <div className={styles.open_price_list} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
+              <div className={styles.open_price_list} onClick={() => openPdf('price')}>Открыть прайс-лист</div>
             </div>
             <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>
           </div>
@@ -149,7 +149,7 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
               className={clsx(styles.main_block, styles.all_accom)}>{optionsByRoomType['two_place'].map((e) => `· ${e}\n`)}</div>
             <div className={clsx(styles.main_block, styles.price_block)}>
               <div className={styles.price_text}>от {priceByRoomType['two_place']}</div>
-              <div className={styles.open_price_list} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
+              <div className={styles.open_price_list} onClick={() => openPdf('price')}>Открыть прайс-лист</div>
             </div>
             <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>
           </div>
@@ -193,7 +193,7 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
           </div>
           {type !== 'living_room' ? <div className={clsx(styles.main_block, styles.price_block)}>
             <div className={styles.price_text}>от {priceByRoomType[type]}</div>
-            <div className={styles.open_price_list} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
+            <div className={styles.open_price_list} onClick={() => openPdf('price')}>Открыть прайс-лист</div>
           </div> : <div className={clsx(styles.main_block, styles.empty_block)}>
           </div>}
           <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>
@@ -220,7 +220,7 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
           </div>
           {type !== 'living_room' ? <div className={clsx(styles.main_block, styles.price_block)}>
             <div className={styles.price_text}>от {priceByRoomType[type]}</div>
-            <div className={styles.open_price_list} onClick={() => openDoc('price')}>Открыть прайс-лист</div>
+            <div className={styles.open_price_list} onClick={() => openPdf('price')}>Открыть прайс-лист</div>
           </div> : <div className={clsx(styles.main_block, styles.empty_block)}>
           </div>}
           <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}></Button>

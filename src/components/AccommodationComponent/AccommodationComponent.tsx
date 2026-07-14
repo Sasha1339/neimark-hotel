@@ -6,7 +6,7 @@ import docs from '@/assets/images/docs.jpeg';
 import {gsap} from 'gsap';
 import {Button} from "@components/Button/Button";
 import {AboutElementComponent} from "@components/AboutElementComponent/AboutElementComponent";
-import {openDoc} from "@/shared/functions";
+import {openPdf} from "@/shared/functions";
 
 type Props = {
   scrollerRef: RefObject<HTMLElement>;
@@ -78,19 +78,19 @@ export const AccommodationComponent: FC<Props> = ({scrollerRef}) => {
             <AboutElementComponent
                                    description={'Публичная оферта'} icon={'document_dark'} showDownload={true}
                                    sizeIcon={window.innerWidth < 700 ? 50 : 70}
-                                   onClick={() => openDoc('public')}/>
+                                   onClick={() => openPdf('public')}/>
           </div>
           <div className={styles.content_item}>
             <AboutElementComponent
                                    description={'Стоимость проживания'} icon={'document_dark'} showDownload={true}
                                    sizeIcon={window.innerWidth < 700 ? 50 : 70}
-                                   onClick={() => openDoc('price')}/>
+                                   onClick={() => openPdf('price')}/>
           </div>
           <div className={styles.content_item}>
             <AboutElementComponent
                                    description={'Правила проживания'} icon={'document_dark'} showDownload={true}
                                    sizeIcon={window.innerWidth < 700 ? 50 : 70}
-                                   onClick={() => openDoc('rules')}/>
+                                   onClick={() => openPdf('rules')}/>
           </div>
         </div>
 
