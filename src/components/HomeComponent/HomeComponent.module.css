@@ -65,7 +65,7 @@
     background-image: url("assets/images/hotel.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-position: center center;
 
     height: 100vh;
@@ -177,7 +177,7 @@
     position: relative;
     z-index: 1;
     color: var(--text-color-default);
-    white-space: pre-line;
+    white-space: nowrap;
     text-align: start;
     width: min-content;
 }

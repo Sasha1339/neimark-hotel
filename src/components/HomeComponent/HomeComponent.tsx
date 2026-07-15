@@ -37,38 +37,10 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
     }
   }, []);
 
-  useEffect(() => {
-
-    gsap.to(imageBG.current, {
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        scroller: scrollerRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-      },
-      backgroundPosition: "center 100%"
-    });
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        scroller: scrollerRef.current,
-        start: "top -10%",
-        scrub: false,
-        onEnter: () => {
-          headerContext[1]('home')
-        },
-        onLeaveBack: () => {
-          headerContext[1]('hidden')
-        },
-      }
-    })
-  }, [scrollerRef]);
 
   return (
     <section ref={triggerRef} className={styles.main}>
-      <div ref={imageBG} className={`${styles.description_section}`}>
+      <div className={`${styles.description_section}`}>
         <video
           ref={videoRef}
           autoPlay
