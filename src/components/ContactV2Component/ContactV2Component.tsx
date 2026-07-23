@@ -1,8 +1,13 @@
 import styles from './ContactV2Component.module.css';
-import { ReactComponent as Logo } from "@/assets/svg/logo.svg";
 import {openDocx, openPdf} from "@/shared/functions";
 
 export const ContactV2Component = () => {
+
+  const open = () => {
+    if (typeof window !== 'undefined' && typeof window.ym === 'function') {
+      window.ym(105500220,'reachGoal','click-phone-mail-hotel')
+    }
+  }
 
   return (
     <footer className={styles.main}>
@@ -33,11 +38,11 @@ export const ContactV2Component = () => {
         <div className={styles.content}>
           <div className={styles.info_column}>
             <div className={styles.title}>/ РЕСЕПШЕН (24/7)</div>
-            <div className={styles.paragraph}>+7 831 435 13 15</div>
+            <a href="tel:+78314351315" className={styles.paragraph} onClick={open}>+7 831 435 13 15</a>
           </div>
           <div className={styles.info_column}>
             <div className={styles.title}>/ E-MAIL</div>
-            <div className={styles.paragraph}>welcome@neimark-it.ru</div>
+            <a href="mailto:welcome@neimark-it.ru" className={styles.paragraph} onClick={open}>welcome@neimark-it.ru</a>
           </div>
           <div className={styles.info_column}>
             <div className={styles.title}>/ АДРЕС</div>

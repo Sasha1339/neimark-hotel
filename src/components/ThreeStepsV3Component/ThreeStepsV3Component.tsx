@@ -14,6 +14,14 @@ type Props = {
 
 export const ThreeStepsV3Component: FC<Props> = ({scrollerRef}) => {
 
+  const actionMetric = () => {
+    window.open('https://neimark.ukmira.ru/register');
+    if (typeof window !== 'undefined' && typeof window.ym === 'function') {
+      window.ym(105500220,'reachGoal','click-form-hotel')
+    }
+  }
+
+
   return (
     <section className={styles.main}>
       <div className={styles.content_block}>
@@ -38,7 +46,7 @@ export const ThreeStepsV3Component: FC<Props> = ({scrollerRef}) => {
             <span className={clsx(styles.item, styles.item_3)}>Заселяйся кампус в любое удобное время</span>
           </div>
         </div>
-        <Button className={styles.button} title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}/>
+        <Button className={styles.button} title={'Подать заявку'} onClick={actionMetric}/>
       </div>
 
     </section>

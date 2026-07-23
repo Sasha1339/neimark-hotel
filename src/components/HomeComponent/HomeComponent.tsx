@@ -11,6 +11,17 @@ import Hls from "hls.js";
 import {SearchComponent} from "@components/SearchComponent/SearchComponent";
 import {Icon} from "@components/Icon/Icon";
 
+declare global {
+  interface Window {
+    ym: (
+      counterId: number,
+      action: string,
+      ...args: any[]
+    ) => void;
+    _tmr: any[]; // если используете Top.Mail.Ru
+  }
+}
+
 gsap.registerPlugin(ScrollTrigger);
 
 type Props = {
@@ -36,6 +47,13 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
       videoRef.current.src = "/hls/index.m3u8";
     }
   }, []);
+
+  const action = () => {
+    window.open('https://neimark.ukmira.ru/register')
+    if (typeof window !== 'undefined' && typeof window.ym === 'function') {
+      window.ym(105500220,'reachGoal','click-form-hotel')
+    }
+  }
 
 
   return (
@@ -70,7 +88,7 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
               <span className={styles.description_inner_text}>{'ИТ\u00A0-кампуса\u00A0НЕЙМАРК'}</span>
             </span>
 
-            <Button title={'Подать заявку'} onClick={() => window.open('https://neimark.ukmira.ru/login')}/>
+            <Button title={'Подать заявку'} onClick={action}/>
           </div>
 
         </div>
