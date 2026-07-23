@@ -49,7 +49,7 @@ export const HomeComponent: FC<Props> = ({scrollerRef}) => {
   }, []);
 
   const action = () => {
-    window.open('https://neimark.ukmira.ru/register')
+    window.open('https://neimark.ukmira.ru/register?from=hotel')
     if (typeof window !== 'undefined' && typeof window.ym === 'function') {
       window.ym(105500220,'reachGoal','click-form-hotel')
     }

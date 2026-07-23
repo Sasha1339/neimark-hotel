@@ -110,7 +110,7 @@ export const PriceV5Component: FC<Props> = ({scrollerRef}) => {
   }
 
   const actionMetric = () => {
-    window.open('https://neimark.ukmira.ru/register');
+    window.open('https://neimark.ukmira.ru/register?from=hotel');
     if (typeof window !== 'undefined' && typeof window.ym === 'function') {
       window.ym(105500220,'reachGoal','click-form-hotel')
     }
