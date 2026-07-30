@@ -27,11 +27,20 @@ export const ContactV2Component = () => {
             </div>
           </div>
           <div className={styles.info_column}>
-            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDocx('form_personal_data', 'Форма согласия на обработку персональных данных')}>Форма согласия на обработку персональных данных
+            <div className={`${styles.paragraph} ${styles.link}`}
+                 onClick={() => openDocx('form_personal_data', 'Форма согласия на обработку персональных данных')}>Форма
+              согласия на обработку персональных данных
             </div>
           </div>
           <div className={styles.info_column}>
-            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openDocx('form_teenager', 'Форма согласия на заселение несовершеннолетнего')}>Форма согласия на заселение несовершеннолетнего
+            <div className={`${styles.paragraph} ${styles.link}`}
+                 onClick={() => openDocx('form_teenager', 'Форма согласия на заселение несовершеннолетнего')}>Форма
+              согласия на заселение несовершеннолетнего
+            </div>
+          </div>
+          <div className={styles.info_column}>
+            <div className={`${styles.paragraph} ${styles.link}`}
+                 onClick={() => openPdf('loyalty')}>Положение о программе лояльности для партнеров
             </div>
           </div>
         </div>
