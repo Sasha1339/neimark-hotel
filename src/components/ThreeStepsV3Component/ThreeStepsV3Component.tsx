@@ -43,7 +43,7 @@ export const ThreeStepsV3Component: FC<Props> = ({scrollerRef}) => {
             <span className={clsx(styles.item, styles.item_1)}>Подай заявку на сайте</span>
             <span
               className={clsx(styles.item, styles.item_2)}>Подтверди специальность и успеваемость справкой из вуза</span>
-            <span className={clsx(styles.item, styles.item_3)}>Заселяйся кампус в любое удобное время</span>
+            <span className={clsx(styles.item, styles.item_3)}>Заселяйся в кампус в любое удобное время</span>
           </div>
         </div>
         <Button className={styles.button} title={'Подать заявку'} onClick={actionMetric}/>
