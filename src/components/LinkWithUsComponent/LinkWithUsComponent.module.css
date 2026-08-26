@@ -3,7 +3,7 @@
     /*height: auto;*/
     padding: 50px 166px;
     box-sizing: border-box;
-    background: var(--text-color-default);
+    /*background: var(--text-color-default);*/
     font-family: Biform, 'sans-serif';
     display: flex;
     flex-direction: column;

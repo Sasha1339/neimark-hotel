@@ -23,6 +23,10 @@ export const ContactV2Component = () => {
             </div>
           </div>
           <div className={styles.info_column}>
+            <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openPdf('order_by_rules')}>Приказ об утверждении положения
+            </div>
+          </div>
+          <div className={styles.info_column}>
             <div className={`${styles.paragraph} ${styles.link}`} onClick={() => openPdf('order')}>Приказ об оплате
             </div>
           </div>
